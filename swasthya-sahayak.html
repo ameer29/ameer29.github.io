@@ -3,7 +3,19 @@
 <title>Swasthya Sahayak · Ameer Batcha</title><meta name="description" content="Product case study: a voice-first, multilingual health assistant on WhatsApp for underserved communities in India. BITSoM capstone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css"></head><body>
+<link rel="stylesheet" href="assets/style.css"><style>
+.demo{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+@media(max-width:720px){.demo{grid-template-columns:1fr}}
+.phone{width:300px;max-width:100%;height:600px;margin:0 auto;border:10px solid #1b1b1b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0;display:block}
+.browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;height:320px;position:relative;background:#fff}
+.browser iframe{width:200%;height:200%;border:0;transform:scale(.5);transform-origin:0 0}
+ol.flow{padding-left:20px;margin:0 0 12px}ol.flow li{margin-bottom:10px}
+.ss-mark{border-radius:14px;padding:28px 22px;background:linear-gradient(135deg,#4f9a6f,#4a8fcf);color:#fff;display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:center}
+.ss-mark .hi{font-size:30px;font-weight:700;line-height:1.2}
+.ss-mark .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ss-mark i{font-style:normal;font-size:13px;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
+</style></head><body>
 <header class="top"><div class="wrap"><a class="brand" href="index.html">Ameer Batcha</a>
 <nav><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="#contact" class="hide-sm">Contact</a><button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap"><a class="back" href="index.html#projects">← All projects</a>
@@ -21,12 +33,17 @@
 </div>
 
 <section>
-  <p class="eyebrow">At a glance</p>
-  <div class="shots">
-    <figure><img src="assets/ss-home.webp" alt="Swasthya Sahayak start screen with User Chatbot and Doctor Dashboard options"><figcaption><b>Two sides.</b> A chat for patients, and a dashboard for doctors and health workers.</figcaption></figure>
-    <figure><img src="assets/ss-language.webp" alt="Language selection: Hindi, Bengali, Marathi, Tamil, Telugu, English"><figcaption><b>Language first.</b> Six languages, each shown in its own script.</figcaption></figure>
-    <figure><img src="assets/ss-menu.webp" alt="Hindi menu: I have a health problem, medicine reminder, family care, talk to a doctor"><figcaption><b>Tap, don't type.</b> Four big intents: a health problem, medicine reminders, family care, talk to a doctor.</figcaption></figure>
-    <figure><img src="assets/ss-guidance.webp" alt="Hindi chat: user reports fever; assistant advises rest and fluids, and to visit a clinic if not better in 2 days; options for home care, clinic, or contacting an ASHA worker"><figcaption><b>A safe next step.</b> "Rest and drink fluids; see a clinic if it's not better in 2 days", plus a one-tap option to contact a local ASHA health worker.</figcaption></figure>
+  <p class="eyebrow">Try it here</p>
+  <h2>The WhatsApp-style prototype, live</h2>
+  <div class="demo">
+    <div class="phone"><iframe src="https://project-swasthya-sahayak.lovable.app/chat" title="Swasthya Sahayak WhatsApp-style prototype" loading="lazy"></iframe></div>
+    <div><ol class="flow">
+      <li><b>Pick a language.</b> Six options, each shown in its own script: Hindi, Bengali, Marathi, Tamil, Telugu and English.</li>
+      <li><b>Tap, don't type.</b> Four big intents: a health problem, medicine reminders, family care, talk to a doctor.</li>
+      <li><b>Answer guided questions.</b> Symptom, then duration, with a large voice button for people who find reading or typing hard.</li>
+      <li><b>Get a safe next step.</b> For a mild fever: rest and drink fluids, and see a clinic if it's not better in 2 days, plus a one-tap option to contact a local ASHA health worker.</li>
+    </ol>
+    <p class="note">This is the real prototype, embedded from Lovable. It's interactive, so try it in Hindi or Tamil.</p></div>
   </div>
 </section>
 
@@ -59,7 +76,7 @@
         <li><b>A provider side.</b> A dashboard where doctors and health workers review escalated cases.</li>
       </ul>
     </div>
-    <img src="assets/ss-web.webp" alt="Swasthya Sahayak website prototype homepage">
+    <div class="browser"><iframe src="https://website-swasthya-sahayak.lovable.app/" title="Swasthya Sahayak website prototype" loading="lazy"></iframe></div>
   </div>
 </section>
 

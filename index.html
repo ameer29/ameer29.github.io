@@ -3,7 +3,19 @@
 <title>Ameer Batcha · Business, Data &amp; Product</title><meta name="description" content="Portfolio of Ameer Batcha: product, data and strategy work from BBA research to Forbes Advisor, NUS CEMS and GenAI product management.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css"></head><body>
+<link rel="stylesheet" href="assets/style.css"><style>
+.demo{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+@media(max-width:720px){.demo{grid-template-columns:1fr}}
+.phone{width:300px;max-width:100%;height:600px;margin:0 auto;border:10px solid #1b1b1b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0;display:block}
+.browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;height:320px;position:relative;background:#fff}
+.browser iframe{width:200%;height:200%;border:0;transform:scale(.5);transform-origin:0 0}
+ol.flow{padding-left:20px;margin:0 0 12px}ol.flow li{margin-bottom:10px}
+.ss-mark{border-radius:14px;padding:28px 22px;background:linear-gradient(135deg,#4f9a6f,#4a8fcf);color:#fff;display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:center}
+.ss-mark .hi{font-size:30px;font-weight:700;line-height:1.2}
+.ss-mark .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ss-mark i{font-style:normal;font-size:13px;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
+</style></head><body>
 <header class="top"><div class="wrap"><a class="brand" href="index.html">Ameer Batcha</a>
 <nav><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education" class="hide-sm">Education</a><a href="#contact" class="hide-sm">Contact</a><button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap" id="top">
@@ -24,7 +36,7 @@
       <h3>Swasthya Sahayak: health guidance in your language, on WhatsApp</h3>
       <p class="muted">A voice-first, multilingual AI health assistant concept for underserved communities in India, with two clickable prototypes. I led the AI design and the success metrics, and came up with the WhatsApp-first idea.</p>
       <span style="color:var(--accent);font-weight:600">Read the case study →</span>
-    </div><img src="assets/ss-web.webp" alt="Swasthya Sahayak prototype" loading="lazy"></div>
+    </div><div class="ss-mark" aria-hidden="true"><span class="hi">स्वास्थ्य सहायक</span><span>Your health, your language</span><span class="chips"><i>हिन्दी</i><i>বাংলা</i><i>मराठी</i><i>தமிழ்</i><i>తెలుగు</i><i>English</i></span></div></div>
   </a>
   <div class="projgrid">
     <a class="pcard" href="zalora-pricing.html"><span class="k">Pricing analytics · NUS · 2026</span><div class="t">Zalora: stop the markdown</div><div class="d">A regression demand model and profit optimisation. Holding the price at S$49.90 still sells out, at a much higher margin. Grade 4/5.</div><span class="go">View →</span></a>
