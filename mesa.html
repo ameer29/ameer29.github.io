@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa · Ameer Batcha</title><meta name="description" content="Mesa: a design-thinking project at ESADE on youth loneliness in the age of AI. A live web app that matches new students into mixed-nationality cooking groups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"><style>
+.demo{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+@media(max-width:720px){.demo{grid-template-columns:1fr}}
+.phone{width:300px;max-width:100%;height:600px;margin:0 auto;border:10px solid #1b1b1b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0;display:block}
+.browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;height:320px;position:relative;background:#fff}
+.browser iframe{width:200%;height:200%;border:0;transform:scale(.5);transform-origin:0 0}
+ol.flow{padding-left:20px;margin:0 0 12px}ol.flow li{margin-bottom:10px}
+.ss-mark{border-radius:14px;padding:28px 22px;background:linear-gradient(135deg,#4f9a6f,#4a8fcf);color:#fff;display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:center}
+.ss-mark .hi{font-size:30px;font-weight:700;line-height:1.2}
+.ss-mark .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ss-mark i{font-style:normal;font-size:13px;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
+</style><style>.phone.wide{width:340px}.steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}@media(max-width:760px){.steps4{grid-template-columns:1fr 1fr}}</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">Ameer Batcha</a>
+<nav><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="#contact" class="hide-sm">Contact</a><button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button></nav></div></header>
+<main class="wrap"><a class="back" href="index.html#projects">← All projects</a>
+
+<div class="hero" style="padding-top:28px">
+  <p class="eyebrow">Design thinking · ESADE Business School (CEMS exchange) · Creative Design Thinking · 2026</p>
+  <h1>Mesa: cook together, eat wider</h1>
+  <p class="lead">Our brief was <i>"Youth, loneliness in the age of AI."</i> Our answer is a live web app that puts newly arrived students in a kitchen with three people from three other countries, then at a shared table every week.</p>
+  <div class="meta"><span><b>Type</b> Group project</span><span><b>My role</b> Brainstorming and the design-thinking process with the team; then I owned the website, from version 0 to a live version 1 collecting real data from ESADE students</span><span><b>Stack</b> HTML/CSS/JavaScript · Vercel · Supabase</span></div>
+  <div class="btns">
+    <a class="btn primary" href="https://mesa-boy5.vercel.app" target="_blank" rel="noopener">Open the live app ↗</a>
+    <a class="btn ghost" href="https://github.com/ameer29/mesa" target="_blank" rel="noopener">Code on GitHub ↗</a>
+  </div>
+</div>
+
+<section>
+  <p class="eyebrow">Try it here</p>
+  <h2>The live app</h2>
+  <div class="demo">
+    <div class="phone wide"><iframe src="https://mesa-boy5.vercel.app" title="Mesa live app" loading="lazy"></iframe></div>
+    <div><ol class="flow">
+      <li><b>Join with your university email.</b> Mesa runs inside one university, so everyone at your table is someone you'll run into again.</li>
+      <li><b>Get matched into a table of four passports.</b> Four students from four countries, so nobody has the home advantage.</li>
+      <li><b>Pick a dish.</b> One from each of your countries, plus a few that anyone can manage.</li>
+      <li><b>Saturday: cook together.</b> A shopping list, jobs you can swap, and a recipe video.</li>
+      <li><b>Wednesday: one table.</b> Four kitchens bring four dishes. Halfway through comes "the round": each person names one thing they're grateful for and one thing that's hard.</li>
+    </ol>
+    <p class="note">This is the real app, embedded. It's interactive.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">The problem</p>
+  <h2>You just moved. Nobody knows you yet.</h2>
+  <p>International students arrive in a new city with no network, and apps make it easy to stay in. Our class brief asked how young people experience loneliness in the age of AI. We focused on the first weeks after moving, when isolation sets in fastest and when a small, repeated ritual could make the biggest difference.</p>
+  <div class="callout"><p><b>Our design principle.</b> Technology should organise the meeting, not replace it. Cooking side by side gives people something to do with their hands, so the conversation happens naturally. The weekly table turns strangers into regulars.</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">Process</p>
+  <h2>From brainstorm to live product</h2>
+  <div class="steps4">
+    <div class="step"><b>1 · Understand</b>Context map canvas of youth loneliness and AI</div>
+    <div class="step"><b>2 · Empathise</b>User personas and user interviews</div>
+    <div class="step"><b>3 · Ideate</b>Team brainstorming, following the course's design-thinking method</div>
+    <div class="step"><b>4 · Prototype &amp; test</b>Website v0 → v1, live with ESADE students</div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">My contribution · Building it</p>
+  <h2>Version 0 to a live version 1</h2>
+  <p>After the team work on the concept, we split the tasks and I took on the website. I built it from a clickable version 0 to a live version 1, deployed it on <b>Vercel</b>, and connected a <b>Supabase</b> database so we could collect real responses from ESADE students.</p>
+  <div class="grid2">
+    <div class="persona"><div class="n">What students can do</div>A 6-step onboarding (university email, home country, what brings you here, cooking level) · table matching · dish picks from four countries · a weekly plan with a shopping list and swappable roles · the round · a group thread that stays open between weeks · XP and badges</div>
+    <div class="persona"><div class="n">What we learn from it</div>Feedback after every evening ("Did you feel more connected?", "Would you turn up next Wednesday?") and on the app itself, plus a private admin dashboard that exports every sign-up, dish choice and response to Excel or CSV</div>
+  </div>
+  <p class="note" style="margin-top:12px">Privacy by design: responses shared at the table are opt-in, and the admin data needs a private key that is never in the public code.</p>
+</section>
+<footer id="contact"><div><p><b>Ameer Batcha</b> · ameer.batcha@u.nus.edu · <a href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/ameer29">GitHub</a></p></div></footer>
+</main><script>(function(){var b=document.getElementById('themeBtn'),r=document.documentElement;b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);r.setAttribute('data-theme',d?'light':'dark');});})();</script></body></html>
