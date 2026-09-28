@@ -1,61 +1,65 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ameer Batcha · Business, Data & Product</title>
 <meta name="description" content="Portfolio of Ameer Batcha: CEMS MIM candidate at NUS Business School. Product, data and strategy work, from operations analytics at a SaaS start-up to data research at Forbes Advisor.">
+<script>try{var _t=localStorage.getItem("ab-theme");if(_t)document.documentElement.setAttribute("data-theme",_t)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0d14; --bg-2:#0f1420; --panel:#121826; --panel-2:#171e2e; --line:#232c40; --line-2:#2e3950;
-  --ink:#ece9e2; --ink-2:#aab2c0; --ink-3:#7c8597;
-  --gold:#c9a55c; --gold-2:#e2c688; --gold-soft:rgba(201,165,92,.14); --gold-glow:rgba(201,165,92,.35);
-  --blue:#6ea8ff; --ok:#5ec79a;
-  --land:#1b2233; --land-line:#0a0d14; --land-hi:#c9a55c;
-  --shadow:0 20px 50px -20px rgba(0,0,0,.65);
+  --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#ffffff; --bg-2:#f4f6f9; --panel:#ffffff; --panel-2:#fafbfc; --line:#e5e8ee; --line-2:#d3d8e0;
+  --ink:#0b0d12; --ink-2:#414856; --ink-3:#727a88;
+  --acc:#1e3a8a; --acc-2:#2f55c4; --acc-soft:rgba(30,58,138,.07); --acc-glow:rgba(30,58,138,.22); --on-acc:#ffffff;
+  --blue:#1e3a8a; --ok:#1f8a5b;
+  --land:#e7ebf1; --land-line:#ffffff; --land-hi:#1e3a8a;
+  --shadow:0 18px 40px -22px rgba(11,13,18,.28);
   --radius:16px;
 }
-:root[data-theme="light"]{
-  --bg:#f6f3ec; --bg-2:#efeae0; --panel:#ffffff; --panel-2:#faf7f1; --line:#e3ddd0; --line-2:#d5cdbd;
-  --ink:#141a27; --ink-2:#4a5263; --ink-3:#7a8190;
-  --gold:#9b7632; --gold-2:#7d5d22; --gold-soft:rgba(155,118,50,.12); --gold-glow:rgba(155,118,50,.28);
-  --blue:#2f5fb3; --ok:#23845a;
-  --land:#e2dccf; --land-line:#f6f3ec; --land-hi:#b08a43;
-  --shadow:0 18px 40px -22px rgba(20,26,39,.35);
+:root[data-theme="dark"]{
+  --bg:#0b0d12; --bg-2:#10141c; --panel:#141923; --panel-2:#19202c; --line:#252c39; --line-2:#323a4a;
+  --ink:#f2f3f5; --ink-2:#b3b9c5; --ink-3:#828a99;
+  --acc:#8fb0ff; --acc-2:#b9cbff; --acc-soft:rgba(143,176,255,.12); --acc-glow:rgba(143,176,255,.3); --on-acc:#0b0d12;
+  --blue:#8fb0ff; --ok:#5ec79a;
+  --land:#1c2230; --land-line:#0b0d12; --land-hi:#8fb0ff;
+  --shadow:0 20px 50px -20px rgba(0,0,0,.65);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(900px 500px at 85% -10%,var(--gold-soft),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(110,168,255,.06),transparent 60%)}
+  background:radial-gradient(900px 500px at 85% -10%,var(--acc-soft),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(110,168,255,.06),transparent 60%)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
 .wrap{width:min(1120px,100% - 32px);margin:0 auto;position:relative;z-index:1}
-h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:0}
 h2{font-size:clamp(28px,4vw,40px)}
 h3{font-size:20px}
 p{margin:0 0 12px}
-.eyebrow{font:600 12px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin:0 0 12px;display:flex;align-items:baseline;gap:12px}
+main{counter-reset:ch}
+.sec-head .eyebrow{color:var(--ink-3)}
+.sec-head .eyebrow::before{counter-increment:ch;content:counter(ch,decimal-leading-zero);font:600 15px/1 var(--serif);letter-spacing:0;color:var(--acc)}
 .muted{color:var(--ink-2)}
 .small{font-size:14px}
 b,strong{color:var(--ink);font-weight:600}
 
 /* progress + nav */
-.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));z-index:60;box-shadow:0 0 12px var(--gold-glow)}
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc-2));z-index:60;box-shadow:0 0 12px var(--acc-glow)}
 header.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.brand{font-family:"Playfair Display",serif;font-size:20px;font-weight:600;display:flex;align-items:center;gap:10px}
-.brand .mono{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#111;font:700 13px Inter;letter-spacing:.02em}
+.brand{font-family:var(--serif);font-size:20px;font-weight:600;display:flex;align-items:center;gap:10px}
+.brand .mono{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--acc),var(--acc-2));color:var(--on-acc);font:700 13px var(--sans);letter-spacing:.02em}
 nav.menu{display:flex;gap:4px;align-items:center}
 nav.menu a{padding:8px 12px;border-radius:999px;font-size:14px;color:var(--ink-2);transition:color .2s,background .2s}
 nav.menu a:hover{color:var(--ink);background:var(--panel-2)}
-nav.menu a.active{color:var(--gold);background:var(--gold-soft)}
+nav.menu a.active{color:var(--acc);background:var(--acc-soft)}
 .theme-btn{font-size:16px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--panel);color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:transform .3s,border-color .2s}
-.theme-btn:hover{transform:rotate(25deg);border-color:var(--gold)}
+.theme-btn:hover{transform:rotate(25deg);border-color:var(--acc)}
 @media(max-width:820px){nav.menu a.hide-sm{display:none}}
 @media(max-width:560px){nav.menu a{padding:6px 8px;font-size:13px}.brand span.nm{display:none}}
 
@@ -63,36 +67,36 @@ nav.menu a.active{color:var(--gold);background:var(--gold-soft)}
 .hero{padding:88px 0 56px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:56px}}
 .hero h1{font-size:clamp(38px,6.2vw,68px)}
-.hero h1 em{font-style:italic;color:var(--gold)}
+.hero h1 em{font-style:italic;color:var(--acc)}
 .lead{font-size:18px;color:var(--ink-2);max-width:620px;margin-top:22px}
-.rotator{display:inline-block;color:var(--ink);border-bottom:2px solid var(--gold);min-width:10ch}
+.rotator{display:inline-block;color:var(--ink);border-bottom:2px solid var(--acc);min-width:10ch}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid var(--line-2);background:var(--panel);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,border-color .25s,background .25s;overflow:hidden;will-change:transform}
 .btn .arr{transition:transform .25s}
-.btn:hover{border-color:var(--gold);box-shadow:0 10px 30px -10px var(--gold-glow)}
+.btn:hover{border-color:var(--acc);box-shadow:0 10px 30px -10px var(--acc-glow)}
 .btn:hover .arr{transform:translateX(4px)}
-.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#12110d;border:0}
+.btn.primary{background:linear-gradient(135deg,var(--acc),var(--acc-2));color:var(--on-acc);border:0}
 .btn.primary::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .7s}
 .btn.primary:hover::after{left:130%}
 .btn.sm{padding:9px 14px;font-size:14px;border-radius:10px}
 
 .idcard{position:relative;border-radius:22px;padding:26px;background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--line-2);box-shadow:var(--shadow);transform-style:preserve-3d;transition:transform .2s}
-.idcard::before{content:"";position:absolute;inset:-1px;border-radius:22px;padding:1px;background:linear-gradient(140deg,var(--gold),transparent 40%,transparent 60%,var(--gold));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.7}
+.idcard::before{content:"";position:absolute;inset:-1px;border-radius:22px;padding:1px;background:linear-gradient(140deg,var(--acc),transparent 40%,transparent 60%,var(--acc));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.7}
 .idcard .row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.avatar{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font:700 22px "Playfair Display";color:#111;background:linear-gradient(135deg,var(--gold),var(--gold-2))}
-.idcard .nm{font:600 20px "Playfair Display"}
+.avatar{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font:700 22px var(--serif);color:var(--on-acc);background:linear-gradient(135deg,var(--acc),var(--acc-2))}
+.idcard .nm{font:600 20px var(--serif)}
 .idcard .role{font-size:13px;color:var(--ink-2)}
 .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .stat{padding:14px;border-radius:14px;background:var(--bg-2);border:1px solid var(--line);transition:border-color .25s,transform .25s}
-.stat:hover{border-color:var(--gold);transform:translateY(-2px)}
-.stat .num{font:600 28px/1.05 "Playfair Display";color:var(--gold)}
+.stat:hover{border-color:var(--acc);transform:translateY(-2px)}
+.stat .num{font:600 28px/1.05 var(--serif);color:var(--acc)}
 .stat .lbl{font-size:12.5px;color:var(--ink-2);margin-top:6px;line-height:1.35}
 .status{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;color:var(--ink-2)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(94,199,154,.7);animation:ping 2s infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(94,199,154,.6)}70%{box-shadow:0 0 0 10px rgba(94,199,154,0)}100%{box-shadow:0 0 0 0 rgba(94,199,154,0)}}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .chip{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);transition:all .2s;background:var(--panel)}
-.chip:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-1px)}
+.chip:hover{color:var(--acc);border-color:var(--acc);transform:translateY(-1px)}
 
 section{padding:64px 0;position:relative;scroll-margin-top:72px}
 button.btn{color:inherit;font-family:inherit;cursor:pointer}
@@ -101,9 +105,9 @@ button.btn{color:inherit;font-family:inherit;cursor:pointer}
 
 /* spotlight cards */
 .card{position:relative;border-radius:var(--radius);background:var(--panel);border:1px solid var(--line);padding:24px;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;overflow:hidden}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),var(--gold-soft),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),var(--acc-soft),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
 .card:hover::before{opacity:1}
-.card:hover{border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:var(--shadow)}
+.card:hover{border-color:color-mix(in srgb,var(--acc) 55%,var(--line));box-shadow:var(--shadow)}
 .card.lift:hover{transform:translateY(-4px)}
 .card > *{position:relative}
 
@@ -118,13 +122,13 @@ button.btn{color:inherit;font-family:inherit;cursor:pointer}
 .badge .f::after{content:"";position:absolute;top:-50%;left:-80%;width:50%;height:200%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.12),transparent);transform:rotate(15deg);animation:shine 5s infinite}
 .badge:nth-child(2) .f::after{animation-delay:1s}.badge:nth-child(3) .f::after{animation-delay:2s}.badge:nth-child(4) .f::after{animation-delay:3s}.badge:nth-child(5) .f::after{animation-delay:4s}
 @keyframes shine{0%,70%{left:-80%}100%{left:140%}}
-.badge .ic{font-size:30px;line-height:1;margin-bottom:10px;filter:drop-shadow(0 4px 12px var(--gold-glow))}
-.badge .t{font:600 15px/1.25 "Playfair Display"}
+.badge .ic{font-size:30px;line-height:1;margin-bottom:10px;filter:drop-shadow(0 4px 12px var(--acc-glow))}
+.badge .t{font:600 15px/1.25 var(--serif)}
 .badge .s{font-size:12px;color:var(--ink-3);margin-top:4px}
-.badge .b{transform:rotateY(180deg);border-color:var(--gold);font-size:13px;color:var(--ink-2)}
-.badge .b b{display:block;color:var(--gold);margin-bottom:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.badge .b{transform:rotateY(180deg);border-color:var(--acc);font-size:13px;color:var(--ink-2)}
+.badge .b b{display:block;color:var(--acc);margin-bottom:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .unlocked{font-size:12px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase}
-.unlocked b{color:var(--gold)}
+.unlocked b{color:var(--acc)}
 
 /* journey */
 .journey{display:grid;grid-template-columns:1.55fr 1fr;gap:18px}
@@ -136,51 +140,51 @@ button.btn{color:inherit;font-family:inherit;cursor:pointer}
 .mapbox .land{fill:var(--land);stroke:var(--land-line);stroke-width:.5;transition:fill .5s}
 .mapbox .land.hi{fill:var(--land-hi)}
 .mapbox .grat{fill:none;stroke:var(--line);stroke-width:.4;opacity:.6}
-.mapbox .arc{fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;opacity:.9;filter:drop-shadow(0 0 4px var(--gold-glow))}
+.mapbox .arc{fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;opacity:.9;filter:drop-shadow(0 0 4px var(--acc-glow))}
 .mapbox .arc.dim{opacity:.25;stroke-dasharray:3 4}
-.pin circle.core{fill:var(--gold);stroke:var(--bg);stroke-width:1.5}
-.pin circle.pulse{fill:none;stroke:var(--gold);stroke-width:1.5;opacity:0}
+.pin circle.core{fill:var(--acc);stroke:var(--bg);stroke-width:1.5}
+.pin circle.pulse{fill:none;stroke:var(--acc);stroke-width:1.5;opacity:0}
 .pin.on circle.pulse{animation:pulse 1.6s infinite}
-.pin.next circle.core{fill:var(--bg);stroke:var(--gold);stroke-dasharray:2 2}
-.pin text{font:600 11px Inter;fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:3px;pointer-events:none;opacity:0;transition:opacity .3s}
+.pin.next circle.core{fill:var(--bg);stroke:var(--acc);stroke-dasharray:2 2}
+.pin text{font:600 11px var(--sans);fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:3px;pointer-events:none;opacity:0;transition:opacity .3s}
 .pin.on text{opacity:1}
 @keyframes pulse{0%{r:4;opacity:.9}100%{r:22;opacity:0}}
 .maphud{position:absolute;left:14px;top:14px;display:flex;gap:8px;flex-wrap:wrap}
 .hud{font-size:12px;padding:6px 10px;border-radius:999px;background:color-mix(in srgb,var(--bg) 70%,transparent);border:1px solid var(--line-2);backdrop-filter:blur(6px);color:var(--ink-2)}
-.hud b{color:var(--gold)}
+.hud b{color:var(--acc)}
 .mapctl{position:absolute;right:14px;bottom:14px;display:flex;gap:8px}
 .mapfallback{position:absolute;inset:0;display:grid;place-items:center;color:var(--ink-3);font-size:14px}
 .stops{display:flex;flex-direction:column;gap:10px}
 .stop{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;text-align:left;cursor:pointer;border-radius:14px;border:1px solid var(--line);background:var(--panel);padding:14px 16px;color:inherit;font:inherit;transition:border-color .25s,transform .25s,background .25s}
 .stop:hover{transform:translateX(4px);border-color:var(--line-2)}
-.stop.on{border-color:var(--gold);background:linear-gradient(90deg,var(--gold-soft),var(--panel) 70%)}
-.stop .lv{font:700 11px Inter;letter-spacing:.1em;color:var(--gold);border:1px solid var(--gold);border-radius:8px;padding:6px 7px;text-align:center;min-width:44px}
+.stop.on{border-color:var(--acc);background:linear-gradient(90deg,var(--acc-soft),var(--panel) 70%)}
+.stop .lv{font:700 11px var(--sans);letter-spacing:.1em;color:var(--acc);border:1px solid var(--acc);border-radius:8px;padding:6px 7px;text-align:center;min-width:44px}
 .stop .lv span{display:block;font-size:16px;letter-spacing:0}
-.stop .pl{font:600 16px "Playfair Display"}
+.stop .pl{font:600 16px var(--serif)}
 .stop .wh{font-size:13px;color:var(--ink-2)}
 .stop .dt{font-size:12px;color:var(--ink-3)}
 .stop .more{display:none;font-size:13px;color:var(--ink-2);margin-top:6px}
 .stop.on .more{display:block}
 .xp{height:6px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:12px}
-.xp i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));transition:width .6s}
+.xp i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--acc-2));transition:width .6s}
 @media(max-width:900px){.stops{align-items:flex-start;flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.stop{min-width:250px;scroll-snap-align:start}}
 
 /* projects */
 .feature{display:grid;grid-template-columns:1.2fr .8fr;gap:0;padding:0}
 @media(max-width:820px){.feature{grid-template-columns:1fr}}
 .feature .txt{padding:30px}
-.feature .vis{min-height:240px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:26px;background:radial-gradient(circle at 30% 20%,rgba(94,199,154,.22),transparent 55%),radial-gradient(circle at 80% 90%,var(--gold-soft),transparent 55%),var(--bg-2);border-left:1px solid var(--line)}
-.feature .vis .dev{font:600 30px/1.2 "Playfair Display";text-align:center}
+.feature .vis{min-height:240px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:26px;background:radial-gradient(circle at 30% 20%,rgba(94,199,154,.22),transparent 55%),radial-gradient(circle at 80% 90%,var(--acc-soft),transparent 55%),var(--bg-2);border-left:1px solid var(--line)}
+.feature .vis .dev{font:600 30px/1.2 var(--serif);text-align:center}
 .feature .vis .langs{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .feature .vis .langs span{font-size:12px;padding:4px 9px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);background:var(--panel)}
-.k{font:600 11.5px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.k{font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
 @media(max-width:900px){.pgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.pgrid{grid-template-columns:1fr}}
 .pcard{display:flex;flex-direction:column;gap:10px;min-height:230px;transform-style:preserve-3d}
-.pcard .t{font:600 19px/1.25 "Playfair Display"}
+.pcard .t{font:600 19px/1.25 var(--serif)}
 .pcard .d{font-size:14.5px;color:var(--ink-2);flex:1}
-.pcard .go{font-size:14px;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:6px}
+.pcard .go{font-size:14px;font-weight:600;color:var(--acc);display:flex;align-items:center;gap:6px}
 .pcard .go i{font-style:normal;transition:transform .25s}
 .pcard:hover .go i{transform:translateX(5px)}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -191,50 +195,51 @@ button.btn{color:inherit;font-family:inherit;cursor:pointer}
 .org{display:flex;gap:16px;align-items:flex-start}
 .logo{width:48px;height:48px;border-radius:12px;background:#fff;display:grid;place-items:center;flex:none;border:1px solid var(--line);overflow:hidden;transition:transform .3s}
 .logo img{width:30px;height:30px;object-fit:contain}
-.logo.mono{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#111;font:700 15px Inter}
+.logo.mono{background:linear-gradient(135deg,var(--acc),var(--acc-2));color:var(--on-acc);font:700 15px var(--sans)}
 .card:hover .logo{transform:rotate(-4deg) scale(1.06)}
-.org h3 a{background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 1px no-repeat;transition:background-size .3s}
-.org h3 a:hover{background-size:100% 1px;color:var(--gold)}
+.org h3 a{background:linear-gradient(var(--acc),var(--acc)) 0 100%/0 1px no-repeat;transition:background-size .3s}
+.org h3 a:hover{background-size:100% 1px;color:var(--acc)}
 .ext{font-size:12px;color:var(--ink-3);margin-left:6px}
 .meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--ink-2);margin-top:4px}
 .meta span{display:inline-flex;align-items:center;gap:5px}
 .ladder{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0 4px}
 .rung{padding:7px 12px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);font-size:13px}
 .rung small{display:block;color:var(--ink-3);font-size:11.5px}
-.rung.cur{border-color:var(--gold);background:var(--gold-soft)}
-.ladder .up{color:var(--gold);font-weight:700}
-.award{display:inline-flex;align-items:center;gap:8px;margin:12px 0 4px;padding:8px 12px;border-radius:10px;background:var(--gold-soft);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);font-size:13.5px}
+.rung.cur{border-color:var(--acc);background:var(--acc-soft)}
+.ladder .up{color:var(--acc);font-weight:700}
+.award{display:inline-flex;align-items:center;gap:8px;margin:12px 0 4px;padding:8px 12px;border-radius:10px;background:var(--acc-soft);border:1px solid color-mix(in srgb,var(--acc) 45%,transparent);font-size:13.5px}
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
 @media(max-width:700px){.metrics{grid-template-columns:1fr 1fr}}
 .metric{padding:12px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line);transition:all .25s}
-.metric:hover{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
-.metric .v{font:600 22px "Playfair Display";color:var(--gold)}
+.metric:hover{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft)}
+.metric .v{font:600 22px var(--serif);color:var(--acc)}
 .metric .l{font-size:12px;color:var(--ink-2);line-height:1.35}
 ul.clean{margin:8px 0 0;padding:0;list-style:none}
 ul.clean li{position:relative;padding-left:20px;margin:8px 0;color:var(--ink-2);font-size:15px}
-ul.clean li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;height:7px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
-details.more summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:14px;font-weight:600;color:var(--gold)}
+ul.clean li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;height:7px;border-radius:2px;background:var(--acc);transform:rotate(45deg)}
+details.more summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:14px;font-weight:600;color:var(--acc)}
 details.more summary::-webkit-details-marker{display:none}
-details.more summary::after{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1px solid var(--gold);font-size:13px;transition:transform .3s}
+details.more summary::after{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1px solid var(--acc);font-size:13px;transition:transform .3s}
 details.more[open] summary::after{transform:rotate(45deg)}
-.h4{font:600 11.5px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:16px 0 4px}
+.h4{font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:16px 0 4px}
 
 /* education timeline */
 .tl{position:relative;padding-left:26px}
-.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--line) 80%)}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--acc),var(--line) 80%)}
 .tl .card{margin-bottom:14px}
-.tl .card::after{content:"";position:absolute;left:-24px;top:30px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);z-index:2}
-.tl .card:hover::after{background:var(--gold)}
+.tl .card::after{content:"";position:absolute;left:-24px;top:30px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--acc);z-index:2}
+.tl .card:hover::after{background:var(--acc)}
 
 /* certs */
 .cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 @media(max-width:900px){.cgrid{grid-template-columns:1fr 1fr}}
-.cert{padding:0;cursor:zoom-in;display:flex;flex-direction:column}
+.cert{padding:0;cursor:pointer;display:flex;flex-direction:column}
 .cert .img{aspect-ratio:4/3;background:var(--bg-2);display:grid;place-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
 .cert .img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
 .cert:hover .img img{transform:scale(1.06)}
-.cert .ph{font:600 34px "Playfair Display";color:var(--gold)}
-.cert .cb{padding:14px 16px}
+.cert .ph{font:600 34px var(--serif);color:var(--acc)}
+.cert .cb{padding:14px 16px;display:flex;flex-direction:column;flex:1}
+.cert .cgo{margin-top:auto!important;padding-top:12px}
 .cert .ct{font-weight:600;font-size:14.5px;line-height:1.3}
 .cert .cs{font-size:12.5px;color:var(--ink-2);margin-top:4px}
 .cert.noimg{cursor:default}
@@ -248,10 +253,10 @@ details.more[open] summary::after{transform:rotate(45deg)}
 @media(max-width:760px){.sgrid{grid-template-columns:1fr}}
 .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .skill-tags span{font-size:13px;padding:6px 11px;border-radius:9px;background:var(--bg-2);border:1px solid var(--line);color:var(--ink-2);transition:all .2s}
-.skill-tags span:hover{color:#111;background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
+.skill-tags span:hover{color:#111;background:var(--acc);border-color:var(--acc);transform:translateY(-2px)}
 
 /* contact */
-.cta{text-align:center;padding:56px 24px;border-radius:24px;border:1px solid var(--line-2);background:radial-gradient(600px 240px at 50% 0%,var(--gold-soft),transparent 70%),var(--panel)}
+.cta{text-align:center;padding:56px 24px;border-radius:24px;border:1px solid var(--line-2);background:radial-gradient(600px 240px at 50% 0%,var(--acc-soft),transparent 70%),var(--panel)}
 .cta h2{font-size:clamp(30px,5vw,48px)}
 .cta .btns{justify-content:center}
 footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
@@ -259,7 +264,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 /* reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--panel);border:1px solid var(--gold);color:var(--ink);padding:10px 16px;border-radius:12px;font-size:14px;z-index:90;box-shadow:var(--shadow);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--panel);border:1px solid var(--acc);color:var(--ink);padding:10px 16px;border-radius:12px;font-size:14px;z-index:90;box-shadow:var(--shadow);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .toast.on{transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 
@@ -268,26 +273,73 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
 .fivec{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .fivec .c{font:inherit;font-size:14px;color:var(--ink-2);background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer;transition:all .25s}
-.fivec .c b{font:700 18px "Playfair Display";color:var(--gold);margin-right:1px}
-.fivec .c:hover,.fivec .c.on{border-color:var(--gold);color:var(--ink);background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--gold-glow)}
+.fivec .c b{font:700 18px var(--serif);color:var(--acc);margin-right:1px}
+.fivec .c:hover,.fivec .c.on{border-color:var(--acc);color:var(--ink);background:var(--acc-soft);transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--acc-glow)}
 .cdesc,.sdesc{margin-top:10px;padding:14px 16px;border-radius:12px;border:1px dashed var(--line-2);font-size:14px;color:var(--ink-2);min-height:64px}
-.cdesc b,.sdesc b{color:var(--gold)}
+.cdesc b,.sdesc b{color:var(--acc)}
 .season{display:grid;grid-template-columns:repeat(13,1fr);gap:6px;margin-top:8px}
 @media(max-width:700px){.season{grid-template-columns:repeat(7,1fr)}}
 .season .s{font:inherit;cursor:pointer;aspect-ratio:1;border-radius:10px;border:1px solid var(--line);background:var(--bg-2);color:var(--ink-3);display:grid;place-items:center;font-size:13px;font-weight:600;position:relative;transition:all .2s}
-.season .s.done{border-color:var(--gold);color:var(--gold);background:var(--gold-soft)}
+.season .s.done{border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
 .season .s.done::after{content:"✓";position:absolute;top:2px;right:5px;font-size:10px}
 .season .s.brk{border-style:dashed;font-size:10px;cursor:default}
-.season .s:hover,.season .s.on{transform:translateY(-3px);border-color:var(--gold);color:var(--ink)}
+.season .s:hover,.season .s.on{transform:translateY(-3px);border-color:var(--acc);color:var(--ink)}
 .prog{display:flex;flex-direction:column;gap:12px;margin-top:10px}
 .prog div{display:grid;grid-template-columns:80px 1fr;gap:4px 12px;align-items:center;font-size:13px}
 .prog span{color:var(--ink-3)}
 .prog i{display:block;height:8px;border-radius:99px;background:var(--line);position:relative;overflow:hidden}
-.prog i::after{content:"";position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:99px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.prog i::after{content:"";position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--acc),var(--acc-2));border-radius:99px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
 .rv.in .prog i::after{width:var(--w)}
 .prog em{grid-column:2;font-style:normal;color:var(--ink-2)}
 .tl .card{overflow:visible}
 .card::before{border-radius:inherit}
+
+/* v3: photo, logos, story, certs, skills */
+.avatar.photo{width:88px;height:88px;border-radius:20px;object-fit:cover;background:none;box-shadow:0 0 0 3px var(--panel),0 0 0 4.5px var(--acc);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.idcard:hover .avatar.photo{transform:scale(1.04) rotate(-2deg)}
+.logo{width:auto;min-width:60px;max-width:132px;height:60px;padding:9px 10px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.logo img{width:auto;height:40px;max-width:112px;object-fit:contain;display:block}
+.logo:hover{border-color:var(--acc);box-shadow:0 6px 18px -8px var(--acc-glow)}
+.story{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center}
+@media(max-width:900px){.story{grid-template-columns:1fr}}
+.story .tell p{font-family:var(--serif);font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--ink);margin:0 0 16px}
+.story .tell p.q{font-style:italic;color:var(--acc)}
+.quest{display:grid;gap:10px}
+.qstep{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel);transition:transform .25s,border-color .25s}
+.qstep:hover{transform:translateX(4px);border-color:var(--acc)}
+.qstep .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:18px;background:var(--bg-2);border:1px solid var(--line)}
+.qstep .lv{font:600 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.qstep .tt{font:600 17px/1.3 var(--serif)}
+.qstep .dd{font-size:13px;color:var(--ink-2)}
+.qstep.win{border-color:var(--acc);background:linear-gradient(90deg,var(--acc-soft),var(--panel) 75%)}
+.qstep.win .ic{background:var(--acc);color:var(--on-acc);border-color:var(--acc)}
+.qstep.miss .ic{color:var(--ink-3)}
+a.cert{color:inherit;display:flex;flex-direction:column}
+.cert .issuer{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.cert .clogo{height:38px;min-width:38px;max-width:120px;padding:6px 8px;border-radius:9px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex:none}
+.cert .clogo img{height:26px;width:auto;max-width:100px;object-fit:contain;display:block}
+.cert .cgo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;white-space:nowrap;margin-top:12px;font-size:13px;font-weight:600;color:var(--acc)}
+.cert .viewc{font-size:12px;font-weight:600;color:var(--ink-2);padding:5px 9px;border-radius:8px;border:1px solid var(--line-2);background:var(--panel);cursor:zoom-in}
+.cert .viewc:hover{border-color:var(--acc);color:var(--acc)}
+.cert .img img.biglogo{height:64px;width:auto;max-width:70%;object-fit:contain}
+.cert.noimg .img{background:#fff}
+.cert:hover .cgo span.arr{transform:translate(2px,-2px)}
+.cert .cgo span.arr{display:inline-block;transition:transform .25s}
+.skill-tags span{position:relative;isolation:isolate;background:none;border:0;cursor:default;transition:color .2s,transform .25s}
+.skill-tags span::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--bg-2);border:1px solid var(--line);z-index:-1;transition:background .25s,border-color .25s,box-shadow .25s}
+.skill-tags span::after{content:attr(data-i);position:absolute;left:50%;bottom:3px;font-size:22px;line-height:1;translate:-50% 0;opacity:0;z-index:-2;pointer-events:none;white-space:nowrap;transition:translate .5s cubic-bezier(.2,.9,.3,1.35),opacity .2s}
+.skill-tags span[data-a="say"]::after{font:600 12px var(--sans);color:var(--acc)}
+.skill-tags span:hover{color:var(--ink);background:none;transform:translateY(-2px)}
+.skill-tags span:hover::before{background:var(--panel);border-color:var(--acc);box-shadow:0 8px 20px -12px var(--acc-glow)}
+.skill-tags span:hover::after{opacity:1;translate:-50% -28px;animation:sk-bob 1.6s .45s ease-in-out infinite}
+.skill-tags span[data-a="snake"]:hover::after{animation-name:sk-snake;animation-duration:.9s}
+.skill-tags span[data-a="spin"]:hover::after{animation:sk-spin 2.4s .45s linear infinite}
+.skill-tags span[data-a="pulse"]:hover::after{animation-name:sk-pulse;animation-duration:1.1s}
+@keyframes sk-snake{0%,100%{rotate:-18deg;scale:1 1}50%{rotate:18deg;scale:1.08 .94}}
+@keyframes sk-spin{to{rotate:360deg}}
+@keyframes sk-pulse{0%,100%{scale:1}50%{scale:1.28}}
+@keyframes sk-bob{0%,100%{rotate:-7deg}50%{rotate:7deg}}
+@media (prefers-reduced-motion:reduce){.skill-tags span:hover::after{animation:none}}
 </style>
 </head>
 <body>
@@ -321,7 +373,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
       </div>
     </div>
     <aside class="idcard rv" id="idcard">
-      <div class="row"><div class="avatar">AB</div><div><div class="nm">Ameer Batcha</div><div class="role">CEMS MIM candidate · NUS × ESADE × Aalto</div></div></div>
+      <div class="row"><img class="avatar photo" src="data:image/webp;base64,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" alt="Ameer Batcha" width="88" height="88"><div><div class="nm">Ameer Batcha</div><div class="role">CEMS MIM candidate · NUS × ESADE × Aalto</div></div></div>
       <div class="statgrid">
         <div class="stat"><div class="num" data-count="15">0</div><div class="lbl">months from Associate to Senior Associate at Forbes Advisor</div></div>
         <div class="stat"><div class="num" data-count="35" data-suffix="%">0</div><div class="lbl">gain in data accuracy from workflows I standardised</div></div>
@@ -341,6 +393,24 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
       <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🏅</div><div class="t">Value Champion</div><div class="s">ITILITE Technologies</div></div><div class="b"><b>When</b>Recognised by ITILITE as a Value Champion, while I moved from the front line into analytics.</div></div></div>
       <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🎓</div><div class="t">First Class Distinction</div><div class="s">BBA · Amity · 2021</div></div><div class="b"><b>Plus</b>Two independent survey studies (Netflix, Swiggy), re-analysed in 2026 with an NPS of +48.</div></div></div>
       <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🧠</div><div class="t">9.3 / 10</div><div class="s">Clinical psychology internship · 2026</div></div><div class="b"><b>What</b>240 hours of training: Mental Status Examination, case-history intake, risk assessment and therapeutic approaches.</div></div></div>
+    </div>
+  </section>
+
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="sec-head rv"><div><p class="eyebrow">The story</p><h2>A final-round no, and what I did with it</h2></div></div>
+    <div class="story">
+      <div class="tell rv">
+        <p>In 2021, straight after my BBA, I applied to the NUS MSc in Management with CEMS MIM. I reached the final round, and I wasn't selected.</p>
+        <p>Looking back, the gap was clear: I had ideas, but no professional experience and no internships to back them up. So I went and got that experience. Over four years I worked in two jobs, operations analytics at a SaaS start-up and then data research at Forbes Advisor. In between I spent a year studying data analytics full-time, and later I took a product-management programme alongside work.</p>
+        <p class="q">In 2025 I applied again, this time with something to show, and I got the offer.</p>
+      </div>
+      <div class="quest rv">
+        <div class="qstep miss"><div class="ic">✕</div><div><div class="lv">Attempt 1 · 2021</div><div class="tt">Final round, not selected</div><div class="dd">Strong on paper, short on experience</div></div></div>
+        <div class="qstep"><div class="ic">⚔️</div><div><div class="lv">Side quest · 2021 – 2025</div><div class="tt">Two jobs, one promotion, two awards</div><div class="dd">ITILITE → studying data analytics → Forbes Advisor, plus BITSoM</div></div></div>
+        <div class="qstep win"><div class="ic">✓</div><div><div class="lv">Attempt 2 · 2025</div><div class="tt">Offer received</div><div class="dd">NUS MSc in Management + CEMS MIM, class starting Jan 2026</div></div></div>
+      </div>
     </div>
   </section>
 
@@ -380,7 +450,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
       <a class="card lift pcard tilt rv" href="adidas-analytics.html"><span class="k">Marketing analytics · NUS · 2026</span><div class="t">Adidas: where the growth really is</div><div class="d">I built the Tableau workbook (5 dashboards, 15 sheets) and designed an A/B testing plan to validate the strategy before scaling.</div><div class="tags"><span class="tag">Tableau</span><span class="tag">A/B testing</span></div><span class="go">View case study <i>→</i></span></a>
       <a class="card lift pcard tilt rv" href="zalora-pricing.html"><span class="k">Pricing analytics · NUS · 2026</span><div class="t">Zalora: stop the markdown</div><div class="d">A regression demand model and profit optimisation. Holding the price at S$49.90 still sells out, for about 77% more profit. Graded 4/5.</div><div class="tags"><span class="tag">Regression</span><span class="tag">Optimisation</span></div><span class="go">View case study <i>→</i></span></a>
       <a class="card lift pcard tilt rv" href="temu-africa.html"><span class="k">Emerging-markets strategy · NUS · 2026</span><div class="t">Can Temu win in Africa beyond low prices?</div><div class="d">My section: the three structural challenges (value curve, delivery, regulation) behind the team's "Africa OS" recommendation.</div><div class="tags"><span class="tag">Market entry</span><span class="tag">Blue Ocean</span></div><span class="go">View case study <i>→</i></span></a>
-      <a class="card lift pcard tilt rv" href="https://github.com/ameer29/retail-customer-analysis-sql-powerbi" target="_blank" rel="noopener"><span class="k">Data analytics · AnalytixLabs · 2023</span><div class="t">Career-switch capstones</div><div class="d">A retail analysis taken from SQL Server to Excel Pareto to a 3-page Power BI dashboard, plus a Python study of 180k orders (57% late; First Class late on every order).</div><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Python</span></div><span class="go">Open on GitHub <i>↗</i></span></a>
+      <a class="card lift pcard tilt rv" href="https://github.com/ameer29/retail-customer-analysis-sql-powerbi" target="_blank" rel="noopener"><span class="k">Data analytics · AnalytixLabs · 2023</span><div class="t">Data analytics capstones</div><div class="d">A retail analysis taken from SQL Server to Excel Pareto to a 3-page Power BI dashboard, plus a Python study of 180k orders (57% late; First Class late on every order).</div><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Python</span></div><span class="go">Open on GitHub <i>↗</i></span></a>
       <a class="card lift pcard tilt rv" href="bba-research.html"><span class="k">Consumer research · BBA · 2020–21</span><div class="t">Netflix &amp; Swiggy customer studies</div><div class="d">Two independent survey studies (92 and 93 respondents), revisited in 2026 with corrected figures, an NPS of +48 and coded open-text answers.</div><div class="tags"><span class="tag">Survey design</span><span class="tag">NPS</span></div><span class="go">View case study <i>→</i></span></a>
     </div>
   </section>
@@ -391,7 +461,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
     <div class="xgrid">
 
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://www.forbes.com/advisor/" target="_blank" rel="noopener" data-mono="FA"><img alt="Forbes Advisor logo" src="https://www.google.com/s2/favicons?domain=forbes.com&sz=128"></a>
+        <div class="org"><a class="logo" href="https://www.forbes.com/advisor/" target="_blank" rel="noopener" data-mono="FA"><img alt="Forbes Advisor logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Forbes%20logo.svg?width=240"></a>
           <div><h3><a href="https://www.forbes.com/advisor/" target="_blank" rel="noopener">Forbes Advisor</a><span class="ext">↗</span></h3>
           <div class="meta"><span>📍 Chennai, India</span><span>Jan 2024 – Dec 2025</span><span>Global personal-finance advice platform</span></div></div></div>
         <div class="ladder"><span class="rung">Associate, Data Research<small>Jan 2024 – Mar 2025</small></span><span class="up">→</span><span class="rung cur">Senior Associate, Data Research<small>Apr 2025 – Dec 2025 · promoted</small></span></div>
@@ -416,8 +486,8 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 
       <article class="card rv">
         <div class="org"><a class="logo" href="https://www.analytixlabs.co.in/" target="_blank" rel="noopener" data-mono="AL"><img alt="AnalytixLabs logo" src="https://www.google.com/s2/favicons?domain=analytixlabs.co.in&sz=128"></a>
-          <div><h3>Career switch: full-time data analytics</h3>
-          <div class="meta"><span>📍 Bangalore, India</span><span>Apr 2023 – Dec 2023</span><span><a href="https://www.analytixlabs.co.in/" target="_blank" rel="noopener"><u>AnalytixLabs</u></a></span></div></div></div>
+          <div><h3><a href="https://www.analytixlabs.co.in/" target="_blank" rel="noopener">AnalytixLabs</a><span class="ext">↗</span></h3>
+          <div class="meta"><span>📍 Bangalore, India</span><span>Apr 2023 – Dec 2023</span><span>Studying data analytics, full-time</span></div></div></div>
         <p class="muted" style="margin-top:14px">Working with data every day at ITILITE showed me how much decisions depend on it. With no technical background I couldn't get the basics to stick alongside a job, so in <b>January 2023 I resigned to study full-time</b> and rebuild from first principles. Within weeks of finishing, I joined Forbes Advisor.</p>
         <div class="metrics">
           <div class="metric"><div class="v">Certified</div><div class="l">Data Analyst, Term 1: Excel, SQL &amp; Power BI</div></div>
@@ -433,7 +503,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
       </article>
 
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://www.itilite.com/" target="_blank" rel="noopener" data-mono="iL"><img alt="ITILITE logo" src="https://www.google.com/s2/favicons?domain=itilite.com&sz=128"></a>
+        <div class="org"><a class="logo" href="https://www.itilite.com/" target="_blank" rel="noopener" data-mono="iL"><img alt="ITILITE logo" src="https://www.google.com/s2/favicons?domain=itilite.com&sz=256"></a>
           <div><h3><a href="https://www.itilite.com/" target="_blank" rel="noopener">ITILITE Technologies</a><span class="ext">↗</span></h3>
           <div class="meta"><span>📍 Bengaluru, India</span><span>Nov 2021 – Jan 2023</span><span>SaaS for business travel &amp; expense management</span></div></div></div>
         <p class="muted small" style="margin-top:12px">A Bengaluru start-up founded in 2017 by two former McKinsey consultants. It raised a $29M Series C in April 2022, during my time there, and served 500,000+ users at 300+ companies in India and the US.</p>
@@ -467,29 +537,29 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
     <div class="sec-head rv"><div><p class="eyebrow">Education</p><h2>Learning across business, data and psychology</h2></div></div>
     <div class="tl">
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://www.esade.edu/" target="_blank" rel="noopener" data-mono="E"><img alt="ESADE logo" src="https://www.google.com/s2/favicons?domain=esade.edu&sz=128"></a>
+        <div class="org"><a class="logo" href="https://www.esade.edu/" target="_blank" rel="noopener" data-mono="E"><img alt="ESADE logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Esade%20logo%20nuevo.png?width=240"></a>
           <div><h3><a href="https://www.esade.edu/" target="_blank" rel="noopener">ESADE Business School</a> · CEMS exchange</h3><div class="meta"><span>📍 Barcelona, Spain</span><span>Aug – Dec 2026</span></div></div></div>
         <p class="muted" style="margin-top:12px">Global Strategy, Data Analytics for Global Management and Creative Design Thinking, plus Spanish for the CEMS language requirement. In Creative Design Thinking our team built <a href="mesa.html"><u>Mesa</u></a>, a live app tackling youth loneliness.</p>
       </article>
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://bschool.nus.edu.sg/" target="_blank" rel="noopener" data-mono="NUS"><img alt="NUS logo" src="https://www.google.com/s2/favicons?domain=nus.edu.sg&sz=128"></a>
+        <div class="org"><a class="logo" href="https://bschool.nus.edu.sg/" target="_blank" rel="noopener" data-mono="NUS"><img alt="NUS logo" src="https://en.wikipedia.org/wiki/Special:FilePath/NationalUniversityofSingapore.svg?width=240"></a>
           <div><h3><a href="https://bschool.nus.edu.sg/" target="_blank" rel="noopener">NUS Business School</a> · MSc in Management + <a href="https://www.cems.org/" target="_blank" rel="noopener">CEMS MIM</a></h3><div class="meta"><span>📍 Singapore → Barcelona → Helsinki</span><span>Jan 2026 – Jul 2027</span></div></div></div>
         <p class="muted" style="margin-top:12px">A global master's across Singapore (Jan – May 2026), ESADE in Barcelona (Aug – Dec 2026) and <a href="https://www.aalto.fi/" target="_blank" rel="noopener"><u>Aalto</u></a> in Helsinki (from Jan 2027). Coursework includes innovation and emerging-markets strategy, pricing analytics and marketing analytics.</p>
       </article>
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://www.bitsom.edu.in/" target="_blank" rel="noopener" data-mono="BI"><img alt="BITSoM logo" src="https://www.google.com/s2/favicons?domain=bitsom.edu.in&sz=128"></a>
+        <div class="org"><a class="logo" href="https://www.bitsom.edu.in/" target="_blank" rel="noopener" data-mono="BI"><img alt="BITSoM logo" src="data:image/webp;base64,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"></a>
           <div><h3><a href="https://www.bitsom.edu.in/" target="_blank" rel="noopener">BITS School of Management</a> · Product Management with Generative &amp; Agentic AI</h3><div class="meta"><span>📍 Mumbai, India (alongside Forbes Advisor)</span><span>Jul 2025 – Jan 2026</span><span>6 modules · capstone</span></div></div></div>
         <p class="muted" style="margin-top:12px">Product thinking, design and MVP, building with agentic AI (prompting, RAG, agent frameworks, LLMOps, responsible AI), Agile delivery, go-to-market, and data and metrics.</p>
         <div class="btns" style="margin-top:6px"><a class="btn sm" href="bitsom-product-management.html">Module-by-module curriculum <span class="arr">→</span></a><a class="btn sm" href="swasthya-sahayak.html">Capstone case study <span class="arr">→</span></a></div>
       </article>
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://onlinejain.com/" target="_blank" rel="noopener" data-mono="JU"><img alt="Jain Online logo" src="https://www.google.com/s2/favicons?domain=onlinejain.com&sz=128"></a>
+        <div class="org"><a class="logo" href="https://onlinejain.com/" target="_blank" rel="noopener" data-mono="JU"><img alt="Jain Online logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jain-University-Bangalore-India-Logo.png?width=240"></a>
           <div><h3><a href="https://onlinejain.com/" target="_blank" rel="noopener">Jain University (Online)</a> · MSc Psychology</h3><div class="meta"><span>📍 Bangalore, India</span><span>2024 – 2026</span></div></div></div>
         <p class="muted" style="margin-top:12px">Studied part-time alongside full-time work, focused on motivation, performance and human behaviour. It shapes how I think about users, customers and teams.</p>
         <p class="muted small"><a href="https://sociallysouled.com/" target="_blank" rel="noopener"><u>Socially Souled</u></a> · Clinical Psychology Training-Based Internship (Jul – Aug 2026 · 240 hours · graded <b>9.3/10</b>): the Mental Status Examination, case-history intake, risk assessment, psychopathology, therapeutic approaches (CBT, DBT, humanistic) and clinical ethics.</p>
       </article>
       <article class="card rv">
-        <div class="org"><a class="logo" href="https://agbs.in/" target="_blank" rel="noopener" data-mono="A"><img alt="Amity Global Business School logo" src="https://www.google.com/s2/favicons?domain=agbs.in&sz=128"></a>
+        <div class="org"><a class="logo" href="https://agbs.in/" target="_blank" rel="noopener" data-mono="A"><img alt="Amity Global Business School logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Amity%20University%20Mumbai%20(cropped).png?width=240"></a>
           <div><h3><a href="https://agbs.in/" target="_blank" rel="noopener">Amity Global Business School</a> · BBA in Marketing</h3><div class="meta"><span>📍 Bangalore, India</span><span>2018 – 2021</span><span>First Class Distinction</span></div></div></div>
         <p class="muted" style="margin-top:12px">Two independent survey-based studies on <a href="bba-research.html"><u>Netflix and Swiggy</u></a>, plus a 6-week digital marketing training with Internshala (2019).</p>
       </article>
@@ -498,24 +568,24 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 
   <!-- CERTIFICATIONS -->
   <section id="certs">
-    <div class="sec-head rv"><div><p class="eyebrow">Certifications</p><h2>Proof of work</h2><p class="muted">Click a certificate to view it.</p></div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Certifications</p><h2>Proof of work</h2><p class="muted">Each card opens a page on what I actually did there. Use “View certificate” to see the certificate itself.</p></div></div>
     <div class="cgrid">
-      <div class="card cert rv" data-full="assets/certs/cert-bitsom.webp"><div class="img"><img src="assets/certs/cert-bitsom.webp" alt="BITSoM certificate: Product Management with Generative & Agentic AI" loading="lazy"><span class="ph" hidden>BITSoM</span></div><div class="cb"><div class="ct">Product Management with Generative &amp; Agentic AI</div><div class="cs">BITSoM · 30 Jul 2025 – 25 Jan 2026</div></div></div>
-      <div class="card cert rv" data-full="assets/certs/cert-analytixlabs.webp"><div class="img"><img src="assets/certs/cert-analytixlabs.webp" alt="AnalytixLabs Certified Data Analyst certificate" loading="lazy"><span class="ph" hidden>AnalytixLabs</span></div><div class="cb"><div class="ct">Certified Data Analyst (Excel, SQL &amp; Power BI)</div><div class="cs">AnalytixLabs · coursework 2023, certified Oct 2024</div></div></div>
-      <div class="card cert rv" data-full="assets/certs/cert-sociallysouled.webp"><div class="img"><img src="assets/certs/cert-sociallysouled.webp" alt="Socially Souled clinical psychology internship certificate" loading="lazy"><span class="ph" hidden>Socially Souled</span></div><div class="cb"><div class="ct">Clinical Psychology Training-Based Internship</div><div class="cs">Socially Souled · 240 hours · 9.3/10</div></div></div>
-      <div class="card cert noimg rv"><div class="img"><span class="ph">Internshala</span></div><div class="cb"><div class="ct">Digital Marketing Training</div><div class="cs">Internshala · Jun – Jul 2019 · SEO, analytics, content, paid and social</div></div></div>
+      <a class="card cert rv" href="bitsom-product-management.html" target="_blank" rel="noopener" data-full="assets/certs/cert-bitsom.webp"><div class="img"><img src="assets/certs/cert-bitsom.webp" alt="BITSoM certificate: Product Management with Generative & Agentic AI" loading="lazy"><span class="ph" hidden>Certificate</span></div><div class="cb"><div class="issuer"><span class="clogo"><img src="data:image/webp;base64,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" alt="BITSoM logo"></span>BITSoM</div><div class="ct">Product Management with Generative &amp; Agentic AI</div><div class="cs">30 Jul 2025 – 25 Jan 2026 · 6 modules + capstone</div><div class="cgo"><span>See the curriculum <span class="arr">↗</span></span><span class="viewc" role="button" tabindex="0">View certificate</span></div></div></a>
+      <a class="card cert rv" href="certifications.html#analytixlabs" target="_blank" rel="noopener" data-full="assets/certs/cert-analytixlabs.webp"><div class="img"><img src="assets/certs/cert-analytixlabs.webp" alt="AnalytixLabs Certified Data Analyst certificate" loading="lazy"><span class="ph" hidden>Certificate</span></div><div class="cb"><div class="issuer"><span class="clogo"><img src="https://www.google.com/s2/favicons?domain=analytixlabs.co.in&sz=128" alt="AnalytixLabs logo"></span>AnalytixLabs</div><div class="ct">Certified Data Analyst (Excel, SQL &amp; Power BI)</div><div class="cs">Coursework 2023 · certified Oct 2024</div><div class="cgo"><span>See the projects <span class="arr">↗</span></span><span class="viewc" role="button" tabindex="0">View certificate</span></div></div></a>
+      <a class="card cert rv" href="certifications.html#clinical-psychology" target="_blank" rel="noopener" data-full="assets/certs/cert-sociallysouled.webp"><div class="img"><img src="assets/certs/cert-sociallysouled.webp" alt="Socially Souled clinical psychology internship certificate" loading="lazy"><span class="ph" hidden>Certificate</span></div><div class="cb"><div class="issuer"><span class="clogo"><img src="data:image/webp;base64,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" alt="Socially Souled logo"></span>Socially Souled</div><div class="ct">Clinical Psychology Training-Based Internship</div><div class="cs">Jul – Aug 2026 · 240 hours · 9.3/10</div><div class="cgo"><span>See what I learnt <span class="arr">↗</span></span><span class="viewc" role="button" tabindex="0">View certificate</span></div></div></a>
+      <a class="card cert rv noimg" href="certifications.html#digital-marketing" target="_blank" rel="noopener"><div class="img"><img class="biglogo" src="https://en.wikipedia.org/wiki/Special:FilePath/Internshala_company_logo.png?width=240" alt="Internshala logo"></div><div class="cb"><div class="issuer"><span class="clogo"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Internshala_company_logo.png?width=240" alt="Internshala logo"></span>Internshala</div><div class="ct">Digital Marketing Training</div><div class="cs">1 Jun – 13 Jul 2019 · 6 weeks</div><div class="cgo"><span>See what I covered <span class="arr">↗</span></span></div></div></a>
     </div>
   </section>
 
   <!-- COMMUNITY -->
   <section id="community">
-    <div class="sec-head rv"><div><p class="eyebrow">Community</p><h2>Giving back: PEER mentoring</h2><p class="muted">A structured youth-mentoring programme in Singapore, and the field placement for my MSc in Psychology.</p></div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Community</p><h2>Giving back</h2><p class="muted">PEER, a structured youth-mentoring programme in Singapore and the field placement for my MSc in Psychology, and a small circle of NUS applicants who were where I was in 2021.</p></div></div>
     <article class="card rv">
-      <div class="org"><a class="logo" href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener" data-mono="PR"><img alt="Mendaki Club logo" src="https://www.google.com/s2/favicons?domain=mendakiclub.org.sg&sz=128"></a>
-        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>📍 Singapore (Woodlands &amp; Tampines)</span><span>From Feb 2026</span><span>MENDAKI Club · Yayasan MENDAKI</span></div></div></div>
-      <p class="muted" style="margin-top:14px"><b>PEER</b> (Positive Engagement through Experiential Relationships) is a six-month programme that pairs trained volunteer mentors with secondary-school students aged 11–16. It runs every other Saturday, built on the <b>5Cs of Positive Youth Development</b>. I joined for the Feb – Aug 2026 cycle, starting with mentor onboarding and mock rounds on 7 February.</p>
+      <div class="org"><a class="logo" href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener" data-mono="PR"><img alt="Mendaki Club logo" src="https://icons.duckduckgo.com/ip3/mendakiclub.org.sg.ico"></a>
+        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>📍 Singapore (Woodlands &amp; Tampines)</span><span>Feb – Aug 2026 · completed</span><span>MENDAKI Club · Yayasan MENDAKI</span></div></div></div>
+      <p class="muted" style="margin-top:14px"><b>PEER</b> (Positive Engagement through Experiential Relationships) is a six-month programme that pairs trained volunteer mentors with secondary-school students aged 11–16. It runs every other Saturday, built on the <b>5Cs of Positive Youth Development</b>. I mentored through the full Feb – Aug 2026 cycle, from mentor onboarding and mock rounds on 7 February to the closing session in August.</p>
       <div class="metrics">
-        <div class="metric"><div class="v">12</div><div class="l">sessions over six months</div></div>
+        <div class="metric"><div class="v">12</div><div class="l">sessions over six months, all completed</div></div>
         <div class="metric"><div class="v">90+</div><div class="l">volunteer mentors and organisers</div></div>
         <div class="metric"><div class="v">60+</div><div class="l">mentees aged 11–16</div></div>
         <div class="metric"><div class="v">2 : 3</div><div class="l">mentors to mentees in every squad</div></div>
@@ -531,7 +601,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
       </div>
       <div class="cdesc" id="cdesc"></div>
 
-      <div class="h4" style="margin-top:22px">The season · sessions I've completed are marked ✓</div>
+      <div class="h4" style="margin-top:22px">The season · all 12 sessions completed ✓</div>
       <div class="season" id="season"></div>
       <div class="sdesc" id="sdesc"></div>
     </article>
@@ -559,17 +629,29 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
         </ul>
       </div>
     </div>
-    <p class="small muted rv" style="margin-top:12px">Photos from the programme aren't shown here because the mentees are under 18.</p>
+    <p class="small muted rv" style="margin-top:12px">My placement report (written in May) looks closely at Sessions 1–4. I stayed with my squad for the rest of the season, through to the closing session in August.</p>
+
+    <article class="card rv" style="margin-top:22px">
+      <div class="org"><a class="logo" href="https://nus.edu.sg/" target="_blank" rel="noopener" data-mono="NUS"><img alt="NUS logo" src="https://en.wikipedia.org/wiki/Special:FilePath/NationalUniversityofSingapore.svg?width=240"></a>
+        <div><h3>NUS applicant circle</h3><div class="meta"><span>Informal, self-started</span><span>From Mar 2026</span><span>Weekly sessions</span></div></div></div>
+      <p class="muted" style="margin-top:14px">From March 2026, people applying to NUS started asking me to help strengthen their profiles. Instead of answering one by one, I brought four of them together and met them every week to work on their profiles, essays and interview preparation, drawing on what I learnt from my own two applications. <b>Two of the four have since secured places at NUS.</b></p>
+      <div class="metrics">
+        <div class="metric"><div class="v">4</div><div class="l">applicants in the group</div></div>
+        <div class="metric"><div class="v">Weekly</div><div class="l">profile, essay and interview work</div></div>
+        <div class="metric"><div class="v">2 of 4</div><div class="l">secured places at NUS</div></div>
+        <div class="metric"><div class="v">2</div><div class="l">applications of my own to learn from</div></div>
+      </div>
+    </article>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="sec-head rv"><div><p class="eyebrow">Toolkit</p><h2>Skills</h2></div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Toolkit</p><h2>Skills</h2><p class="muted">Hover over a skill to wake it up.</p></div></div>
     <div class="sgrid">
-      <div class="card rv"><h3>Data &amp; AI</h3><div class="skill-tags"><span>Python · pandas</span><span>NumPy</span><span>Matplotlib · Seaborn</span><span>SciPy</span><span>scikit-learn</span><span>SQL Server</span><span>Excel · Solver</span><span>Tableau</span><span>Power BI</span><span>Google Gemini</span></div></div>
-      <div class="card rv"><h3>Product</h3><div class="skill-tags"><span>PRDs</span><span>Jobs-to-be-Done</span><span>Value Proposition Canvas</span><span>MoSCoW · RICE</span><span>Success metrics</span><span>A/B test design</span><span>Prototyping (Lovable)</span><span>Vercel · Supabase</span></div></div>
-      <div class="card rv"><h3>Strategy &amp; research</h3><div class="skill-tags"><span>Survey design</span><span>Market entry</span><span>Business Model Canvas</span><span>Blue Ocean · Four Actions</span><span>Design thinking</span><span>Stakeholder advisory</span><span>Process optimisation</span></div></div>
-      <div class="card rv"><h3>Languages</h3><div class="skill-tags"><span>English</span><span>Tamil</span><span>Hindi</span><span>Urdu</span><span>Spanish (elementary)</span></div></div>
+      <div class="card rv"><h3>Data &amp; AI</h3><div class="skill-tags"><span data-i="🐍" data-a="snake">Python · pandas</span><span data-i="🔢">NumPy</span><span data-i="📈">Matplotlib · Seaborn</span><span data-i="🧪">SciPy</span><span data-i="🤖">scikit-learn</span><span data-i="🗄️">SQL Server</span><span data-i="🧮">Excel · Solver</span><span data-i="📊">Tableau</span><span data-i="⚡" data-a="pulse">Power BI</span><span data-i="✨" data-a="pulse">Google Gemini</span></div></div>
+      <div class="card rv"><h3>Product</h3><div class="skill-tags"><span data-i="📝">PRDs</span><span data-i="🎯" data-a="pulse">Jobs-to-be-Done</span><span data-i="🧩">Value Proposition Canvas</span><span data-i="⚖️">MoSCoW · RICE</span><span data-i="📏">Success metrics</span><span data-i="🆎">A/B test design</span><span data-i="🛠️">Prototyping (Lovable)</span><span data-i="🚀" data-a="pulse">Vercel · Supabase</span></div></div>
+      <div class="card rv"><h3>Strategy &amp; research</h3><div class="skill-tags"><span data-i="📋">Survey design</span><span data-i="🌍">Market entry</span><span data-i="🗺️">Business Model Canvas</span><span data-i="🌊" data-a="snake">Blue Ocean · Four Actions</span><span data-i="💡" data-a="pulse">Design thinking</span><span data-i="🤝" data-a="pulse">Stakeholder advisory</span><span data-i="⚙️" data-a="spin">Process optimisation</span></div></div>
+      <div class="card rv"><h3>Languages</h3><div class="skill-tags"><span data-i="Hello" data-a="say">English</span><span data-i="வணக்கம்" data-a="say">Tamil</span><span data-i="नमस्ते" data-a="say">Hindi</span><span data-i="آداب" data-a="say">Urdu</span><span data-i="¡Hola!" data-a="say">Spanish (elementary)</span></div></div>
     </div>
   </section>
 
@@ -646,8 +728,10 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
   // certificates
   var lb=document.getElementById('lightbox'),lbi=lb.querySelector('img');
   document.querySelectorAll('.cert[data-full]').forEach(function(c){
-    var img=c.querySelector('img'); img.addEventListener('error',function(){img.remove(); c.querySelector('.ph').hidden=false; c.classList.add('noimg'); c.removeAttribute('data-full');});
-    c.addEventListener('click',function(){if(!c.dataset.full)return; lbi.src=c.dataset.full; lbi.alt=img.alt; lb.classList.add('on');});
+    var img=c.querySelector('.img > img'), vc=c.querySelector('.viewc');
+    img.addEventListener('error',function(){img.remove(); c.querySelector('.ph').hidden=false; c.classList.add('noimg'); c.removeAttribute('data-full'); if(vc) vc.remove();});
+    function open(e){e.preventDefault(); e.stopPropagation(); if(!c.dataset.full)return; lbi.src=c.dataset.full; lbi.alt=img.alt; lb.classList.add('on');}
+    if(vc){vc.addEventListener('click',open); vc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')open(e);});}
   });
   lb.addEventListener('click',function(e){if(e.target!==lbi) lb.classList.remove('on');});
   addEventListener('keydown',function(e){if(e.key==='Escape') lb.classList.remove('on');});
@@ -664,7 +748,7 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 window.addEventListener('DOMContentLoaded',function(){
   var STOPS=[
     {city:'Dubai',country:'United Arab Emirates',iso:'784',ll:[55.27,25.20],when:'Childhood',what:'Where I grew up',more:'Grew up in Dubai, which gave me an international outlook from the start.'},
-    {city:'Bangalore',country:'India',iso:'356',ll:[77.59,12.97],when:'2018 – 2023',what:'BBA · ITILITE · career switch',more:'BBA in Marketing (First Class Distinction), three roles at ITILITE (Value Champion), then a full-time retrain in data analytics.'},
+    {city:'Bangalore',country:'India',iso:'356',ll:[77.59,12.97],when:'2018 – 2023',what:'BBA · ITILITE · studying data analytics',more:'BBA in Marketing (First Class Distinction), three roles at ITILITE (Value Champion), then a year studying data analytics full-time.'},
     {city:'Chennai',country:'India',iso:'356',ll:[80.27,13.08],when:'2024 – 2025',what:'Forbes Advisor',more:'Data research, Associate to Senior Associate in 15 months, Rockstar Rookie award. BITSoM product management alongside.'},
     {city:'Singapore',country:'Singapore',iso:'702',ll:[103.82,1.35],when:'Jan – May 2026',what:'NUS Business School',more:'MSc in Management + CEMS MIM: pricing, marketing analytics and emerging-markets strategy. Volunteer mentor with the PEER Community Programme.'},
     {city:'Barcelona',country:'Spain',iso:'724',ll:[2.17,41.39],when:'Aug – Dec 2026',what:'ESADE · CEMS exchange',more:'Global strategy, data analytics and design thinking, where I built Mesa, a live app tackling youth loneliness.'},
@@ -753,12 +837,12 @@ window.addEventListener('DOMContentLoaded',function(){
   function showC(i){cs.forEach(function(b,j){b.classList.toggle('on',j===i);}); cd.innerHTML='<b>'+C[i][0]+'</b>: '+C[i][1]+'<br><span style="color:var(--ink-3)">In PEER:</span> '+C[i][2];}
   cs.forEach(function(b,i){b.addEventListener('mouseenter',function(){showC(i);}); b.addEventListener('click',function(){showC(i);}); b.addEventListener('focus',function(){showC(i);});});
   showC(0);
-  var S=[['1','Orientation','14 Feb',1],['2','Community session: Ramadan outreach','28 Feb',1],['3','Social session: bonding (drawing and board games)','14 Mar',1],['—','Hari Raya break','21 Mar – 10 Apr',-1],['4','Social session: bonding (shared squad art)','11 Apr',1],['5','Squad outing (postponed)','25 Apr',0],['6','Social session','9 May',0],['7','Squad outing','23 May',0],['8','Career session','6 Jun',0],['9','Life-skills session','20 Jun',0],['10','Squad outing','4 Jul',0],['11','Community session 2','18 Jul',0],['12','Closing','1 Aug',0]];
+  var S=[['1','Orientation','14 Feb',1],['2','Community session: Ramadan outreach','28 Feb',1],['3','Social session: bonding (drawing and board games)','14 Mar',1],['—','Hari Raya break','21 Mar – 10 Apr',-1],['4','Social session: bonding (shared squad art)','11 Apr',1],['5','Squad outing','rescheduled from 25 Apr',1],['6','Social session','9 May',1],['7','Squad outing','23 May',1],['8','Career session','6 Jun',1],['9','Life-skills session','20 Jun',1],['10','Squad outing','4 Jul',1],['11','Community session 2','18 Jul',1],['12','Closing','1 Aug',1]];
   var se=document.getElementById('season'), sd=document.getElementById('sdesc'), btns=[];
   S.forEach(function(s,i){var b=document.createElement('button'); b.type='button'; b.className='s'+(s[3]===1?' done':'')+(s[3]===-1?' brk':''); b.textContent=s[3]===-1?'Break':s[0]; b.title=s[1];
     b.addEventListener('mouseenter',function(){show(i);}); b.addEventListener('click',function(){show(i);}); se.appendChild(b); btns.push(b);});
   function show(i){var s=S[i]; btns.forEach(function(b,j){b.classList.toggle('on',j===i);}); sd.innerHTML=(s[3]===-1?'':'<b>Session '+s[0]+'</b> · ')+s[1]+' <span style="color:var(--ink-3)">· '+s[2]+' 2026'+(s[3]===1?' · completed ✓':'')+'</span>';}
-  show(4);
+  show(S.length-1);
 })();
 </script>
 </body>
