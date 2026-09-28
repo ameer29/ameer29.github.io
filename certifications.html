@@ -105,6 +105,14 @@ figure.cert figcaption b{color:var(--ink-2);font-weight:600}
 footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--ink-3);font-size:13px;text-align:center}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+body.focus .hero{padding:32px 0 8px}
+body.focus .hero h1,body.focus .hero .lead,body.focus .hero>.eyebrow{display:none}
+body.focus .shelf{margin-top:8px}
+body.focus section.c{display:none;border-top:0;padding-top:28px}
+body.focus section.c.on{display:block}
+.tile.on{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft)}
+.viewall{display:none;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--acc)}
+body.focus .viewall{display:inline-flex}
 </style>
 </head>
 <body>
@@ -125,6 +133,7 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--ink-3);f
       <a class="tile rv" href="#awards"><span class="kind">Award</span><span class="lg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Forbes%20logo.svg?width=240" alt="Forbes logo"></span><span class="k">Forbes Advisor · 2024</span><span class="t">Rockstar Rookie</span></a>
       <a class="tile rv" href="#awards"><span class="kind">Award</span><span class="lg"><img src="https://www.google.com/s2/favicons?domain=itilite.com&amp;sz=256" alt="ITILITE logo"></span><span class="k">ITILITE Technologies</span><span class="t">Value Champion</span></a>
     </div>
+    <a class="viewall" href="#all">View all credentials →</a>
   </div>
 
   <!-- BITSOM -->
@@ -267,6 +276,8 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--ink-3);f
     b.addEventListener('click',function(){li.src=b.dataset.full;li.alt=im.alt;lb.classList.add('on');});});
   lb.addEventListener('click',function(e){if(e.target!==li)lb.classList.remove('on');});
   addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on');});
+  function route(){var h=location.hash.slice(1),s=h&&document.getElementById(h),f=!!(s&&s.classList.contains('c'));document.body.classList.toggle('focus',f);document.querySelectorAll('section.c').forEach(function(x){x.classList.toggle('on',x===s);});document.querySelectorAll('.tile').forEach(function(x){x.classList.toggle('on',f&&x.getAttribute('href')==='#'+h);});if(f){s.querySelectorAll('.rv').forEach(function(e){e.classList.add('in');});var q=document.getElementById('score');if(q)q.classList.add('in');}setTimeout(function(){window.scrollTo(0,0);},0);}
+  addEventListener('hashchange',route);route();
   document.querySelectorAll('.logo img,.lg img').forEach(function(i){i.addEventListener('error',function(){i.replaceWith(document.createTextNode(i.alt.replace(' logo','')));});});
   var sc2=document.getElementById('score');
   if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});sc2.classList.add('in');return;}
