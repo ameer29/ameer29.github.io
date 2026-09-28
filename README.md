@@ -14,3 +14,5 @@ Personal portfolio of **Ameer Batcha**: business, data and product work, from BB
 | [BBA research](https://ameer29.github.io/bba-research.html) | Netflix and Swiggy customer studies, revisited in 2026 |
 
 Built as a static site (HTML/CSS, no framework) and hosted on GitHub Pages.
+
+`preview.html` is a redesigned homepage under review.
