@@ -262,6 +262,32 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--panel);border:1px solid var(--gold);color:var(--ink);padding:10px 16px;border-radius:12px;font-size:14px;z-index:90;box-shadow:var(--shadow);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .toast.on{transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* community */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.fivec{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fivec .c{font:inherit;font-size:14px;color:var(--ink-2);background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer;transition:all .25s}
+.fivec .c b{font:700 18px "Playfair Display";color:var(--gold);margin-right:1px}
+.fivec .c:hover,.fivec .c.on{border-color:var(--gold);color:var(--ink);background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--gold-glow)}
+.cdesc,.sdesc{margin-top:10px;padding:14px 16px;border-radius:12px;border:1px dashed var(--line-2);font-size:14px;color:var(--ink-2);min-height:64px}
+.cdesc b,.sdesc b{color:var(--gold)}
+.season{display:grid;grid-template-columns:repeat(13,1fr);gap:6px;margin-top:8px}
+@media(max-width:700px){.season{grid-template-columns:repeat(7,1fr)}}
+.season .s{font:inherit;cursor:pointer;aspect-ratio:1;border-radius:10px;border:1px solid var(--line);background:var(--bg-2);color:var(--ink-3);display:grid;place-items:center;font-size:13px;font-weight:600;position:relative;transition:all .2s}
+.season .s.done{border-color:var(--gold);color:var(--gold);background:var(--gold-soft)}
+.season .s.done::after{content:"✓";position:absolute;top:2px;right:5px;font-size:10px}
+.season .s.brk{border-style:dashed;font-size:10px;cursor:default}
+.season .s:hover,.season .s.on{transform:translateY(-3px);border-color:var(--gold);color:var(--ink)}
+.prog{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.prog div{display:grid;grid-template-columns:80px 1fr;gap:4px 12px;align-items:center;font-size:13px}
+.prog span{color:var(--ink-3)}
+.prog i{display:block;height:8px;border-radius:99px;background:var(--line);position:relative;overflow:hidden}
+.prog i::after{content:"";position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:99px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.rv.in .prog i::after{width:var(--w)}
+.prog em{grid-column:2;font-style:normal;color:var(--ink-2)}
+.tl .card{overflow:visible}
+.card::before{border-radius:inherit}
 </style>
 </head>
 <body>
@@ -483,12 +509,57 @@ footer{padding:36px 0 50px;color:var(--ink-3);font-size:13px;text-align:center}
 
   <!-- COMMUNITY -->
   <section id="community">
-    <div class="sec-head rv"><div><p class="eyebrow">Community</p><h2>Giving back</h2></div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Community</p><h2>Giving back: PEER mentoring</h2><p class="muted">A structured youth-mentoring programme in Singapore, and the field placement for my MSc in Psychology.</p></div></div>
     <article class="card rv">
       <div class="org"><a class="logo" href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener" data-mono="PR"><img alt="Mendaki Club logo" src="https://www.google.com/s2/favicons?domain=mendakiclub.org.sg&sz=128"></a>
-        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>📍 Singapore</span><span>MENDAKI / Yayasan MENDAKI initiative</span></div></div></div>
-      <p class="muted" style="margin-top:12px">I mentor secondary school students through a structured community programme, running skills-building sessions on personal development and goal-setting.</p>
+        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>📍 Singapore (Woodlands &amp; Tampines)</span><span>From Feb 2026</span><span>MENDAKI Club · Yayasan MENDAKI</span></div></div></div>
+      <p class="muted" style="margin-top:14px"><b>PEER</b> (Positive Engagement through Experiential Relationships) is a six-month programme that pairs trained volunteer mentors with secondary-school students aged 11–16. It runs every other Saturday, built on the <b>5Cs of Positive Youth Development</b>. I joined for the Feb – Aug 2026 cycle, starting with mentor onboarding and mock rounds on 7 February.</p>
+      <div class="metrics">
+        <div class="metric"><div class="v">12</div><div class="l">sessions over six months</div></div>
+        <div class="metric"><div class="v">90+</div><div class="l">volunteer mentors and organisers</div></div>
+        <div class="metric"><div class="v">60+</div><div class="l">mentees aged 11–16</div></div>
+        <div class="metric"><div class="v">2 : 3</div><div class="l">mentors to mentees in every squad</div></div>
+      </div>
+
+      <div class="h4">The 5Cs framework · hover or tap each C</div>
+      <div class="fivec" id="fivec">
+        <button type="button" class="c on" data-i="0"><b>C</b>ompetence</button>
+        <button type="button" class="c" data-i="1"><b>C</b>onfidence</button>
+        <button type="button" class="c" data-i="2"><b>C</b>onnection</button>
+        <button type="button" class="c" data-i="3"><b>C</b>haracter</button>
+        <button type="button" class="c" data-i="4"><b>C</b>ontribution</button>
+      </div>
+      <div class="cdesc" id="cdesc"></div>
+
+      <div class="h4" style="margin-top:22px">The season · sessions I've completed are marked ✓</div>
+      <div class="season" id="season"></div>
+      <div class="sdesc" id="sdesc"></div>
     </article>
+
+    <div class="pgrid" style="margin-top:16px">
+      <div class="card lift pcard rv"><span class="k">Session 1 · 14 Feb 2026</span><div class="t">Orientation: planting trust</div><div class="d">First meeting with my squad of three mentees. We used structured icebreakers and handed out reflection journals for every session. As the mock rounds predicted, the mentees were reserved, so the goal was simply a safe first impression, not a breakthrough.</div><div class="tags"><span class="tag">Rapport</span><span class="tag">Active listening</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 2 · 28 Feb 2026</span><div class="t">Ramadan outreach: food and rations</div><div class="d">Mentees helped prepare the rations, plan the route and hand out food to families in need, followed by a debrief. Many reflected in their journals on privilege and community: Character and Contribution in practice.</div><div class="tags"><span class="tag">Community service</span><span class="tag">Empathy</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Sessions 3 &amp; 4 · Mar – Apr 2026</span><div class="t">Theme event: trust through creative expression</div><div class="d">Draw-yourself icebreakers, cooperative (not competitive) board games, then a shared squad art piece after the Hari Raya break. Mentees who were quiet in Session 1 started conversations themselves by Session 4.</div><div class="tags"><span class="tag">Play-based</span><span class="tag">Teamwork</span></div></div>
+    </div>
+
+    <div class="grid2 rv" style="margin-top:16px">
+      <div class="card"><div class="h4" style="margin-top:0">What changed across the sessions</div>
+        <div class="prog">
+          <div><span>Session 1</span><i style="--w:25%"></i><em>Guarded, unsure what to expect</em></div>
+          <div><span>Session 3</span><i style="--w:60%"></i><em>Relaxing, expressing themselves through drawing and games</em></div>
+          <div><span>Session 4</span><i style="--w:90%"></i><em>Initiating conversations, laughing, keen to come back</em></div>
+        </div>
+        <p class="small muted" style="margin-top:10px">My own observations, recorded in my placement report.</p>
+      </div>
+      <div class="card"><div class="h4" style="margin-top:0">Through a psychology lens</div>
+        <ul class="clean">
+          <li><b>Rapport can't be rushed.</b> As in therapy, the relationship is the intervention, so I built trust through consistency rather than questions.</li>
+          <li><b>Play and art lower the barrier.</b> Adolescents who won't talk in a new group will draw, build and play, and the conversation follows.</li>
+          <li><b>Feedback loops keep it honest.</b> Mentee journals and mentor reports to group leads mean the programme adapts to what the mentees actually need.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small muted rv" style="margin-top:12px">Photos from the programme aren't shown here because the mentees are under 18.</p>
   </section>
 
   <!-- SKILLS -->
@@ -669,6 +740,26 @@ window.addEventListener('DOMContentLoaded',function(){
   }
   tryLoad(0);
 });
+</script>
+
+<script>
+(function(){
+  var C=[['Competence','A positive view of one\'s abilities: social, academic, cognitive and vocational.','Build social skills, academic confidence and life skills.'],
+         ['Confidence','An inner sense of self-worth, self-efficacy and belief in the future.','Consistent encouragement and reinforcement from mentors.'],
+         ['Connection','Positive two-way bonds with peers, family, school and community.','A real bond with the mentor, and better relationships beyond the programme.'],
+         ['Character','Respect, a sense of right and wrong, integrity, care and empathy.','Mentors model positive values and hold high expectations.'],
+         ['Contribution','Active participation in family, school and community life, and leadership.','Chances to give back, like the Ramadan food distribution.']];
+  var cd=document.getElementById('cdesc'), cs=[].slice.call(document.querySelectorAll('#fivec .c'));
+  function showC(i){cs.forEach(function(b,j){b.classList.toggle('on',j===i);}); cd.innerHTML='<b>'+C[i][0]+'</b>: '+C[i][1]+'<br><span style="color:var(--ink-3)">In PEER:</span> '+C[i][2];}
+  cs.forEach(function(b,i){b.addEventListener('mouseenter',function(){showC(i);}); b.addEventListener('click',function(){showC(i);}); b.addEventListener('focus',function(){showC(i);});});
+  showC(0);
+  var S=[['1','Orientation','14 Feb',1],['2','Community session: Ramadan outreach','28 Feb',1],['3','Social session: bonding (drawing and board games)','14 Mar',1],['—','Hari Raya break','21 Mar – 10 Apr',-1],['4','Social session: bonding (shared squad art)','11 Apr',1],['5','Squad outing (postponed)','25 Apr',0],['6','Social session','9 May',0],['7','Squad outing','23 May',0],['8','Career session','6 Jun',0],['9','Life-skills session','20 Jun',0],['10','Squad outing','4 Jul',0],['11','Community session 2','18 Jul',0],['12','Closing','1 Aug',0]];
+  var se=document.getElementById('season'), sd=document.getElementById('sdesc'), btns=[];
+  S.forEach(function(s,i){var b=document.createElement('button'); b.type='button'; b.className='s'+(s[3]===1?' done':'')+(s[3]===-1?' brk':''); b.textContent=s[3]===-1?'Break':s[0]; b.title=s[1];
+    b.addEventListener('mouseenter',function(){show(i);}); b.addEventListener('click',function(){show(i);}); se.appendChild(b); btns.push(b);});
+  function show(i){var s=S[i]; btns.forEach(function(b,j){b.classList.toggle('on',j===i);}); sd.innerHTML=(s[3]===-1?'':'<b>Session '+s[0]+'</b> · ')+s[1]+' <span style="color:var(--ink-3)">· '+s[2]+' 2026'+(s[3]===1?' · completed ✓':'')+'</span>';}
+  show(4);
+})();
 </script>
 </body>
 </html>
