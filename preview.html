@@ -8,7 +8,8 @@
 <script>try{var _t=localStorage.getItem("ab-theme");if(_t)document.documentElement.setAttribute("data-theme",_t)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-10 0 220 120'><g transform='skewX(-10) translate(14 0)' fill='none' stroke='%230e1422' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'><path d='M20 100 C 44 78, 62 40, 80 14 C 82 40, 80 72, 76 100'/><path d='M34 76 C 50 70, 64 68, 78 68 M78 68 C 92 66, 100 58, 104 44 C 108 30, 110 20, 114 14 C 150 6, 160 34, 122 50 C 164 50, 170 90, 124 100 C 106 104, 94 98, 100 92 C 104 88, 112 92, 108 98'/></g></svg>">
 <style>
 :root{
   --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -361,59 +362,191 @@ a.cert{color:inherit;display:flex;flex-direction:column}
 .pwgo i{font-style:normal;display:inline-block;transition:transform .25s}
 .pw:hover .pwgo i{transform:translate(3px,-3px)}
 .badge .b a{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--acc)}
+@media(max-width:480px){nav.menu a.hide-xs{display:none}}
+.rsgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.rsgrid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.rsgrid{grid-template-columns:1fr}}
+.rstop{height:120px;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:22px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,var(--acc-soft),transparent);position:relative;overflow:hidden}
+.rstop b{font:600 34px/1 var(--serif);color:var(--acc);transition:transform .4s cubic-bezier(.2,.8,.2,1);transform-origin:left}
+.pw:hover .rstop b{transform:scale(1.06)}
+.rstop small{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.rstop small.soon{color:#b45309}
+
+/* ===== 2026 redesign: Space Grotesk, warm minimal ===== */
+:root{--serif:"Space Grotesk",system-ui,sans-serif;--sans:"Space Grotesk",system-ui,sans-serif;
+  --bg:#f7f5f1;--bg-2:#efece6;--panel:#ffffff;--panel-2:#fbfaf7;--line:#e7e3db;--line-2:#d8d3c9;
+  --ink:#0e1422;--ink-2:#4a505d;--ink-3:#7c808a;
+  --acc:#1b2a4a;--acc-2:#2e416b;--acc-soft:rgba(27,42,74,.06);--acc-glow:rgba(27,42,74,.16);--on-acc:#ffffff;
+  --warm:#b8683a;--shadow:0 18px 40px -26px rgba(14,20,34,.35);--radius:14px}
+:root[data-theme="dark"]{--bg:#0d1017;--bg-2:#131721;--panel:#161b25;--panel-2:#1a202b;--line:#262d3a;--line-2:#333b4a;
+  --ink:#eef0f3;--ink-2:#b4bac5;--ink-3:#868d99;--acc:#e8ebf2;--acc-2:#c9d0de;--acc-soft:rgba(232,235,242,.07);--acc-glow:rgba(0,0,0,.4);--on-acc:#0e1422;--warm:#e0925f}
+body{font:400 17px/1.65 var(--sans);letter-spacing:-.003em}
+body::before{display:none}
+h1,h2,h3{font-family:var(--sans);letter-spacing:-.025em}
+h2{font-weight:700;font-size:clamp(30px,4vw,44px);line-height:1.08}
+h3{font-weight:600}
+.eyebrow{font:500 12px/1 var(--sans);letter-spacing:.14em;color:var(--ink-3)}
+.sec-head .eyebrow::before{font:500 13px/1 var(--sans);color:var(--ink-2);content:counter(ch,decimal-leading-zero) ".";margin-right:4px}
+.sec-head .eyebrow::after{content:"";width:56px;height:1px;background:var(--line-2);order:-1;display:none}
+section{padding:88px 0}
+.btn{font:500 15px var(--sans);border-radius:10px;padding:13px 22px}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary::after{display:none}
+.btn:hover{border-color:var(--ink);box-shadow:0 10px 24px -14px var(--acc-glow);transform:translateY(-1px)}
+.card{border-radius:var(--radius)}
+.card::before{display:none}
+.card:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.chip{font-weight:500}
+.progress{background:var(--ink);box-shadow:none;height:2px}
+.skill-tags span::after{display:none}
+.skill-tags span:hover{transform:translateY(-1px)}
+.skill-tags span:hover::before{border-color:var(--ink);box-shadow:none}
+.cta{background:var(--panel);border-color:var(--line)}
+.badge .ic{filter:none;color:var(--ink);margin-bottom:12px}
+.badge .ic svg{width:30px;height:30px}
+.qstep .ic svg{width:18px;height:18px}
+
+/* nav */
+header.top{position:fixed;left:0;right:0;top:0;background:transparent;border-bottom:1px solid transparent;backdrop-filter:none;-webkit-backdrop-filter:none;transition:background .35s,border-color .35s,backdrop-filter .35s}
+header.top.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--line)}
+header.top .wrap{height:72px}
+.brand{color:var(--ink)}
+.brand .sig{width:62px;height:34px;display:block;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.brand:hover .sig{transform:rotate(-4deg) scale(1.04)}
+nav.menu{gap:30px}
+nav.menu a{position:relative;padding:6px 0;border-radius:0;font:500 15px var(--sans);color:var(--ink-2);background:none!important}
+nav.menu a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+nav.menu a:hover{color:var(--ink)}
+nav.menu a:hover::after,nav.menu a.active::after{transform:scaleX(1)}
+nav.menu a.active{color:var(--ink)}
+.navright{display:flex;align-items:center;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:11px 18px;border-radius:9px;background:var(--ink);color:var(--bg);font:500 15px var(--sans);transition:transform .25s,box-shadow .25s}
+.cta-btn .arr{transition:transform .25s}
+.cta-btn:hover{transform:translateY(-1px);box-shadow:0 12px 26px -14px rgba(14,20,34,.6)}
+.cta-btn:hover .arr{transform:translateX(4px)}
+.theme-btn{width:38px;height:38px;border-radius:9px;border-color:var(--line-2);background:transparent}
+.menu-btn{display:none;width:40px;height:40px;border-radius:9px;border:1px solid var(--line-2);background:transparent;color:var(--ink);font-size:18px;cursor:pointer}
+@media(max-width:1020px){nav.menu{gap:20px}nav.menu a{font-size:14px}}
+@media(max-width:900px){
+  nav.menu{position:absolute;top:72px;left:16px;right:16px;flex-direction:column;align-items:stretch;gap:0;padding:8px 18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .25s,transform .25s}
+  nav.menu.open{opacity:1;pointer-events:auto;transform:none}
+  nav.menu a{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}nav.menu a:last-child{border-bottom:0}
+  nav.menu a::after{display:none}
+  .menu-btn{display:grid;place-items:center}
+  .cta-btn{padding:9px 14px;font-size:14px}}
+@media(max-width:480px){.cta-btn{display:none}}
+.theme-btn svg{width:17px;height:17px}
+.avail{display:flex}
+
+/* hero */
+.hero2{padding:0;position:relative;min-height:min(92vh,760px);display:flex;align-items:center;overflow:hidden;background:#e9d3b8}
+.hero2 .bg{position:absolute;inset:0;background:url(assets/img/hero.webp) 72% 30%/cover no-repeat;transform:scale(1.04);animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero2::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,245,241,.9) 0%,rgba(247,245,241,.72) 32%,rgba(247,245,241,.15) 58%,rgba(247,245,241,0) 70%),linear-gradient(180deg,rgba(247,245,241,.55) 0%,rgba(247,245,241,0) 22%,rgba(247,245,241,0) 80%,var(--bg) 100%)}
+:root[data-theme="dark"] .hero2::after{background:linear-gradient(90deg,rgba(13,16,23,.92) 0%,rgba(13,16,23,.75) 34%,rgba(13,16,23,.2) 60%,rgba(13,16,23,.05) 72%),linear-gradient(180deg,rgba(13,16,23,.5) 0%,rgba(13,16,23,0) 22%,rgba(13,16,23,0) 80%,var(--bg) 100%)}
+.hero2 .wrap{z-index:2;padding:120px 0 80px}
+.hero2 .hi{font:500 13px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);margin:0 0 14px}
+.hero2 h1{font:700 clamp(52px,8vw,96px)/.98 var(--sans);letter-spacing:-.045em;color:var(--ink);margin:0}
+.hero2 .tagline{font:500 clamp(14px,1.6vw,18px) var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin:22px 0 0}
+.hero2 .tagline i{font-style:normal;color:var(--warm);margin:0 .5em}
+.hero2 .lead{font:400 clamp(17px,1.5vw,19px)/1.6 var(--sans);color:var(--ink-2);max-width:520px;margin:22px 0 0}
+.hero2 .btns{margin-top:32px}
+.hero2 .btn{padding:15px 26px}
+.hero2 .btn:not(.primary){background:color-mix(in srgb,var(--panel) 40%,transparent);border-color:color-mix(in srgb,var(--ink) 35%,transparent);backdrop-filter:blur(6px)}
+.social{display:flex;gap:22px;margin-top:30px}
+.social a{color:var(--ink-2);display:grid;place-items:center;transition:color .2s,transform .25s}
+.social a:hover{color:var(--ink);transform:translateY(-2px)}
+.social svg{width:22px;height:22px}
+@media(max-width:760px){.hero2{display:block;min-height:0;background:var(--bg)}
+  .hero2 .bg{position:relative;height:72vw;min-height:280px;animation:none;transform:none;background-position:78% 25%}
+  .hero2::after{inset:0 0 auto 0;height:72vw;min-height:280px;background:linear-gradient(180deg,rgba(247,245,241,.35) 0%,rgba(247,245,241,0) 25%,rgba(247,245,241,0) 65%,var(--bg) 100%)}
+  :root[data-theme="dark"] .hero2::after{background:linear-gradient(180deg,rgba(13,16,23,.4) 0%,rgba(13,16,23,0) 25%,rgba(13,16,23,0) 65%,var(--bg) 100%)}
+  .hero2 .wrap{padding:4px 0 36px}}
+/* about */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:start}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:36px}}
+.about p.body{font-size:18px;color:var(--ink-2);max-width:560px}
+.more{display:inline-flex;align-items:center;gap:10px;margin-top:12px;font-weight:500;padding-bottom:6px;border-bottom:1.5px solid var(--ink)}
+.more .arr{transition:transform .25s}.more:hover .arr{transform:translateX(4px)}
+.pillars{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.pillar{display:flex;gap:16px;padding:26px 20px 26px 0;border-bottom:1px solid var(--line)}
+.pillar:nth-child(odd){border-right:1px solid var(--line)}.pillar:nth-child(even){padding-left:24px}
+.pillar .pi{flex:none;width:52px;height:52px;border-radius:12px;background:var(--bg-2);display:grid;place-items:center;color:var(--ink);transition:transform .3s,background .3s}
+.pillar:hover .pi{transform:translateY(-3px);background:var(--panel)}
+.pillar .pi svg{width:24px;height:24px}
+.pillar .pv{font:700 26px/1 var(--sans);letter-spacing:-.02em}
+.pillar .pl{font-size:14px;color:var(--ink-3);margin-top:6px;line-height:1.4}
+@media(max-width:520px){.pillars{grid-template-columns:1fr}.pillar:nth-child(odd){border-right:0}.pillar:nth-child(even){padding-left:0}}
+.avail{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:14px;color:var(--ink-2)}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<header class="top"><div class="wrap">
-  <a class="brand" href="#top"><span class="mono">AB</span><span class="nm">Ameer Batcha</span></a>
-  <nav class="menu">
-    <a href="#journey">Journey</a>
-    <a href="#projects">Projects</a>
+<header class="top" id="topbar"><div class="wrap">
+  <a class="brand" href="#home" aria-label="Ameer Batcha, home"><svg class="sig" viewBox="-10 0 220 120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="skewX(-10) translate(14 0)"><path stroke-width="7" d="M20 100 C 44 78, 62 40, 80 14 C 82 40, 80 72, 76 100"/><path stroke-width="7" d="M34 76 C 50 70, 64 68, 78 68 M78 68 C 92 66, 100 58, 104 44 C 108 30, 110 20, 114 14 C 150 6, 160 34, 122 50 C 164 50, 170 90, 124 100 C 106 104, 94 98, 100 92 C 104 88, 112 92, 108 98"/></g></svg></a>
+  <nav class="menu" id="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#experience">Experience</a>
-    <a href="#education" class="hide-sm">Education</a>
-    <a href="#contact" class="hide-sm">Contact</a>
-    <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode">◐</button>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <div class="navright">
+    <a class="cta-btn" href="#contact"><span class="lbl">Let’s Connect</span> <span class="arr">→</span></a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
 </div></header>
 
 <main id="top">
+<section class="hero2" id="home">
+  <div class="bg" role="img" aria-label="Ameer Batcha at sunset, overlooking a city"></div>
+  <div class="wrap">
+    <p class="hi rv">Hello, I’m</p>
+    <h1 class="rv">Ameer Batcha</h1>
+    <p class="tagline rv">Strategy<i>·</i>Product<i>·</i>Data</p>
+    <p class="lead rv">Business and management professional with experience across data research, strategy, product management and consumer insights. Now a CEMS MIM candidate at NUS Business School.</p>
+    <div class="btns rv">
+      <a class="btn primary" href="#projects">View my work <span class="arr">→</span></a>
+      <a class="btn" href="assets/CV_Ameer_Batcha.pdf" target="_blank" rel="noopener">Download CV <span class="arr">↓</span></a>
+    </div>
+    <div class="social rv">
+      <a href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+      <a href="https://github.com/ameer29" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+      <a href="mailto:ameer.batcha@u.nus.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+    </div>
+  </div>
+</section>
 <div class="wrap">
-  <section class="hero">
-    <div>
-      <p class="eyebrow rv">Portfolio · CEMS MIM · NUS Business School</p>
-      <h1 class="rv">Some people start with data. Some start with people. <em>I decided to learn both.</em></h1>
-      <p class="lead rv">I work at the intersection of <span class="rotator" id="rotator">product</span>. From running operations analytics at a SaaS start-up to leading data research at Forbes Advisor, and now studying across Singapore, Barcelona and Helsinki.</p>
-      <div class="btns rv">
-        <a class="btn primary magnet" href="#projects">See my work <span class="arr">→</span></a>
-        <a class="btn magnet" href="#journey">Play the journey <span class="arr">▶</span></a>
-        <a class="btn magnet" href="mailto:ameer.batcha@u.nus.edu">Get in touch</a>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about">
+      <div class="rv">
+        <div class="sec-head" style="margin-bottom:18px"><div><p class="eyebrow">About</p><h2>About me</h2></div></div>
+        <p class="body">I work at the intersection of business, data and people. I ran operations analytics at a SaaS start-up, led data research at Forbes Advisor, and I'm now studying management across Singapore, Barcelona and Helsinki, alongside an MSc in Psychology.</p>
+        <a class="more" href="#story">More about me <span class="arr">→</span></a>
+        <div class="avail"><span class="dot"></span>Open to product, data, strategy and consulting roles</div>
       </div>
-      <div class="chips rv">
-        <span class="chip">Product management</span><span class="chip">Data &amp; analytics</span><span class="chip">Strategy &amp; consulting</span><span class="chip">GenAI</span><span class="chip">Consumer psychology</span>
+      <div class="pillars rv">
+        <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6 4 4 6-7"/><path d="M15 8h5v5"/></svg></div><div><div class="pv" data-count="15">0</div><div class="pl">months from Associate to Senior Associate at Forbes Advisor</div></div></div>
+        <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 20V12M10 20V6M15 20v-9M20 20V4"/></svg></div><div><div class="pv" data-count="35" data-suffix="%">0</div><div class="pl">gain in data accuracy from workflows I standardised</div></div></div>
+        <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg></div><div><div class="pv" data-count="2">0</div><div class="pl">employer awards: Rockstar Rookie and Value Champion</div></div></div>
+        <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></div><div><div class="pv" data-count="4">0</div><div class="pl">countries lived and studied in, with Finland next</div></div></div>
       </div>
     </div>
-    <aside class="idcard rv" id="idcard">
-      <div class="row"><img class="avatar photo" src="data:image/webp;base64,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" alt="Ameer Batcha" width="88" height="88"><div><div class="nm">Ameer Batcha</div><div class="role">CEMS MIM candidate · NUS × ESADE × Aalto</div></div></div>
-      <div class="statgrid">
-        <div class="stat"><div class="num" data-count="15">0</div><div class="lbl">months from Associate to Senior Associate at Forbes Advisor</div></div>
-        <div class="stat"><div class="num" data-count="35" data-suffix="%">0</div><div class="lbl">gain in data accuracy from workflows I standardised</div></div>
-        <div class="stat"><div class="num" data-count="2">0</div><div class="lbl">employer awards: Rockstar Rookie and Value Champion</div></div>
-        <div class="stat"><div class="num" data-count="4">0</div><div class="lbl">countries lived and studied in, with Finland next</div></div>
-      </div>
-      <div class="status"><span class="dot"></span>Open to product, data, strategy and consulting roles</div>
-    </aside>
   </section>
+
 
   <!-- ACHIEVEMENTS -->
   <section style="padding-top:8px">
-    <div class="sec-head rv"><div><p class="eyebrow">Achievements</p><h2>Unlocked so far</h2></div><div class="unlocked">Hover a badge to flip it · <b>5</b> unlocked</div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Achievements</p><h2>Highlights so far</h2></div><div class="unlocked">Hover a card for the details</div></div>
     <div class="badges">
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🏆</div><div class="t">Rockstar Rookie</div><div class="s">Forbes Advisor · Jul 2024</div></div><div class="b"><b>Why</b>For outstanding talent, collaboration, innovation and initiative as a new team member, six months after I joined.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">⬆️</div><div class="t">Promoted in 15 months</div><div class="s">Forbes Advisor · Apr 2025</div></div><div class="b"><b>How</b>Associate → Senior Associate after leading a team of 4 and cutting bottleneck resolution from two weeks to 2–3 days.</div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🏅</div><div class="t">Value Champion</div><div class="s">ITILITE Technologies</div></div><div class="b"><b>Why</b>A certificate of appreciation from ITILITE's founders for upholding the company's core values.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🎓</div><div class="t">First Class Distinction</div><div class="s">BBA · Amity · 2021</div></div><div class="b"><b>Plus</b>Two independent survey studies (Netflix, Swiggy), re-analysed in 2026 with an NPS of +48.</div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🧠</div><div class="t">9.3 / 10</div><div class="s">Clinical psychology internship · 2026</div></div><div class="b"><b>What</b>240 hours of training: Mental Status Examination, case-history intake, risk assessment and therapeutic approaches.</div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg></div><div class="t">Rockstar Rookie</div><div class="s">Forbes Advisor · Jul 2024</div></div><div class="b"><b>Why</b>For outstanding talent, collaboration, innovation and initiative as a new team member, six months after I joined.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6 4 4 6-7"/><path d="M15 8h5v5"/></svg></div><div class="t">Promoted in 15 months</div><div class="s">Forbes Advisor · Apr 2025</div></div><div class="b"><b>How</b>Associate → Senior Associate after leading a team of 4 and cutting bottleneck resolution from two weeks to 2–3 days.</div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg></div><div class="t">Value Champion</div><div class="s">ITILITE Technologies</div></div><div class="b"><b>Why</b>A certificate of appreciation from ITILITE's founders for upholding the company's core values.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></div><div class="t">First Class Distinction</div><div class="s">BBA · Amity · 2021</div></div><div class="b"><b>Plus</b>Two survey studies, on Netflix and Swiggy, now on my <a href="research.html" target="_blank" rel="noopener">Research page ↗</a></div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 0 0-5.8 1A3 3 0 0 0 4 11a3 3 0 0 0 2 5 3 3 0 0 0 6 1V5z"/><path d="M12 5a3 3 0 0 1 5.8 1A3 3 0 0 1 20 11a3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></svg></div><div class="t">9.3 / 10</div><div class="s">Clinical psychology internship · 2026</div></div><div class="b"><b>What</b>240 hours of training: Mental Status Examination, case-history intake, risk assessment and therapeutic approaches.</div></div></div>
     </div>
   </section>
 
@@ -428,9 +561,9 @@ a.cert{color:inherit;display:flex;flex-direction:column}
         <p class="q">In 2025 I applied again, this time with something to show, and I got the offer.</p>
       </div>
       <div class="quest rv">
-        <div class="qstep miss"><div class="ic">✕</div><div><div class="lv">Attempt 1 · 2021</div><div class="tt">Final round, not selected</div><div class="dd">Strong on paper, short on experience</div></div></div>
-        <div class="qstep"><div class="ic">⚔️</div><div><div class="lv">Side quest · 2021 – 2025</div><div class="tt">Two jobs, one promotion, two awards</div><div class="dd">ITILITE → studying data analytics → Forbes Advisor, plus BITSoM</div></div></div>
-        <div class="qstep win"><div class="ic">✓</div><div><div class="lv">Attempt 2 · 2025</div><div class="tt">Offer received</div><div class="dd">NUS MSc in Management + CEMS MIM, class starting Jan 2026</div></div></div>
+        <div class="qstep miss"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></div><div><div class="lv">Attempt 1 · 2021</div><div class="tt">Final round, not selected</div><div class="dd">Strong on paper, short on experience</div></div></div>
+        <div class="qstep"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c4-1 3-7 7-7s3-6 7-7"/><circle cx="5" cy="19" r="1.6"/><circle cx="19" cy="5" r="1.6"/></svg></div><div><div class="lv">In between · 2021 – 2025</div><div class="tt">Two jobs, one promotion, two awards</div><div class="dd">ITILITE → studying data analytics → Forbes Advisor, plus BITSoM</div></div></div>
+        <div class="qstep win"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div><div class="lv">Attempt 2 · 2025</div><div class="tt">Offer received</div><div class="dd">NUS MSc in Management + CEMS MIM, class starting Jan 2026</div></div></div>
       </div>
     </div>
   </section>
@@ -472,7 +605,7 @@ a.cert{color:inherit;display:flex;flex-direction:column}
       <a class="card lift pcard tilt rv" href="zalora-pricing.html"><span class="k">Pricing analytics · NUS · 2026</span><div class="t">Zalora: stop the markdown</div><div class="d">A regression demand model and profit optimisation. Holding the price at S$49.90 still sells out, for about 77% more profit. Graded 4/5.</div><div class="tags"><span class="tag">Regression</span><span class="tag">Optimisation</span></div><span class="go">View case study <i>→</i></span></a>
       <a class="card lift pcard tilt rv" href="temu-africa.html"><span class="k">Emerging-markets strategy · NUS · 2026</span><div class="t">Can Temu win in Africa beyond low prices?</div><div class="d">My section: the three structural challenges (value curve, delivery, regulation) behind the team's "Africa OS" recommendation.</div><div class="tags"><span class="tag">Market entry</span><span class="tag">Blue Ocean</span></div><span class="go">View case study <i>→</i></span></a>
       <a class="card lift pcard tilt rv" href="https://github.com/ameer29/retail-customer-analysis-sql-powerbi" target="_blank" rel="noopener"><span class="k">Data analytics · AnalytixLabs · 2023</span><div class="t">Data analytics capstones</div><div class="d">A retail analysis taken from SQL Server to Excel Pareto to a 3-page Power BI dashboard, plus a Python study of 180k orders (57% late; First Class late on every order).</div><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Python</span></div><span class="go">Open on GitHub <i>↗</i></span></a>
-      <a class="card lift pcard tilt rv" href="bba-research.html"><span class="k">Consumer research · BBA · 2020–21</span><div class="t">Netflix &amp; Swiggy customer studies</div><div class="d">Two independent survey studies (92 and 93 respondents), revisited in 2026 with corrected figures, an NPS of +48 and coded open-text answers.</div><div class="tags"><span class="tag">Survey design</span><span class="tag">NPS</span></div><span class="go">View case study <i>→</i></span></a>
+      <a class="card lift pcard tilt rv" href="research.html#netflix"><span class="k">Consumer research · BBA · 2020–21</span><div class="t">Netflix &amp; Swiggy customer studies</div><div class="d">Two survey studies with 92 and 93 respondents: my first research, from questionnaire design to findings, with the full reports.</div><div class="tags"><span class="tag">Survey design</span><span class="tag">Consumer insights</span></div><span class="go">View case study <i>→</i></span></a>
     </div>
   </section>
 
@@ -484,9 +617,9 @@ a.cert{color:inherit;display:flex;flex-direction:column}
       <article class="card rv">
         <div class="org"><a class="logo" href="https://www.forbes.com/advisor/" target="_blank" rel="noopener" data-mono="FA"><img alt="Forbes Advisor logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Forbes%20logo.svg?width=240"></a>
           <div><h3><a href="https://www.forbes.com/advisor/" target="_blank" rel="noopener">Forbes Advisor</a><span class="ext">↗</span></h3>
-          <div class="meta"><span>📍 Chennai, India</span><span>Jan 2024 – Dec 2025</span><span>Global personal-finance advice platform</span></div></div></div>
+          <div class="meta"><span>Chennai, India</span><span>Jan 2024 – Dec 2025</span><span>Global personal-finance advice platform</span></div></div></div>
         <div class="ladder"><span class="rung">Associate, Data Research<small>Jan 2024 – Mar 2025</small></span><span class="up">→</span><span class="rung cur">Senior Associate, Data Research<small>Apr 2025 – Dec 2025 · promoted</small></span></div>
-        <div class="award">🏆 <span><b>Rockstar Rookie award</b> (Jul 2024) for outstanding talent, collaboration, innovation and initiative as a new team member</span></div>
+        <div class="award"><span><b>Rockstar Rookie award</b> (Jul 2024) for outstanding talent, collaboration, innovation and initiative as a new team member</span></div>
         <div class="metrics">
           <div class="metric"><div class="v">35%</div><div class="l">higher data accuracy across 15+ quarterly projects</div></div>
           <div class="metric"><div class="v">25%</div><div class="l">faster reporting turnaround</div></div>
@@ -508,7 +641,7 @@ a.cert{color:inherit;display:flex;flex-direction:column}
       <article class="card rv">
         <div class="org"><a class="logo" href="https://www.analytixlabs.co.in/" target="_blank" rel="noopener" data-mono="AL"><img alt="AnalytixLabs logo" src="https://www.google.com/s2/favicons?domain=analytixlabs.co.in&sz=128"></a>
           <div><h3><a href="https://www.analytixlabs.co.in/" target="_blank" rel="noopener">AnalytixLabs</a><span class="ext">↗</span></h3>
-          <div class="meta"><span>📍 Bangalore, India</span><span>Apr 2023 – Dec 2023</span><span>Studying data analytics, full-time</span></div></div></div>
+          <div class="meta"><span>Bangalore, India</span><span>Apr 2023 – Dec 2023</span><span>Studying data analytics, full-time</span></div></div></div>
         <p class="muted" style="margin-top:14px">Working with data every day at ITILITE showed me how much decisions depend on it. With no technical background I couldn't get the basics to stick alongside a job, so in <b>January 2023 I resigned to study full-time</b> and rebuild from first principles. Within weeks of finishing, I joined Forbes Advisor.</p>
         <div class="metrics">
           <div class="metric"><div class="v">Certified</div><div class="l">Data Analyst, Term 1: Excel, SQL &amp; Power BI</div></div>
@@ -526,10 +659,10 @@ a.cert{color:inherit;display:flex;flex-direction:column}
       <article class="card rv">
         <div class="org"><a class="logo" href="https://www.itilite.com/" target="_blank" rel="noopener" data-mono="iL"><img alt="ITILITE logo" src="https://www.google.com/s2/favicons?domain=itilite.com&sz=256"></a>
           <div><h3><a href="https://www.itilite.com/" target="_blank" rel="noopener">ITILITE Technologies</a><span class="ext">↗</span></h3>
-          <div class="meta"><span>📍 Bengaluru, India</span><span>Nov 2021 – Jan 2023</span><span>SaaS for business travel &amp; expense management</span></div></div></div>
+          <div class="meta"><span>Bengaluru, India</span><span>Nov 2021 – Jan 2023</span><span>SaaS for business travel &amp; expense management</span></div></div></div>
         <p class="muted small" style="margin-top:12px">A Bengaluru start-up founded in 2017 by two former McKinsey consultants. It raised a $29M Series C in April 2022, during my time there, and served 500,000+ users at 300+ companies in India and the US.</p>
         <div class="ladder"><span class="rung">Customer Relations Executive<small>Nov 2021 – Feb 2022</small></span><span class="up">→</span><span class="rung">Reconfirmation · Financial Oversight<small>Mar – May 2022</small></span><span class="up">→</span><span class="rung cur">Workforce Management Analyst<small>Jun 2022 – Jan 2023</small></span></div>
-        <div class="award">🏅 <span><b>ITILITE Value Champion</b>, for upholding the company's core values</span></div>
+        <div class="award"><span><b>ITILITE Value Champion</b>, for upholding the company's core values</span></div>
         <div class="metrics">
           <div class="metric"><div class="v">5+ KPIs</div><div class="l">on dashboards used by the Head of Ops and founders</div></div>
           <div class="metric"><div class="v">15+</div><div class="l">UI/UX issues flagged, including Quick Apply</div></div>
@@ -559,30 +692,30 @@ a.cert{color:inherit;display:flex;flex-direction:column}
     <div class="tl">
       <article class="card rv">
         <div class="org"><a class="logo" href="https://www.esade.edu/" target="_blank" rel="noopener" data-mono="E"><img alt="ESADE logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Esade%20logo%20nuevo.png?width=240"></a>
-          <div><h3><a href="https://www.esade.edu/" target="_blank" rel="noopener">ESADE Business School</a> · CEMS exchange</h3><div class="meta"><span>📍 Barcelona, Spain</span><span>Aug – Dec 2026</span></div></div></div>
+          <div><h3><a href="https://www.esade.edu/" target="_blank" rel="noopener">ESADE Business School</a> · CEMS exchange</h3><div class="meta"><span>Barcelona, Spain</span><span>Aug – Dec 2026</span></div></div></div>
         <p class="muted" style="margin-top:12px">Global Strategy, Data Analytics for Global Management and Creative Design Thinking, plus Spanish for the CEMS language requirement. In Creative Design Thinking our team built <a href="mesa.html"><u>Mesa</u></a>, a live app tackling youth loneliness.</p>
       </article>
       <article class="card rv">
         <div class="org"><a class="logo" href="https://bschool.nus.edu.sg/" target="_blank" rel="noopener" data-mono="NUS"><img alt="NUS logo" src="https://en.wikipedia.org/wiki/Special:FilePath/NationalUniversityofSingapore.svg?width=240"></a>
-          <div><h3><a href="https://bschool.nus.edu.sg/" target="_blank" rel="noopener">NUS Business School</a> · MSc in Management + <a href="https://www.cems.org/" target="_blank" rel="noopener">CEMS MIM</a></h3><div class="meta"><span>📍 Singapore → Barcelona → Helsinki</span><span>Jan 2026 – Jul 2027</span></div></div></div>
+          <div><h3><a href="https://bschool.nus.edu.sg/" target="_blank" rel="noopener">NUS Business School</a> · MSc in Management + <a href="https://www.cems.org/" target="_blank" rel="noopener">CEMS MIM</a></h3><div class="meta"><span>Singapore → Barcelona → Helsinki</span><span>Jan 2026 – Jul 2027</span></div></div></div>
         <p class="muted" style="margin-top:12px">A global master's across Singapore (Jan – May 2026), ESADE in Barcelona (Aug – Dec 2026) and <a href="https://www.aalto.fi/" target="_blank" rel="noopener"><u>Aalto</u></a> in Helsinki (from Jan 2027). Coursework includes innovation and emerging-markets strategy, pricing analytics and marketing analytics.</p>
       </article>
       <article class="card rv">
         <div class="org"><a class="logo" href="https://www.bitsom.edu.in/" target="_blank" rel="noopener" data-mono="BI"><img alt="BITSoM logo" src="data:image/webp;base64,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"></a>
-          <div><h3><a href="https://www.bitsom.edu.in/" target="_blank" rel="noopener">BITS School of Management</a> · Product Management with Generative &amp; Agentic AI</h3><div class="meta"><span>📍 Mumbai, India (alongside Forbes Advisor)</span><span>Jul 2025 – Jan 2026</span><span>6 modules · capstone</span></div></div></div>
+          <div><h3><a href="https://www.bitsom.edu.in/" target="_blank" rel="noopener">BITS School of Management</a> · Product Management with Generative &amp; Agentic AI</h3><div class="meta"><span>Mumbai, India (alongside Forbes Advisor)</span><span>Jul 2025 – Jan 2026</span><span>6 modules · capstone</span></div></div></div>
         <p class="muted" style="margin-top:12px">Product thinking, design and MVP, building with agentic AI (prompting, RAG, agent frameworks, LLMOps, responsible AI), Agile delivery, go-to-market, and data and metrics.</p>
         <div class="btns" style="margin-top:6px"><a class="btn sm" href="bitsom-product-management.html">Module-by-module curriculum <span class="arr">→</span></a><a class="btn sm" href="swasthya-sahayak.html">Capstone case study <span class="arr">→</span></a></div>
       </article>
       <article class="card rv">
         <div class="org"><a class="logo" href="https://onlinejain.com/" target="_blank" rel="noopener" data-mono="JU"><img alt="Jain Online logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jain-University-Bangalore-India-Logo.png?width=240"></a>
-          <div><h3><a href="https://onlinejain.com/" target="_blank" rel="noopener">Jain University (Online)</a> · MSc Psychology</h3><div class="meta"><span>📍 Bangalore, India</span><span>2024 – 2026</span></div></div></div>
+          <div><h3><a href="https://onlinejain.com/" target="_blank" rel="noopener">Jain University (Online)</a> · MSc Psychology</h3><div class="meta"><span>Bangalore, India</span><span>2024 – 2026</span></div></div></div>
         <p class="muted" style="margin-top:12px">Studied part-time alongside full-time work, focused on motivation, performance and human behaviour. It shapes how I think about users, customers and teams.</p>
         <p class="muted small"><a href="https://sociallysouled.com/" target="_blank" rel="noopener"><u>Socially Souled</u></a> · Clinical Psychology Training-Based Internship (Jul – Aug 2026 · 240 hours · graded <b>9.3/10</b>): the Mental Status Examination, case-history intake, risk assessment, psychopathology, therapeutic approaches (CBT, DBT, humanistic) and clinical ethics.</p>
       </article>
       <article class="card rv">
         <div class="org"><a class="logo" href="https://agbs.in/" target="_blank" rel="noopener" data-mono="A"><img alt="Amity Global Business School logo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Amity%20University%20Mumbai%20(cropped).png?width=240"></a>
-          <div><h3><a href="https://agbs.in/" target="_blank" rel="noopener">Amity Global Business School</a> · BBA in Marketing</h3><div class="meta"><span>📍 Bangalore, India</span><span>2018 – 2021</span><span>First Class Distinction</span></div></div></div>
-        <p class="muted" style="margin-top:12px">Two independent survey-based studies on <a href="bba-research.html"><u>Netflix and Swiggy</u></a>, plus a 6-week digital marketing training with Internshala (2019).</p>
+          <div><h3><a href="https://agbs.in/" target="_blank" rel="noopener">Amity Global Business School</a> · BBA in Marketing</h3><div class="meta"><span>Bangalore, India</span><span>2018 – 2021</span><span>First Class Distinction</span></div></div></div>
+        <p class="muted" style="margin-top:12px">Two independent survey-based studies on <a href="research.html#netflix"><u>Netflix and Swiggy</u></a>, plus a 6-week digital marketing training with Internshala (2019).</p>
       </article>
     </div>
   </section>
@@ -598,12 +731,23 @@ a.cert{color:inherit;display:flex;flex-direction:column}
     </div>
   </section>
 
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="sec-head rv"><div><p class="eyebrow">Research</p><h2>Questions I've studied</h2><p class="muted">Two consumer surveys from my BBA, a psychology field report, and my MSc dissertation in progress. Open any card for the method, findings, questionnaire and full report.</p></div></div>
+    <div class="rsgrid">
+      <a class="card pw rv" href="research.html#netflix" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2020 · survey</small><b>n = 92</b></div><div class="pwb"><div class="pwk">Consumer research</div><div class="pwt">Why people stay with Netflix</div><div class="pwd">Survey, May – Jun 2020</div><ul class="pwl"><li>81% satisfied; pricing rated lowest</li><li>Phone-first, young audience</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#swiggy" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2021 · dissertation</small><b>n = 93</b></div><div class="pwb"><div class="pwk">Business model &amp; survey</div><div class="pwt">What keeps people ordering on Swiggy</div><div class="pwd">Survey, Mar – Apr 2021</div><ul class="pwl"><li>80% satisfied; food quality the top concern</li><li>App discounts the biggest driver</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#peer" target="_blank" rel="noopener"><div class="rstop"><small>MSc · 2026 · field report</small><b>5Cs</b></div><div class="pwb"><div class="pwk">Psychology field placement</div><div class="pwt">Building trust with young mentees</div><div class="pwd">PEER, Feb – Apr 2026</div><ul class="pwl"><li>Play-based activities to build rapport</li><li>Mapped to Positive Youth Development</li></ul><span class="pwgo">See the report <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#sdt" target="_blank" rel="noopener"><div class="rstop"><small class="soon">MSc dissertation · in progress</small><b>SDT</b></div><div class="pwb"><div class="pwk">Organisational psychology</div><div class="pwt">Leadership styles and employee well-being</div><div class="pwd">Literature review drafted</div><ul class="pwl"><li>Autonomy, competence, relatedness</li><li>Results coming soon</li></ul><span class="pwgo">See progress <i>↗</i></span></div></a>
+    </div>
+  </section>
+
   <!-- COMMUNITY -->
   <section id="community">
     <div class="sec-head rv"><div><p class="eyebrow">Community</p><h2>Giving back</h2><p class="muted">PEER, a structured youth-mentoring programme in Singapore and the field placement for my MSc in Psychology, and a small circle of NUS applicants who were where I was in 2021.</p></div></div>
     <article class="card rv">
       <div class="org"><a class="logo" href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener" data-mono="PR"><img alt="Mendaki Club logo" src="https://icons.duckduckgo.com/ip3/mendakiclub.org.sg.ico"></a>
-        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>📍 PEER @ Tampines, Singapore</span><span>Feb – Aug 2026 · completed</span><span>Group lead</span><span>MENDAKI Club · Yayasan MENDAKI</span></div></div></div>
+        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>PEER @ Tampines, Singapore</span><span>Feb – Aug 2026 · completed</span><span>Group lead</span><span>MENDAKI Club · Yayasan MENDAKI</span></div></div></div>
       <p class="muted" style="margin-top:14px"><b>PEER</b> (Positive Engagement through Experiential Relationships) is a six-month programme that pairs trained volunteer mentors with secondary-school students aged 11–16. It runs every other Saturday, built on the <b>5Cs of Positive Youth Development</b>. I mentored through the full Feb – Aug 2026 cycle, from mentor onboarding and mock rounds on 7 February to the closing session in August.</p>
       <div class="metrics">
         <div class="metric"><div class="v">12</div><div class="l">sessions in the season; I completed the full programme</div></div>
@@ -625,6 +769,7 @@ a.cert{color:inherit;display:flex;flex-direction:column}
       <div class="h4" style="margin-top:22px">The season · Feb – Aug 2026 · completed ✓</div>
       <div class="season" id="season"></div>
       <div class="sdesc" id="sdesc"></div>
+      <div class="btns" style="margin-top:20px"><a class="btn sm primary" href="research.html#peer" target="_blank" rel="noopener">Read my field report <span class="arr">↗</span></a><a class="btn sm" href="research/reports/peer-mentor-field-report-2026.pdf" target="_blank" rel="noopener">Report (PDF) <span class="arr">↗</span></a></div>
     </article>
 
     <div class="grid2 rv" style="margin-top:16px">
@@ -633,18 +778,18 @@ a.cert{color:inherit;display:flex;flex-direction:column}
     </div>
     <div class="h4" style="margin-top:26px">Session by session · all 12</div>
     <div class="pgrid sessions" style="margin-top:8px">
-      <div class="card lift pcard rv"><span class="k">Session 1 · 14 Feb 2026 · Orientation</span><div class="t">The First Bridge: From Me to We</div><div class="d">Opened by the guest of honour, Dr Syed Harun. Squads crossed a floor of “lava” as one connected train, built a table that had to hold an egg through a surprise wind test, then agreed on three shared values.</div><div class="where">📍 Our Tampines Hub</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 2 · 28 Feb 2026 · Community session</span><div class="t">Ramadan food distribution</div><div class="d">We packed food packs at Our Tampines Hub, then went floor by floor delivering them to families in need, and closed with a reflection on what the residents’ lives taught us.</div><div class="where">📍 Our Tampines Hub → Blk 299B Tampines St 22</div><div class="tags"><span class="tag">Character</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 3 · 14 Mar 2026 · Social session</span><div class="t">Board &amp; Bond</div><div class="d">“Draw My Face”: rotating pairs each drew one feature of their partner while chatting, until everyone had a finished portrait. Then rounds of board games run by The Mind Cafe.</div><div class="where">📍 Home Team NS, Bedok Reservoir</div><div class="tags"><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 4 · 11 Apr 2026 · Full-group session</span><div class="t">Tribe Quest</div><div class="d">Back after the Hari Raya break: tribe-based tactical missions where every mentee had a different ability, so the tribe could only win by relying on each other.</div><div class="where">📍 Siglap Community Club</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 5 · 25 Apr 2026 · Squad outing</span><div class="t">The Albatross File exhibition</div><div class="d">Breakfast check-in with the squad, then Singapore’s journey from merger to separation (1963–65) through declassified documents. We reflected on making hard decisions under pressure.</div><div class="where">📍 National Library, Victoria Street</div><div class="tags"><span class="tag">Competence</span><span class="tag">Character</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 6 · 9 May 2026 · Social session</span><div class="t">Pirateball</div><div class="d">Station games (broken telephone, match the cups, dog and bone) earned points to buy “powers” and “threats” for Pirateball, a captain’s-ball spin-off built on strategy and knowing each other’s strengths.</div><div class="where">📍 Yayasan MENDAKI field</div><div class="tags"><span class="tag">Competence</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 7 · 23 May 2026 · Squad outing</span><div class="t">Squad outing</div><div class="d">An outing with just our squad: two mentors and three mentees.</div><div class="where">📍 With our three mentees</div><div class="tags"><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 8 · 6 Jun 2026 · Career session</span><div class="t">Future Fit: pathways that align with you</div><div class="d">A career auction scored on income, meaning and work-life balance, a lab of six future industries, and a “Human Library” where mentors shared their paths. I gave my view on finding a path that fits you, rather than following a set route.</div><div class="where">📍 Tampines West CC</div><div class="tags"><span class="tag">Competence</span><span class="tag">Confidence</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 9 · 20 Jun 2026 · Life-skills session</span><div class="t">Sneaker art jamming</div><div class="d">Each mentee turned a blank pair of sneakers into a design that told their own story, a no-wrong-answers way to build confidence through self-expression.</div><div class="where">📍 Epic Workshop, Jalan Pemimpin</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Character</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 10 · 4 Jul 2026 · Squad outing</span><div class="t">Indoor pool activities</div><div class="d">A more relaxed, active outing with the squad, at an indoor swimming pool.</div><div class="where">📍 Indoor swimming pool</div><div class="tags"><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 11 · 18 Jul 2026 · Community session</span><div class="t">Youth-senior terrarium workshop</div><div class="d">Mentees built terrariums side by side with seniors (Care Corner beneficiaries), then shared lunch with them. I registered as a Care Corner volunteer for the session.</div><div class="where">📍 House of Joy Active Ageing Centre</div><div class="tags"><span class="tag">Character</span><span class="tag">Contribution</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 12 · 1 Aug 2026 · Closing session</span><div class="t">Journey Forward: Charting My Direction</div><div class="d">A squad cheer, a drawing relay using words from the programme, a gallery walk of the season, and a Circle of Encouragement. Then we agreed how the squad would stay connected after PEER.</div><div class="where">📍 Tampines West CC</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 1 · 14 Feb 2026 · Orientation</span><div class="t">The First Bridge: From Me to We</div><div class="d">Opened by the guest of honour, Dr Syed Harun. Squads crossed a floor of “lava” as one connected train, built a table that had to hold an egg through a surprise wind test, then agreed on three shared values.</div><div class="where">Our Tampines Hub</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 2 · 28 Feb 2026 · Community session</span><div class="t">Ramadan food distribution</div><div class="d">We packed food packs at Our Tampines Hub, then went floor by floor delivering them to families in need, and closed with a reflection on what the residents’ lives taught us.</div><div class="where">Our Tampines Hub → Blk 299B Tampines St 22</div><div class="tags"><span class="tag">Character</span><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 3 · 14 Mar 2026 · Social session</span><div class="t">Board &amp; Bond</div><div class="d">“Draw My Face”: rotating pairs each drew one feature of their partner while chatting, until everyone had a finished portrait. Then rounds of board games run by The Mind Cafe.</div><div class="where">Home Team NS, Bedok Reservoir</div><div class="tags"><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 4 · 11 Apr 2026 · Full-group session</span><div class="t">Tribe Quest</div><div class="d">Back after the Hari Raya break: tribe-based tactical missions where every mentee had a different ability, so the tribe could only win by relying on each other.</div><div class="where">Siglap Community Club</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 5 · 25 Apr 2026 · Squad outing</span><div class="t">The Albatross File exhibition</div><div class="d">Breakfast check-in with the squad, then Singapore’s journey from merger to separation (1963–65) through declassified documents. We reflected on making hard decisions under pressure.</div><div class="where">National Library, Victoria Street</div><div class="tags"><span class="tag">Competence</span><span class="tag">Character</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 6 · 9 May 2026 · Social session</span><div class="t">Pirateball</div><div class="d">Station games (broken telephone, match the cups, dog and bone) earned points to buy “powers” and “threats” for Pirateball, a captain’s-ball spin-off built on strategy and knowing each other’s strengths.</div><div class="where">Yayasan MENDAKI field</div><div class="tags"><span class="tag">Competence</span><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 7 · 23 May 2026 · Squad outing</span><div class="t">Squad outing</div><div class="d">An outing with just our squad: two mentors and three mentees.</div><div class="where">With our three mentees</div><div class="tags"><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 8 · 6 Jun 2026 · Career session</span><div class="t">Future Fit: pathways that align with you</div><div class="d">A career auction scored on income, meaning and work-life balance, a lab of six future industries, and a “Human Library” where mentors shared their paths. I gave my view on finding a path that fits you, rather than following a set route.</div><div class="where">Tampines West CC</div><div class="tags"><span class="tag">Competence</span><span class="tag">Confidence</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 9 · 20 Jun 2026 · Life-skills session</span><div class="t">Sneaker art jamming</div><div class="d">Each mentee turned a blank pair of sneakers into a design that told their own story, a no-wrong-answers way to build confidence through self-expression.</div><div class="where">Epic Workshop, Jalan Pemimpin</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Character</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 10 · 4 Jul 2026 · Squad outing</span><div class="t">Indoor pool activities</div><div class="d">A more relaxed, active outing with the squad, at an indoor swimming pool.</div><div class="where">Indoor swimming pool</div><div class="tags"><span class="tag">Connection</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 11 · 18 Jul 2026 · Community session</span><div class="t">Youth-senior terrarium workshop</div><div class="d">Mentees built terrariums side by side with seniors (Care Corner beneficiaries), then shared lunch with them. I registered as a Care Corner volunteer for the session.</div><div class="where">House of Joy Active Ageing Centre</div><div class="tags"><span class="tag">Character</span><span class="tag">Contribution</span></div></div>
+      <div class="card lift pcard rv"><span class="k">Session 12 · 1 Aug 2026 · Closing session</span><div class="t">Journey Forward: Charting My Direction</div><div class="d">A squad cheer, a drawing relay using words from the programme, a gallery walk of the season, and a Circle of Encouragement. Then we agreed how the squad would stay connected after PEER.</div><div class="where">Tampines West CC</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
     </div>
 
     <div class="grid2 rv" style="margin-top:16px">
@@ -682,7 +827,7 @@ a.cert{color:inherit;display:flex;flex-direction:column}
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="sec-head rv"><div><p class="eyebrow">Toolkit</p><h2>Skills</h2><p class="muted">Hover over a skill to wake it up.</p></div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Toolkit</p><h2>Skills</h2></div></div>
     <div class="sgrid">
       <div class="card rv"><h3>Data &amp; AI</h3><div class="skill-tags"><span data-i="🐍" data-a="snake">Python · pandas</span><span data-i="🔢">NumPy</span><span data-i="📈">Matplotlib · Seaborn</span><span data-i="🧪">SciPy</span><span data-i="🤖">scikit-learn</span><span data-i="🗄️">SQL Server</span><span data-i="🧮">Excel · Solver</span><span data-i="📊">Tableau</span><span data-i="⚡" data-a="pulse">Power BI</span><span data-i="✨" data-a="pulse">Google Gemini</span></div></div>
       <div class="card rv"><h3>Product</h3><div class="skill-tags"><span data-i="📝">PRDs</span><span data-i="🎯" data-a="pulse">Jobs-to-be-Done</span><span data-i="🧩">Value Proposition Canvas</span><span data-i="⚖️">MoSCoW · RICE</span><span data-i="📏">Success metrics</span><span data-i="🆎">A/B test design</span><span data-i="🛠️">Prototyping (Lovable)</span><span data-i="🚀" data-a="pulse">Vercel · Supabase</span></div></div>
@@ -701,12 +846,13 @@ a.cert{color:inherit;display:flex;flex-direction:column}
         <a class="btn primary magnet" href="mailto:ameer.batcha@u.nus.edu">ameer.batcha@u.nus.edu <span class="arr">→</span></a>
         <a class="btn magnet" href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener">LinkedIn <span class="arr">↗</span></a>
         <a class="btn magnet" href="https://github.com/ameer29" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        <a class="btn magnet" href="assets/CV_Ameer_Batcha.pdf" target="_blank" rel="noopener">Resume (PDF) <span class="arr">↓</span></a>
       </div>
     </div>
   </section>
 </div>
 </main>
-<footer><div class="wrap">© 2026 Ameer Batcha · Survey figures recalculated from anonymised exports; no respondent data is published. Logos belong to their organisations.</div></footer>
+<footer><div class="wrap">© 2026 Ameer Batcha · Survey data is anonymised. Logos belong to their organisations.</div></footer>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate"><button aria-label="Close">✕</button><img alt=""></div>
 <div class="toast" id="toast"></div>
@@ -724,10 +870,14 @@ a.cert{color:inherit;display:flex;flex-direction:column}
   // progress bar + active nav
   var bar=document.getElementById('progress');
   var links=[].slice.call(document.querySelectorAll('nav.menu a'));
-  function onScroll(){var h=document.documentElement; bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  var topbar=document.getElementById('topbar');
+  function onScroll(){var h=document.documentElement; bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'; topbar.classList.toggle('scrolled',h.scrollTop>24);}
+  var menu=document.getElementById('menu'),mb=document.getElementById('menuBtn');
+  mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'✕':'☰';});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');mb.textContent='☰';mb.setAttribute('aria-expanded','false');});});
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
   var secObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
-  ['journey','projects','experience','education','contact'].forEach(function(id){var s=document.getElementById(id); if(s) secObs.observe(s);});
+  ['home','about','experience','projects','research','education','contact'].forEach(function(id){var s=document.getElementById(id); if(s) secObs.observe(s);});
 
   // reveal
   var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target);}});},{threshold:.12});
@@ -741,8 +891,8 @@ a.cert{color:inherit;display:flex;flex-direction:column}
 
   // rotating word
   var words=['product','data','strategy','psychology','GenAI'],wi=0,rot=document.getElementById('rotator');
-  if(!reduce) setInterval(function(){wi=(wi+1)%words.length; rot.style.opacity=0; setTimeout(function(){rot.textContent=words[wi]; rot.style.opacity=1;},250);},2200);
-  rot.style.transition='opacity .25s';
+  if(!reduce&&rot) setInterval(function(){wi=(wi+1)%words.length; rot.style.opacity=0; setTimeout(function(){rot.textContent=words[wi]; rot.style.opacity=1;},250);},2200);
+  if(rot) rot.style.transition='opacity .25s';
 
   // spotlight
   document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(); c.style.setProperty('--mx',(e.clientX-r.left)+'px'); c.style.setProperty('--my',(e.clientY-r.top)+'px');});});
