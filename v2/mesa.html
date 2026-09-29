@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa · Ameer Batcha</title><meta name="description" content="Mesa: a design-thinking project at ESADE on youth loneliness in the age of AI. A live web app that matches new students into mixed-nationality cooking groups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=3"><script src="../assets/site.js?v=3"></script><style>
+.demo{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+@media(max-width:720px){.demo{grid-template-columns:1fr}}
+.phone{width:300px;max-width:100%;height:600px;margin:0 auto;border:10px solid #1b1b1b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0;display:block}
+.browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;height:320px;position:relative;background:#fff}
+.browser iframe{width:200%;height:200%;border:0;transform:scale(.5);transform-origin:0 0}
+ol.flow{padding-left:20px;margin:0 0 12px}ol.flow li{margin-bottom:10px}
+.ss-mark{border-radius:14px;padding:28px 22px;background:linear-gradient(135deg,#4f9a6f,#4a8fcf);color:#fff;display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:center}
+.ss-mark .hi{font-size:30px;font-weight:700;line-height:1.2}
+.ss-mark .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ss-mark i{font-style:normal;font-size:13px;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
+</style><style>.phone.wide{width:340px}.steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}@media(max-width:760px){.steps4{grid-template-columns:1fr 1fr}}</style><link rel="stylesheet" href="../assets/v2.css"><script src="../assets/v2.js" defer></script>
+</head><body>
+<header class="top v2"><div class="wrap"><a class="brand" href="index.html" aria-label="Ameer Batcha, home"><svg class="sig" viewBox="230 40 740 690" aria-hidden="true"><defs><g id="abs" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path data-k="aleft" d="M260 648 C 262 600, 300 520, 340 420 C 390 300, 440 170, 472 62"/><path data-k="aright" d="M476 60 C 488 150, 490 400, 495 560 C 498 650, 505 705, 516 708 C 524 706, 528 690, 532 678"/><path data-k="cross" d="M335 455 C 400 440, 490 405, 565 383"/><path data-k="bstem" d="M640 244 C 646 330, 652 430, 660 536"/><path data-k="btop" d="M594 264 C 588 228, 620 204, 684 180 C 760 150, 835 125, 853 165 C 868 205, 800 262, 706 355"/><path data-k="bbot" d="M706 355 C 800 343, 930 360, 940 440 C 950 540, 860 622, 740 656 C 650 681, 560 690, 548 650 C 538 600, 610 560, 680 518"/></g></defs><use href="#abs" x="-6.13" y="5.14"/><use href="#abs" x="-4.09" y="3.43"/><use href="#abs" x="-2.04" y="1.71"/><use href="#abs" x="0.0" y="-0.0"/><use href="#abs" x="2.04" y="-1.71"/><use href="#abs" x="4.09" y="-3.43"/><use href="#abs" x="6.13" y="-5.14"/></svg></a><nav class="menu" id="menu"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="research.html">Research</a><a href="index.html#education">Education</a><a href="index.html#contact">Contact</a></nav><div class="navright"><a class="cta-btn" href="index.html#contact"><span class="lbl">Let’s Connect</span> <span class="arr">→</span></a><button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button><button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button></div></div></header>
+<main class="wrap"><a class="back" href="index.html#projects">← All projects</a>
+
+<div class="hero" style="padding-top:28px">
+  <p class="eyebrow">Design sprint · CEMS × SoReDI · ESADE Business School · Creative Design Thinking · 15–18 Sep 2026</p>
+  <h1>Mesa: cook together, eat wider</h1>
+  <p class="lead">Our challenge from SoReDI was <i>youth loneliness in the age of AI.</i> One sprint, twelve conversations, one live prototype. Our answer: a weekly table for students who just landed in a new city. You cook together on Saturday and share one table on Wednesday.</p>
+  <div class="meta"><span><b>Team</b> 6 (Team 3)</span><span><b>My role</b> Design-thinking process with the team (including one of the six user interviews); then I owned the website, from first prototype to a live version collecting real data from ESADE students</span><span><b>Stack</b> HTML/CSS/JavaScript · Vercel · Supabase</span></div>
+  <div class="btns">
+    <a class="btn primary" href="https://mesa-boy5.vercel.app" target="_blank" rel="noopener">Open the live app ↗</a>
+    <a class="btn ghost" href="https://github.com/ameer29/mesa" target="_blank" rel="noopener">Code on GitHub ↗</a>
+  </div>
+</div>
+
+<section>
+  <p class="eyebrow">Try it here</p>
+  <h2>The live app</h2>
+  <div class="demo">
+    <div class="phone wide"><iframe src="https://mesa-boy5.vercel.app" title="Mesa live app" loading="lazy"></iframe></div>
+    <div><ol class="flow">
+      <li><b>Join with your university email.</b> Mesa runs inside one university, so everyone at your table is someone you'll run into again.</li>
+      <li><b>Get matched into a table of four passports.</b> Four students from four countries, so nobody has the home advantage.</li>
+      <li><b>Pick a dish.</b> One from each of your countries, plus a few that anyone can manage.</li>
+      <li><b>Saturday: cook together.</b> A shopping list, jobs you can swap, and a recipe video.</li>
+      <li><b>Wednesday: one table.</b> Four kitchens bring four dishes. Halfway through comes "the round": each person names one thing they're grateful for and one thing that's hard.</li>
+    </ol>
+    <p class="note">This is the real app, embedded. It's interactive.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">1 · The problem</p>
+  <h2>One in four is lonely, and AI answers first</h2>
+  <div class="stats">
+    <div class="stat"><div class="num">25.5%</div><div class="lbl">of 16–29-year-olds in Spain feel lonely (ONCE, 2024)</div></div>
+    <div class="stat"><div class="num">6</div><div class="lbl">in-depth interviews in week one, one per teammate</div></div>
+    <div class="stat"><div class="num">7</div><div class="lbl">prototype tests: six students plus one AI walkthrough</div></div>
+  </div>
+  <p>Arriving in a new city is the worst moment to meet anyone. Welcome week throws hundreds of names at you at once, and by week three the groups have quietly closed. So people turn to AI instead. AI isn't a bad product; it's just a faster one. It's awake at midnight, it agrees with you, and the conversation ends feeling resolved.</p>
+  <div class="callout"><p><b>What the interviews kept showing.</b> Real comfort, no relationship, so the loneliness survived the conversation. One interviewee explained why she asked an AI, not a friend, to settle an argument: <i>"Closure was faster."</i> And nobody in six interviews used the word "lonely". They all said "busy".</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">2 · The user</p>
+  <h2>She doesn't want 600 contacts. She wants two people.</h2>
+  <div class="grid2">
+    <div class="persona"><div class="n">Giulia, 23 · Milan · month 2 of 5 on exchange</div>A persona synthesised from our six interviews. Her programme friends feel temporary ("we're all leaving anyway"), so she holds back and the friendships stay polite. Evenings and the hour after an argument are the hardest, with nobody local to talk it through.</div>
+    <div class="persona"><div class="n">Her goal</div>One or two friendships that survive the semester, and the feeling of living in Barcelona rather than passing through it. Not a bigger network, just somewhere to turn up on a Wednesday.</div>
+  </div>
+  <p class="muted" style="margin-top:12px"><b>My interview (Interview 6):</b> a 25-year-old two to three weeks into Barcelona, an introvert who had learned to open up, who uses AI for work emails and translation and "sometimes like my psychologist" late at night, when there's nobody to call. The takeaway we built around: <i>AI can be a companion, but not the only one.</i></p>
+</section>
+
+<section>
+  <p class="eyebrow">3 · The solution</p>
+  <h2>A weekly table, not another app to perform on</h2>
+  <div class="steps4" style="grid-template-columns:repeat(3,1fr)">
+    <div class="step"><b>Cook</b>Six students from one university, verified by university email, cook a dish from home together. The task carries the conversation, so nobody has to be interesting on demand.</div>
+    <div class="step"><b>Table</b>Four of those kitchens bring their dishes to one shared table, at a new venue every week. You eat all four, not just your own.</div>
+    <div class="step"><b>The round</b>Everyone names one thing they're grateful for and one thing that's hard. No fixing, and no advice unless someone asks for it. Everyone takes a turn, so nobody is exposed.</div>
+  </div>
+  <p class="muted">Paper sketch on Day 2, clickable and in front of students on Day 3.</p>
+</section>
+
+<section>
+  <p class="eyebrow">4 · Iteration</p>
+  <h2>Seven tests found the flaw that would have killed it</h2>
+  <p>We ran the Explorative Experimentation Cycle (Hassi &amp; Rekonen, 2018): six hypotheses (would people host, download, show up, cook with strangers, feel safe, stay in touch), a ten-question script, and 10–15 minute sessions.</p>
+  <table class="data">
+    <thead><tr><th>What testers told us</th><th>What we changed</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nobody trusts a free sign-up.</b> Testers admitted they'd cancel for better plans.</td><td><b>Put money on the table:</b> ingredients paid upfront (€5–8). It isn't revenue; it's the difference between an intention and a commitment.</td></tr>
+      <tr><td><b>Hosting alone is the real ask.</b> Cooking with strangers was never the blocker; opening your own flat to five of them was.</td><td><b>Show the people first:</b> verified profiles and the full guest list before dinner, plus a co-host or a neutral kitchen.</td></tr>
+      <tr><td><b>Safety is about people, not the app.</b> Testers wanted to see who was coming and where.</td><td>(Covered by the guest list above.)</td></tr>
+      <tr><td><b>A download is a barrier; a university link isn't.</b></td><td><b>Arrive through the university:</b> a web app, with nothing to install.</td></tr>
+      <tr><td>Dietary needs and awkward seating.</td><td><b>Make the next table better:</b> ratings after each dinner feed the seating, and a recipe-and-budget matcher handles diets.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout"><p><b>What we deliberately kept.</b> Cooking together and the round. Every tester liked the shared task, so we didn't let ourselves redesign it.</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">5 · Final</p>
+  <h2>Mesa v2 runs end to end</h2>
+  <p>Sign up with a university email → profile (photo, studies, diet) → book and pay €5–8 → see the host and guest list → cook, eat and do the round → rate and swap contacts. The thread stays open, and the table comes back seven days later.</p>
+  <div class="callout"><p><b>Our ask: a pilot.</b> Four tables at ESADE in <b>week three</b> of the semester, not week one, because testers told us the first week is noise and the need arrives once everyone else has settled in. One number decides it: <b>how many people book a second table.</b></p></div>
+  <p class="muted"><i>"AI can give Giulia closure in thirty seconds. We're asking for two hours, one table, and four people who will still be there next Wednesday."</i> (our closing line)</p>
+</section>
+
+<section>
+  <p class="eyebrow">My contribution</p>
+  <h2>From the whiteboard to the live product</h2>
+  <ul class="clean">
+    <li><b>Research and ideation, as a team.</b> I ran one of the six user interviews and worked through the design-thinking process with the team on our shared Miro board: context map, research plan, interviews, empathy map, problem statement, How-Might-We, ideation, paper prototype and experiment plan.</li>
+    <li><b>I owned the website.</b> Once we split the work, I built the web app, from the first clickable prototype we tested on Day 3 to the live version. I deployed it on <b>Vercel</b> and connected a <b>Supabase</b> database so we could collect real responses from ESADE students.</li>
+  </ul>
+  <div class="grid2">
+    <div class="persona"><div class="n">What students can do</div>A 6-step onboarding (university email, home country, what brings you here, cooking level) · table matching · dish picks · a weekly plan with a shopping list and swappable roles · the round · a group thread that stays open between weeks</div>
+    <div class="persona"><div class="n">What we learn from it</div>Feedback after every evening ("Did you feel more connected?", "Would you turn up next Wednesday?") and on the app itself, plus a private admin dashboard that exports every sign-up, dish choice and response to Excel or CSV</div>
+  </div>
+  <p class="note" style="margin-top:12px">In the prototype, the matching is simulated; the planned logic uses diet, budget and neighbourhood. Privacy by design: anything shared at the table is opt-in, and the admin data needs a private key that is never in the public code.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Team</p>
+  <h2>Team 3</h2>
+  <p>Linus · Rita · João · Paul · Niki · <b>Ameer</b>. CEMS × SoReDI Design Sprint, ESADE, 15–18 September 2026. Each of us ran one user interview; the final pitch was five beats with one speaker each.</p>
+</section>
+<footer id="contact"><div><p><b>Ameer Batcha</b> · ameer.batcha@u.nus.edu · <a href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/ameer29">GitHub</a></p></div></footer>
+</main><script>(function(){var b=document.getElementById('themeBtn'),r=document.documentElement;b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);r.setAttribute('data-theme',d?'light':'dark');});})();</script></body></html>
