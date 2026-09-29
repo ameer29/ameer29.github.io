@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research · Ameer Batcha</title>
+<meta name="description" content="Ameer Batcha's research: consumer surveys on Netflix (2020) and Swiggy (2021), a PEER mentoring field report, and an MSc dissertation on leadership and Self-Determination Theory.">
+<script>try{var _t=localStorage.getItem("ab-theme");if(_t)document.documentElement.setAttribute("data-theme",_t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--serif:"Fraunces",Georgia,serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;--bg:#fff;--bg-2:#f4f6f9;--panel:#fff;--line:#e5e8ee;--line-2:#d3d8e0;--ink:#0b0d12;--ink-2:#414856;--ink-3:#727a88;--acc:#1e3a8a;--acc-2:#2f55c4;--acc-soft:rgba(30,58,138,.07);--glow:rgba(30,58,138,.22);--on-acc:#fff;--track:#eceff4;--shadow:0 18px 40px -22px rgba(11,13,18,.28)}
+:root[data-theme="dark"]{--bg:#0b0d12;--bg-2:#10141c;--panel:#141923;--line:#252c39;--line-2:#323a4a;--ink:#f2f3f5;--ink-2:#b3b9c5;--ink-3:#828a99;--acc:#8fb0ff;--acc-2:#b9cbff;--acc-soft:rgba(143,176,255,.12);--glow:rgba(143,176,255,.3);--on-acc:#0b0d12;--track:#232a37;--shadow:0 20px 50px -20px rgba(0,0,0,.65)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(900px 480px at 88% -8%,var(--acc-soft),transparent 60%)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc-2));z-index:60}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font:600 19px var(--serif);display:flex;align-items:center;gap:10px}
+.brand .mono{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--acc),var(--acc-2));color:var(--on-acc);font:700 13px var(--sans)}
+nav{display:flex;align-items:center;gap:4px;font-size:14px;color:var(--ink-2)}
+nav a{padding:8px 12px;border-radius:999px;transition:color .2s,background .2s}nav a:hover{color:var(--acc);background:var(--acc-soft)}
+@media(max-width:640px){nav a.hs{display:none}}
+.theme-btn{width:36px;height:36px;margin-left:6px;border-radius:50%;border:1px solid var(--line-2);background:var(--panel);color:var(--ink);cursor:pointer;transition:transform .3s,border-color .2s}.theme-btn:hover{transform:rotate(25deg);border-color:var(--acc)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.12;margin:0}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+.eyebrow .n{font:600 15px/1 var(--serif);letter-spacing:0}
+.eyebrow .l{color:var(--ink-3)}
+.hero{padding:64px 0 36px}.hero h1{font-size:clamp(38px,6vw,64px);max-width:860px}
+.hero h1 em{font-style:italic;color:var(--acc)}
+.lead{font-size:18px;color:var(--ink-2);max-width:680px;margin:20px 0 0}
+.shelf{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:36px 0 8px}
+@media(max-width:980px){.shelf{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.shelf{grid-template-columns:repeat(2,1fr)}}
+.tile{position:relative;display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:16px;border:1px solid var(--line);background:var(--panel);transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 14px 30px -16px var(--glow)}
+.tile .lg{height:52px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;padding:8px}
+.tile .lg img{max-height:34px;max-width:100%;object-fit:contain;display:block}
+.tile .k{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.tile .t{font:600 15px/1.25 var(--serif)}
+.tile .kind{align-self:flex-start;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:var(--acc-soft);color:var(--acc)}
+section.c{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
+.grid{display:grid;grid-template-columns:1.45fr 1fr;gap:40px;align-items:start}
+@media(max-width:880px){.grid{grid-template-columns:1fr;gap:24px}}
+.head{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.logo{height:64px;min-width:64px;max-width:150px;padding:10px 12px;border-radius:16px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:border-color .2s,box-shadow .2s}
+.logo:hover{border-color:var(--acc);box-shadow:0 8px 20px -10px var(--glow)}
+.logo img{height:42px;width:auto;max-width:124px;object-fit:contain;display:block}
+h2{font-size:clamp(26px,3.4vw,36px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.chips span{font-size:12.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink-2)}
+.chips span b{color:var(--ink);font-weight:600}
+.story{font:400 clamp(18px,1.9vw,20px)/1.6 var(--serif);margin:0 0 18px}
+.h4{font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:26px 0 10px}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.mods{grid-template-columns:1fr}}
+.mod{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel);transition:border-color .25s,transform .25s}
+.mod:hover{border-color:var(--acc);transform:translateY(-2px)}
+.mod .i{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font:600 13px var(--serif);background:var(--acc-soft);color:var(--acc)}
+.mod b{display:block;font-size:14px;line-height:1.3}
+.mod small{display:block;font-size:12.5px;color:var(--ink-3);line-height:1.4;margin-top:2px}
+ul.clean{padding:0;margin:0;list-style:none}
+ul.clean li{position:relative;padding-left:20px;margin:9px 0;color:var(--ink-2);font-size:15px}
+ul.clean li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;height:7px;border-radius:2px;background:var(--acc);transform:rotate(45deg)}
+b{color:var(--ink);font-weight:600}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 6px}
+.metric{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel);transition:transform .25s,border-color .25s}
+.metric:hover{transform:translateY(-3px);border-color:var(--acc)}
+.metric .v{font:600 26px/1.1 var(--serif);color:var(--acc)}.metric .l{font-size:12.5px;color:var(--ink-2);line-height:1.35;margin-top:4px}
+.score{display:grid;gap:10px;padding:18px;border-radius:16px;border:1px solid var(--line);background:var(--panel)}
+.score .r{display:grid;grid-template-columns:130px 1fr 52px;gap:12px;align-items:center;font-size:13.5px}
+.score .r span{color:var(--ink-2)}.score .r em{font-style:normal;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.score i{height:10px;border-radius:99px;background:var(--track);position:relative;overflow:hidden}
+.score i::after{content:"";position:absolute;inset:0;width:0;border-radius:99px;background:linear-gradient(90deg,var(--acc),var(--acc-2));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.score.in i::after{width:var(--w)}
+.score .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:10px;margin-top:2px;font-size:13px;color:var(--ink-3)}
+.score .tot b{font:600 24px var(--serif);color:var(--acc)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;font-weight:600;font-size:14px;border:1px solid var(--line-2);background:var(--panel);transition:transform .25s,border-color .25s,box-shadow .25s,color .25s}
+.btn:hover{transform:translateY(-2px);border-color:var(--acc);color:var(--acc);box-shadow:0 10px 26px -14px var(--glow)}
+.btn.primary{background:linear-gradient(135deg,var(--acc),var(--acc-2));color:var(--on-acc);border:0}.btn.primary:hover{color:var(--on-acc)}
+figure.cert{margin:0;position:sticky;top:88px}
+@media(max-width:880px){figure.cert{position:static}}
+figure.cert button{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg-2);cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+figure.cert button:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:var(--shadow);border-color:var(--acc)}
+figure.cert img{width:100%;display:block}
+figure.cert figcaption{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--ink-3);margin-top:10px}
+figure.cert figcaption b{color:var(--ink-2);font-weight:600}
+.awards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.awards{grid-template-columns:1fr}}
+.aw{border:1px solid var(--line);border-radius:18px;background:var(--panel);overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
+.aw:hover{border-color:var(--acc);box-shadow:var(--shadow);transform:translateY(-3px)}
+.aw button{display:block;width:100%;padding:0;border:0;border-bottom:1px solid var(--line);background:var(--bg-2);cursor:zoom-in}
+.aw button img{width:100%;display:block;aspect-ratio:16/11;object-fit:cover}
+.aw .b{padding:20px 22px}
+.aw h3{font-size:22px;margin:6px 0 8px}
+.aw q{display:block;font:italic 400 17px/1.5 var(--serif);color:var(--ink);margin:0 0 12px}
+.aw .k{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.note{font-size:13px;color:var(--ink-3)}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(5,7,12,.86);display:none;place-items:center;padding:24px;cursor:zoom-out}
+.lightbox.on{display:grid}
+.lightbox img{max-width:min(960px,100%);max-height:88vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox button{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:50%;border:1px solid #555;background:#111;color:#fff;font-size:18px;cursor:pointer}
+footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--ink-3);font-size:13px;text-align:center}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+body.focus .hero{padding:32px 0 8px}
+body.focus .hero h1,body.focus .hero .lead,body.focus .hero>.eyebrow{display:none}
+body.focus .shelf{margin-top:8px}
+body.focus section.c{display:none;border-top:0;padding-top:28px}
+body.focus section.c.on{display:block}
+.tile.on{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft)}
+.viewall{display:none;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--acc)}
+body.focus .viewall{display:inline-flex}
+
+.shelf.rs{grid-template-columns:repeat(4,1fr)}
+@media(max-width:820px){.shelf.rs{grid-template-columns:repeat(2,1fr)}}
+.tile .big{font:600 30px/1.1 var(--serif);color:var(--acc);padding:6px 0 2px}
+.tile .kind.soon{background:rgba(217,119,6,.12);color:#b45309}
+:root[data-theme="dark"] .tile .kind.soon{color:#fbbf24}
+.sub{font-size:14.5px;color:var(--ink-3);margin:8px 0 18px;font-style:italic}
+.side{display:grid;gap:14px;position:sticky;top:88px}
+@media(max-width:880px){.side{position:static}}
+.chart{padding:18px;border-radius:16px;border:1px solid var(--line);background:var(--panel)}
+.chart .ct{font:600 16px/1.3 var(--serif)}
+.chart .cs{font-size:12.5px;color:var(--ink-3);margin:3px 0 12px}
+.chart .score{padding:0;border:0;background:none}
+.score .r{grid-template-columns:150px 1fr 44px}
+.score .r span small{display:block;font-size:11px;color:var(--ink-3)}
+.score .r.hl i::after{background:linear-gradient(90deg,#d97706,#f59e0b)}
+.stack{display:flex;height:34px;border-radius:10px;overflow:hidden;background:var(--track)}
+.stack i{width:var(--w);display:grid;place-items:center;font:600 12px var(--sans);font-style:normal;color:#fff;transition:filter .2s}
+.stack i:hover{filter:brightness(1.12)}
+.stack i:nth-child(1),.legend .d1{background:var(--acc)}
+.stack i:nth-child(2),.legend .d2{background:var(--acc-2)}
+.stack i:nth-child(3),.legend .d3{background:#8aa4e6}
+.stack i:nth-child(4),.legend .d4{background:#c7d3f2}
+.stack.nps i:nth-child(3),.legend .d5{background:#d97706}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px;color:var(--ink-2)}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.cols{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;height:150px;align-items:end}
+.cols div{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.cols i{width:100%;height:var(--h);border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,var(--acc-2),var(--acc));transition:transform .25s;transform-origin:bottom}
+.cols div:hover i{transform:scaleY(1.04)}
+.cols em{order:-1;font-style:normal;font-size:12px;font-weight:600}
+.cols span{font-size:12px;color:var(--ink-3)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+.box{padding:20px 22px;border-radius:16px;border:1px solid var(--line);background:var(--bg-2)}
+.box p{margin:0;color:var(--ink-2);font-size:15px}
+details.q{margin-top:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+details.q summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:14.5px;list-style:none;display:flex;justify-content:space-between}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:"+";color:var(--acc);font-size:18px;line-height:1;transition:transform .2s}
+details.q[open] summary::after{transform:rotate(45deg)}
+details.q ol{margin:0;padding:4px 22px 18px 44px;color:var(--ink-2);font-size:14px}
+details.q li{margin:6px 0}
+details.q em{color:var(--ink-3)}
+.tl{display:grid;gap:0;border-left:2px solid var(--line-2);margin-left:6px}
+.tl div{position:relative;padding:0 0 16px 20px}
+.tl div::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--panel);border:2px solid var(--acc)}
+.tl b{display:block;font-size:14.5px}
+.tl span{display:block;font-size:14px;color:var(--ink-2);line-height:1.5}
+.five{display:grid;gap:8px}
+.five div{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:baseline;padding:8px 10px;border-radius:10px;background:var(--acc-soft);transition:transform .2s}
+.five div:hover{transform:translateX(4px)}
+.five b{font:600 14px var(--serif);color:var(--acc)}
+.five span{font-size:12.5px;color:var(--ink-2)}
+.rq{margin:0;padding-left:20px;color:var(--ink-2);font-size:15px}.rq li{margin:8px 0}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{position:relative;padding:8px 0 8px 30px;font-size:14px;color:var(--ink-3)}
+.steps li::before{content:"";position:absolute;left:0;top:10px;width:16px;height:16px;border-radius:50%;border:2px solid var(--line-2)}
+.steps li.done{color:var(--ink)}
+.steps li.done::before{background:var(--acc);border-color:var(--acc)}
+.steps li.done::after{content:"✓";position:absolute;left:4px;top:8px;font-size:11px;color:var(--on-acc);font-weight:700}
+.steps li.now{color:var(--ink);font-weight:600}
+.steps li.now::before{border-color:#d97706;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,119,6,.45)}70%{box-shadow:0 0 0 8px rgba(217,119,6,0)}100%{box-shadow:0 0 0 0 rgba(217,119,6,0)}}
+.chips span.live{border-color:#d97706;color:#b45309}
+:root[data-theme="dark"] .chips span.live{color:#fbbf24}
+.soonbox{border-style:dashed}
+section.c .btns{margin-top:18px}
+section.c>.note{margin-top:10px}
+.stack.nps i:nth-child(2){background:#8aa4e6}</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header><div class="wrap"><a class="brand" href="index.html"><span class="mono">AB</span>Ameer Batcha</a>
+<nav><a href="index.html#projects" class="hs">Projects</a><a href="certifications.html" class="hs">Credentials</a><a href="index.html#research">← Portfolio</a><button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode">◐</button></nav></div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="eyebrow rv">Research · marketing and psychology</p>
+    <h1 class="rv">How I ask questions, and <em>what the answers showed.</em></h1>
+    <p class="lead rv">Two consumer surveys from my BBA, a field report from my psychology placement, and my MSc dissertation, which is in progress. Each study has its method, findings, questionnaire and the full report. The BBA projects were my first research, so I’ve added what I’d do differently now.</p>
+    <div class="shelf rs">
+      <a class="tile rv" href="#netflix"><span class="kind">BBA · 2020</span><span class="big">n = 92</span><span class="k">Consumer survey</span><span class="t">Why people stay with Netflix</span></a>
+      <a class="tile rv" href="#swiggy"><span class="kind">BBA · 2021</span><span class="big">n = 93</span><span class="k">Dissertation</span><span class="t">What keeps people ordering on Swiggy</span></a>
+      <a class="tile rv" href="#peer"><span class="kind">MSc · 2026</span><span class="big">5Cs</span><span class="k">Field report</span><span class="t">Building trust with young mentees</span></a>
+      <a class="tile rv" href="#sdt"><span class="kind soon">In progress</span><span class="big">SDT</span><span class="k">MSc dissertation</span><span class="t">Leadership styles and well-being</span></a>
+    </div>
+    <a class="viewall" href="#all">View all research →</a>
+  </div>
+
+  <!-- NETFLIX -->
+  <section class="c" id="netflix">
+    <p class="eyebrow rv"><span class="n">01</span><span class="l">BBA summer internship project · 2020</span></p>
+    <div class="grid">
+      <div class="rv">
+        <h2>Why do people stay with Netflix?</h2>
+        <p class="sub">A study on the effect of consumer preference and attitude in online service marketing (B2C): Netflix</p>
+        <div class="chips"><span><b>Amity Global Business School</b> · BBA in Marketing</span><span>Guide: Prof. Shanti J</span><span>Survey May – Jun 2020</span><span>17 questions</span><span>92 responses</span></div>
+        <p class="story">My first research project. During India's first COVID lockdown, streaming became everyone's evening, so I surveyed people on how they watch Netflix, what they value, and what would pull them to a rival.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">81%</div><div class="l">satisfied overall (49% extremely)</div></div>
+          <div class="metric"><div class="v">39%</div><div class="l">would always choose Netflix over a rival</div></div>
+          <div class="metric"><div class="v">55%</div><div class="l">named Amazon Prime as their alternative</div></div>
+          <div class="metric"><div class="v">61%</div><div class="l">would always recommend Netflix</div></div>
+        </div>
+        <div class="h4">What I found</div>
+        <ul class="clean">
+          <li><b>A young, phone-first audience.</b> 79% were students and 60% were aged 15–20. 41% watched mainly on a smartphone, 31% on a TV.</li>
+          <li><b>Content wins, price lags.</b> "Many series" and "quality content" were the features most often rated satisfying. Pricing came last.</li>
+          <li><b>Long viewing sessions.</b> 2–3 hours a day was the most common answer (31.5%), and 12% watched more than 5 hours.</li>
+          <li><b>Recommendations matter.</b> 80% sometimes check Netflix's recommendation list before choosing something new, and 12.5% always do.</li>
+          <li><b>Tastes and plans.</b> Thrillers (34%) and sci-fi/action (28%) were the favourite genres, and Premium was the most chosen plan (47%).</li>
+        </ul>
+      </div>
+      <aside class="side rv">
+        <div class="chart">
+          <div class="ct">Overall satisfaction</div><div class="cs">% of respondents</div>
+          <div class="stack" role="img" aria-label="Extremely satisfied 49%, moderately satisfied 32%, neutral 18%, moderately dissatisfied 1%"><i style="--w:49.4%">49%</i><i style="--w:31.5%">32%</i><i style="--w:18%">18%</i><i style="--w:1.1%"></i></div>
+          <div class="legend"><span><b class="d1"></b>Extremely</span><span><b class="d2"></b>Moderately</span><span><b class="d3"></b>Neutral</span><span><b class="d4"></b>Dissatisfied</span></div>
+        </div>
+        <div class="chart">
+          <div class="ct">Features rated satisfying</div><div class="cs">Number of respondents who ticked each feature</div>
+          <div class="score in">
+            <div class="r"><span>Many series</span><i style="--w:100%"></i><em>72</em></div>
+            <div class="r"><span>Quality content</span><i style="--w:94%"></i><em>68</em></div>
+            <div class="r"><span>Blu-ray &amp; Dolby Atmos</span><i style="--w:65%"></i><em>47</em></div>
+            <div class="r"><span>Interface</span><i style="--w:61%"></i><em>44</em></div>
+            <div class="r hl"><span>Pricing</span><i style="--w:32%"></i><em>23</em></div>
+          </div>
+        </div>
+        <div class="chart">
+          <div class="ct">Main device</div><div class="cs">% of respondents</div>
+          <div class="stack" role="img" aria-label="Smartphone 41%, TV 31%, laptop 21%, other 7%"><i style="--w:41.1%">41%</i><i style="--w:31.1%">31%</i><i style="--w:21.1%">21%</i><i style="--w:6.7%"></i></div>
+          <div class="legend"><span><b class="d1"></b>Smartphone</span><span><b class="d2"></b>TV</span><span><b class="d3"></b>Laptop</span><span><b class="d4"></b>Other</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="grid2">
+      <div class="rv box">
+        <div class="h4" style="margin-top:0">Method</div>
+        <p>An online questionnaire (Google Forms) shared through my network, covering usage (device, hours a day, tenure), satisfaction with five features, the service people would switch to, plan type, overall satisfaction and willingness to recommend. I analysed each question as a frequency table and chart and interpreted the percentages.</p>
+      </div>
+      <div class="rv box">
+        <div class="h4" style="margin-top:0">Looking back · my learning curve</div>
+        <ul class="clean">
+          <li>A convenience sample of mostly students, so the results describe young viewers rather than all subscribers.</li>
+          <li>I'd now rate each feature on a 5-point scale instead of "tick if satisfied".</li>
+          <li>The analysis was descriptive. Since then I've learnt hypothesis testing, which I'd use to test relationships between answers.</li>
+        </ul>
+      </div>
+    </div>
+    <details class="q rv"><summary>The questionnaire · 17 questions</summary>
+      <ol>
+        <li>Name <em>(removed from the published data)</em></li>
+        <li>Gender: Male · Female · Prefer not to say</li>
+        <li>Nationality <em>(removed from the published data)</em></li>
+        <li>Age group: 15–20 · 20–30 · 30–40 · 40–50 · 50+</li>
+        <li>Profession: Student · Business · Private · Government</li>
+        <li>Are you an existing customer of Netflix? Yes · No · Maybe</li>
+        <li>What device do you use Netflix on? Smartphone · Television · Computer/laptop · Other</li>
+        <li>If you had to choose a streaming service other than Netflix, what would it be? Amazon Prime · Hotstar · Hulu · Other · I would always choose Netflix</li>
+        <li>Which features of Netflix are you satisfied with? Quality content · Interface · Instant Blu-ray and Dolby Atmos · Many series · Pricing</li>
+        <li>How long have you been using Netflix? 3 months · 6 months · 1 year · More than a year</li>
+        <li>How many hours a day do you use Netflix? 1–2 · 2–3 · 3–4 · 4–5 · More than 5</li>
+        <li>How often do you check Netflix's recommendations before choosing something new? Always · Sometimes · Never</li>
+        <li>How likely are you to recommend Netflix to others? Always · Sometimes · Very rarely</li>
+        <li>What type of shows do you prefer? Thriller · Sci-fi/action · Horror · Anime · Comedy · Other</li>
+        <li>Why do you prefer Netflix over other services? Entertainment · New content · Popularity · Pricing · All of the above</li>
+        <li>Which plan do you prefer? Mobile · Basic · Standard · Premium</li>
+        <li>Overall, how satisfied are you with Netflix? Extremely satisfied → Extremely dissatisfied</li>
+      </ol>
+    </details>
+    <div class="btns rv"><a class="btn primary" href="research/reports/netflix-consumer-study-2020.pdf" target="_blank" rel="noopener">Read the report (PDF) ↗</a><a class="btn" href="research/data/netflix-survey-2020.csv" download>Survey responses (CSV) ↓</a></div>
+    <p class="note rv">The report is a draft of the final submission. Respondents' names, nationality and timestamps are removed from the data. An academic project, not affiliated with Netflix.</p>
+  </section>
+
+  <!-- SWIGGY -->
+  <section class="c" id="swiggy">
+    <p class="eyebrow rv"><span class="n">02</span><span class="l">BBA dissertation · 2021</span></p>
+    <div class="grid">
+      <div class="rv">
+        <h2>What keeps people ordering on Swiggy?</h2>
+        <p class="sub">A study on the business model of Swiggy, Bangalore</p>
+        <div class="chips"><span><b>Amity Global Business School</b> · final-year dissertation</span><span>Guide: Prof. S. Karthikeyan</span><span>Survey Mar – Apr 2021</span><span>20 questions</span><span>93 responses</span></div>
+        <p class="story">My final-year dissertation paired a business-model analysis of Swiggy with a consumer survey on how, how often and why people order food online.</p>
+        <div class="metrics">
+          <div class="metric"><div class="v">80%</div><div class="l">satisfied or highly satisfied</div></div>
+          <div class="metric"><div class="v">84%</div><div class="l">say food quality is their top concern</div></div>
+          <div class="metric"><div class="v">79%</div><div class="l">order food online through Swiggy</div></div>
+          <div class="metric"><div class="v">63%</div><div class="l">ordered during the lockdown</div></div>
+        </div>
+        <div class="h4">What I found</div>
+        <ul class="clean">
+          <li><b>Who ordered.</b> 83% were students and 54% were aged 15–20.</li>
+          <li><b>Habit, not occasion.</b> Most people ordered once a week (48%) and at random (72%), not for weekends, guests or offers.</li>
+          <li><b>Discounts matter.</b> 46% rated the impact of promotions 5 out of 5, and app discounts were the most-picked driver (65 respondents).</li>
+          <li><b>Quality comes first.</b> Food quality was the top concern for 84%, ahead of speed and price.</li>
+          <li><b>Loyal users.</b> 59% of subscribers had Swiggy Super, and 34% had used Swiggy for more than two years.</li>
+        </ul>
+      </div>
+      <aside class="side rv">
+        <div class="chart">
+          <div class="ct">Satisfaction with Swiggy</div><div class="cs">% of respondents</div>
+          <div class="score in">
+            <div class="r"><span>Satisfied</span><i style="--w:51%"></i><em>51%</em></div>
+            <div class="r"><span>Highly satisfied</span><i style="--w:29%"></i><em>29%</em></div>
+          </div>
+        </div>
+        <div class="chart">
+          <div class="ct">What most affects ordering</div><div class="cs">Multi-select · number of respondents</div>
+          <div class="score in">
+            <div class="r"><span>App discounts</span><i style="--w:100%"></i><em>65</em></div>
+            <div class="r"><span>Lower delivery fees &amp; tax</span><i style="--w:66%"></i><em>43</em></div>
+            <div class="r"><span>Restaurant prices</span><i style="--w:45%"></i><em>29</em></div>
+            <div class="r"><span>Faster delivery</span><i style="--w:38%"></i><em>25</em></div>
+          </div>
+        </div>
+        <div class="chart">
+          <div class="ct">Impact of discounts on ordering</div><div class="cs">1 = low, 5 = high · number of respondents</div>
+          <div class="cols" role="img" aria-label="1: 6, 2: 6, 3: 15, 4: 22, 5: 41 respondents"><div><i style="--h:15%"></i><em>6</em><span>1</span></div><div><i style="--h:15%"></i><em>6</em><span>2</span></div><div><i style="--h:37%"></i><em>15</em><span>3</span></div><div><i style="--h:54%"></i><em>22</em><span>4</span></div><div><i style="--h:100%"></i><em>41</em><span>5</span></div></div>
+        </div>
+      </aside>
+    </div>
+    <div class="grid2">
+      <div class="rv box">
+        <div class="h4" style="margin-top:0">The business-model lens</div>
+        <ul class="clean">
+          <li><b>Logistics at the core.</b> Swiggy built its own delivery fleet and live tracking, making speed and reliability the product.</li>
+          <li><b>Fighting multi-homing.</b> Customers compared Swiggy, Zomato and Uber Eats before ordering, so Swiggy signed exclusive deals and ranked those restaurants first.</li>
+          <li><b>Revenue.</b> Restaurant commissions, delivery fees, the Swiggy Super subscription, and a move into groceries and other deliveries.</li>
+        </ul>
+      </div>
+      <div class="rv box">
+        <div class="h4" style="margin-top:0">Looking back · my learning curve</div>
+        <ul class="clean">
+          <li>Most respondents came through my network and already used Swiggy, so the satisfaction figures describe existing users.</li>
+          <li>The frequency question needed a "less than once a week" option.</li>
+          <li>The analysis was descriptive. Today I'd state hypotheses and test them, for example whether frequent users are more discount-driven.</li>
+        </ul>
+      </div>
+    </div>
+    <details class="q rv"><summary>The questionnaire · 20 questions</summary>
+      <ol>
+        <li>Name <em>(removed from the published data)</em></li>
+        <li>Gender: Male · Female · Others</li>
+        <li>Nationality <em>(removed from the published data)</em></li>
+        <li>Age group: 15–20 · 20–30 · 30–40 · 40–50 · 50+</li>
+        <li>Profession: Student · Business · Private · Government</li>
+        <li>Do you use Swiggy? Yes · No · Maybe</li>
+        <li>How do you order food online? Swiggy · Zomato · Restaurant app · I call the restaurant directly</li>
+        <li>Do you order food frequently? Yes · No · Maybe</li>
+        <li>How many times a week do you order, on average? Once · 3 times · Daily · None</li>
+        <li>On what occasion do you usually order? Randomly · Weekends · When I have guests · When there's an offer</li>
+        <li>Which subscription plan do you have? Swiggy Super · Zomato Gold · EazyDiner · Dineout</li>
+        <li>What impact do promotions and discounts have on your ordering? 1 (low) → 5 (high)</li>
+        <li>What has the most impact on your ordering on Swiggy? App discounts · Less delivery time · Restaurant cost · Lower charges (delivery fee, tax)</li>
+        <li>When ordering online, what is your top concern? Food quality · Quick delivery · Accurate pricing · Other</li>
+        <li>How likely are you to recommend Swiggy to friends and relatives? 1 → 10</li>
+        <li>Roughly how much do you spend per order? &lt;₹150 · &lt;₹250 · &lt;₹500 · More than ₹500</li>
+        <li>Are you satisfied ordering on Swiggy? Highly satisfied → Highly dissatisfied</li>
+        <li>How long have you been ordering on Swiggy? 6 months · 1 year · 2 years · More than 2 years</li>
+        <li>Did you order from Swiggy during the lockdown? Yes · No · Maybe</li>
+        <li>Swiggy and Zomato are big competitors. Which do you prefer, and why? <em>(open answer)</em></li>
+      </ol>
+    </details>
+    <div class="btns rv"><a class="btn primary" href="research/reports/swiggy-dissertation-2021.pdf" target="_blank" rel="noopener">Read the dissertation (PDF) ↗</a><a class="btn" href="research/data/swiggy-survey-2021.csv" download>Survey responses (CSV) ↓</a></div>
+    <p class="note rv">Respondents' names, nationality and timestamps are removed from the data. Open answers are kept as written.</p>
+  </section>
+
+  <!-- PEER -->
+  <section class="c" id="peer">
+    <p class="eyebrow rv"><span class="n">03</span><span class="l">MSc field placement · 2026</span></p>
+    <div class="grid">
+      <div class="rv">
+        <h2>Building trust through creative expression</h2>
+        <p class="sub">Peer mentor field report · PEER Community Programme, Yayasan MENDAKI</p>
+        <div class="chips"><span><b>MENDAKI Club</b> · PEER @ Tampines</span><span>Sessions 1–4 · Feb – Apr 2026</span><span>Written end of April 2026</span><span>Observational field report</span></div>
+        <p class="story">For the field placement in my MSc in Psychology, I documented how a group of secondary-school mentees (aged 11–16) went from guarded to open, and why play-based activities helped.</p>
+        <div class="h4">What I observed</div>
+        <div class="tl">
+          <div><b>14 Feb · Orientation</b><span>Mentees were reserved, as the mock rounds had predicted. Structured icebreakers and reflection journals gave them a low-pressure start.</span></div>
+          <div><b>28 Feb · Ramadan food distribution</b><span>A turning point: in the debrief and their journals, mentees reflected on privilege and community.</span></div>
+          <div><b>14 Mar · Drawing &amp; board games</b><span>"Draw something that represents you" let them open up without direct questioning. Cooperative games replaced competition.</span></div>
+          <div><b>11 Apr · After the Hari Raya break</b><span>Quiet mentees were now starting conversations themselves. Trust was building step by step.</span></div>
+        </div>
+        <p class="note" style="margin-top:16px">The report covers the first four sessions. I completed all 12, through 1 Aug 2026.</p>
+      </div>
+      <aside class="side rv">
+        <div class="chart">
+          <div class="ct">Framework: the 5Cs of Positive Youth Development</div><div class="cs">Every activity was mapped to these</div>
+          <div class="five">
+            <div><b>Competence</b><span>Social, academic and life skills</span></div>
+            <div><b>Confidence</b><span>Self-worth and belief in the future</span></div>
+            <div><b>Connection</b><span>Bonds with mentors, peers, family</span></div>
+            <div><b>Character</b><span>Values, empathy, integrity</span></div>
+            <div><b>Contribution</b><span>Giving back to the community</span></div>
+          </div>
+        </div>
+        <div class="chart">
+          <div class="ct">Method</div>
+          <ul class="clean"><li>Participant observation as a mentor (2 mentors, 3 mentees)</li><li>Mentee reflection journals and group debriefs</li><li>Concepts from clinical psychology: rapport, group dynamics, prosocial development</li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="btns rv"><a class="btn primary" href="research/reports/peer-mentor-field-report-2026.pdf" target="_blank" rel="noopener">Read the report (PDF) ↗</a><a class="btn" href="index.html#community">See all 12 sessions →</a></div>
+    <p class="note rv">Photos are removed from the published report, and no mentee is named, to protect the mentees' privacy.</p>
+  </section>
+
+  <!-- SDT -->
+  <section class="c" id="sdt">
+    <p class="eyebrow rv"><span class="n">04</span><span class="l">MSc dissertation · in progress</span></p>
+    <div class="grid">
+      <div class="rv">
+        <h2>Leadership styles through the lens of Self-Determination Theory</h2>
+        <p class="sub">The psychological impact of leadership styles on employee well-being and productivity: a Self-Determination Theory perspective</p>
+        <div class="chips"><span><b>Jain University</b> · MSc in Psychology</span><span class="live">Literature review drafted</span><span>Method and results: coming soon</span></div>
+        <p class="story">Why do some managers bring out the best in people while others wear them down? Self-Determination Theory suggests one answer: people thrive when their needs for autonomy, competence and relatedness are met.</p>
+        <div class="h4">Research questions</div>
+        <ol class="rq">
+          <li>How do different leadership styles influence employee well-being and productivity?</li>
+          <li>How do these styles support or frustrate the three basic psychological needs?</li>
+          <li>Which approaches best sustain motivation, engagement and effectiveness over time?</li>
+        </ol>
+        <div class="h4">Styles compared</div>
+        <div class="chips"><span>Transformational</span><span>Democratic</span><span>Supportive &amp; servant</span><span>Authoritarian</span><span>Laissez-faire</span><span>Hybrid</span></div>
+        <p class="note">Working proposition from the literature: need-supportive styles lead to higher well-being and more sustainable productivity, while controlling or absent leadership frustrates those needs. The study will test this.</p>
+      </div>
+      <aside class="side rv">
+        <div class="chart">
+          <div class="ct">Progress</div>
+          <ul class="steps">
+            <li class="done">Introduction and research questions</li>
+            <li class="done">Literature review</li>
+            <li class="now">Research methodology</li>
+            <li>Data collection</li>
+            <li>Analysis and results</li>
+            <li>Discussion and conclusion</li>
+          </ul>
+        </div>
+        <div class="chart soonbox"><div class="ct">Coming soon</div><p class="cs" style="margin:0">Results, the questionnaire and the analysis will be published here when the study is complete.</p></div>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Ameer Batcha · Survey data is anonymised and shared for transparency.</div></footer>
+<script>
+(function(){
+  var r=document.documentElement;
+  document.getElementById('themeBtn').addEventListener('click',function(){var t=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem('ab-theme',t)}catch(e){}});
+  var bar=document.getElementById('progress');function sc(){var h=document.documentElement;bar.style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%';}addEventListener('scroll',sc,{passive:true});sc();
+  function route(){var h=location.hash.slice(1),s=h&&document.getElementById(h),f=!!(s&&s.classList.contains('c'));document.body.classList.toggle('focus',f);document.querySelectorAll('section.c').forEach(function(x){x.classList.toggle('on',x===s);});document.querySelectorAll('.tile').forEach(function(x){x.classList.toggle('on',f&&x.getAttribute('href')==='#'+h);});if(f){s.querySelectorAll('.rv').forEach(function(e){e.classList.add('in');});}setTimeout(function(){window.scrollTo(0,0);},0);}
+  addEventListener('hashchange',route);route();
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%6)*50+'ms';io.observe(el);});
+})();
+</script>
+</body>
+</html>

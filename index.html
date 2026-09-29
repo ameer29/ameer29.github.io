@@ -361,6 +361,14 @@ a.cert{color:inherit;display:flex;flex-direction:column}
 .pwgo i{font-style:normal;display:inline-block;transition:transform .25s}
 .pw:hover .pwgo i{transform:translate(3px,-3px)}
 .badge .b a{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--acc)}
+@media(max-width:480px){nav.menu a.hide-xs{display:none}}
+.rsgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.rsgrid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.rsgrid{grid-template-columns:1fr}}
+.rstop{height:120px;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:22px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,var(--acc-soft),transparent);position:relative;overflow:hidden}
+.rstop b{font:600 34px/1 var(--serif);color:var(--acc);transition:transform .4s cubic-bezier(.2,.8,.2,1);transform-origin:left}
+.pw:hover .rstop b{transform:scale(1.06)}
+.rstop small{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.rstop small.soon{color:#b45309}
 </style>
 </head>
 <body>
@@ -368,9 +376,10 @@ a.cert{color:inherit;display:flex;flex-direction:column}
 <header class="top"><div class="wrap">
   <a class="brand" href="#top"><span class="mono">AB</span><span class="nm">Ameer Batcha</span></a>
   <nav class="menu">
-    <a href="#journey">Journey</a>
+    <a href="#journey" class="hide-xs">Journey</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
     <a href="#education" class="hide-sm">Education</a>
     <a href="#contact" class="hide-sm">Contact</a>
     <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode">◐</button>
@@ -595,6 +604,17 @@ a.cert{color:inherit;display:flex;flex-direction:column}
       <a class="card pw rv" href="certifications.html#analytixlabs" target="_blank" rel="noopener"><div class="pwlogo"><img src="https://www.google.com/s2/favicons?domain=analytixlabs.co.in&amp;sz=128" alt="AnalytixLabs logo"></div><div class="pwb"><div class="pwk">AnalytixLabs</div><div class="pwt">Certified Data Analyst</div><div class="pwd">Studied Apr – Dec 2023 · certified Oct 2024</div><div class="h4">What I studied</div><ul class="pwl"><li>Excel, SQL Server and Power BI</li><li>Python: pandas, Seaborn, SciPy</li><li>Retail and supply-chain capstones</li></ul><span class="pwgo">See what I did <i>↗</i></span></div></a>
       <a class="card pw rv" href="certifications.html#clinical-psychology" target="_blank" rel="noopener"><div class="pwlogo"><img src="data:image/webp;base64,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" alt="Socially Souled logo"></div><div class="pwb"><div class="pwk">Socially Souled</div><div class="pwt">Clinical Psychology Training-Based Internship</div><div class="pwd">Jul – Aug 2026 · 240 hours · 9.3/10</div><div class="h4">What I studied</div><ul class="pwl"><li>Mental Status Examination and intake</li><li>Psychopathology and diagnosis</li><li>CBT, DBT and other therapies</li></ul><span class="pwgo">See what I did <i>↗</i></span></div></a>
       <a class="card pw rv" href="certifications.html#digital-marketing" target="_blank" rel="noopener"><div class="pwlogo"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Internshala_company_logo.png?width=240" alt="Internshala logo"></div><div class="pwb"><div class="pwk">Internshala</div><div class="pwt">Digital Marketing Training</div><div class="pwd">Jun – Jul 2019 · 6 weeks</div><div class="h4">What I studied</div><ul class="pwl"><li>SEO and web analytics</li><li>Email, content and inbound</li><li>Search, display and social ads</li></ul><span class="pwgo">See what I did <i>↗</i></span></div></a>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="sec-head rv"><div><p class="eyebrow">Research</p><h2>Questions I've studied</h2><p class="muted">Two consumer surveys from my BBA, a psychology field report, and my MSc dissertation in progress. Open any card for the method, findings, questionnaire and full report.</p></div></div>
+    <div class="rsgrid">
+      <a class="card pw rv" href="research.html#netflix" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2020 · survey</small><b>n = 92</b></div><div class="pwb"><div class="pwk">Consumer research</div><div class="pwt">Why people stay with Netflix</div><div class="pwd">Survey, May – Jun 2020</div><ul class="pwl"><li>81% satisfied; pricing rated lowest</li><li>Phone-first, young audience</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#swiggy" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2021 · dissertation</small><b>n = 93</b></div><div class="pwb"><div class="pwk">Business model &amp; survey</div><div class="pwt">What keeps people ordering on Swiggy</div><div class="pwd">Survey, Mar – Apr 2021</div><ul class="pwl"><li>80% satisfied; food quality the top concern</li><li>App discounts the biggest driver</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#peer" target="_blank" rel="noopener"><div class="rstop"><small>MSc · 2026 · field report</small><b>5Cs</b></div><div class="pwb"><div class="pwk">Psychology field placement</div><div class="pwt">Building trust with young mentees</div><div class="pwd">PEER, Feb – Apr 2026</div><ul class="pwl"><li>Play-based activities to build rapport</li><li>Mapped to Positive Youth Development</li></ul><span class="pwgo">See the report <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#sdt" target="_blank" rel="noopener"><div class="rstop"><small class="soon">MSc dissertation · in progress</small><b>SDT</b></div><div class="pwb"><div class="pwk">Organisational psychology</div><div class="pwt">Leadership styles and employee well-being</div><div class="pwd">Literature review drafted</div><ul class="pwl"><li>Autonomy, competence, relatedness</li><li>Results coming soon</li></ul><span class="pwgo">See progress <i>↗</i></span></div></a>
     </div>
   </section>
 
