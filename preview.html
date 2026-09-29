@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-10 0 220 120'><g transform='skewX(-10) translate(14 0)' fill='none' stroke='%230e1422' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'><path d='M20 100 C 44 78, 62 40, 80 14 C 82 40, 80 72, 76 100'/><path d='M34 76 C 50 70, 64 68, 78 68 M78 68 C 92 66, 100 58, 104 44 C 108 30, 110 20, 114 14 C 150 6, 160 34, 122 50 C 164 50, 170 90, 124 100 C 106 104, 94 98, 100 92 C 104 88, 112 92, 108 98'/></g></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='230 40 740 690'><g fill='none' stroke='%230e1422' stroke-width='40' stroke-linecap='round' stroke-linejoin='round'><path d='M260 648 C 262 600, 300 520, 340 420 C 390 300, 440 170, 472 62'/><path d='M476 60 C 488 150, 490 400, 495 560 C 498 650, 505 705, 516 708 C 524 706, 528 690, 532 678'/><path d='M335 455 C 400 440, 490 405, 565 383'/><path d='M640 244 C 646 330, 652 430, 660 536'/><path d='M594 264 C 588 228, 620 204, 684 180 C 760 150, 835 125, 853 165 C 868 205, 800 262, 706 355'/><path d='M706 355 C 800 343, 930 360, 940 440 C 950 540, 860 622, 740 656 C 650 681, 560 690, 548 650 C 538 600, 610 560, 680 518'/></g></svg>">
 <style>
 :root{
   --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -397,12 +397,10 @@ section{padding:88px 0}
 .card:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
 .chip{font-weight:500}
 .progress{background:var(--ink);box-shadow:none;height:2px}
-.skill-tags span::after{display:none}
-.skill-tags span:hover{transform:translateY(-1px)}
-.skill-tags span:hover::before{border-color:var(--ink);box-shadow:none}
+.skill-tags span:hover::before{border-color:var(--ink)}
+.skill-tags span[data-a="say"]::after{color:var(--warm)}
+.sgrid .card.wide{grid-column:1/-1}
 .cta{background:var(--panel);border-color:var(--line)}
-.badge .ic{filter:none;color:var(--ink);margin-bottom:12px}
-.badge .ic svg{width:30px;height:30px}
 .qstep .ic svg{width:18px;height:18px}
 
 /* nav */
@@ -410,7 +408,7 @@ header.top{position:fixed;left:0;right:0;top:0;background:transparent;border-bot
 header.top.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--line)}
 header.top .wrap{height:72px}
 .brand{color:var(--ink)}
-.brand .sig{width:62px;height:34px;display:block;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.brand .sig{width:46px;height:43px;display:block;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .brand:hover .sig{transform:rotate(-4deg) scale(1.04)}
 nav.menu{gap:30px}
 nav.menu a{position:relative;padding:6px 0;border-radius:0;font:500 15px var(--sans);color:var(--ink-2);background:none!important}
@@ -438,8 +436,9 @@ nav.menu a.active{color:var(--ink)}
 .avail{display:flex}
 
 /* hero */
-.hero2{padding:0;position:relative;min-height:min(92vh,760px);display:flex;align-items:center;overflow:hidden;background:#e9d3b8}
-.hero2 .bg{position:absolute;inset:0;background:url(assets/img/hero.webp) 72% 30%/cover no-repeat;transform:scale(1.04);animation:heroZoom 14s ease-out forwards}
+.hero2{padding:0;position:relative;height:min(84vh,700px);min-height:600px;display:flex;align-items:center;overflow:hidden;background:var(--bg)}
+.hero2 .bg{position:absolute;top:0;right:0;bottom:0;height:100%;aspect-ratio:1637/960;background:url(assets/img/hero.webp) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%);transform:scale(1.03);transform-origin:right bottom;animation:heroZoom 14s ease-out forwards}
+
 @keyframes heroZoom{to{transform:scale(1)}}
 .hero2::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,245,241,.9) 0%,rgba(247,245,241,.72) 32%,rgba(247,245,241,.15) 58%,rgba(247,245,241,0) 70%),linear-gradient(180deg,rgba(247,245,241,.55) 0%,rgba(247,245,241,0) 22%,rgba(247,245,241,0) 80%,var(--bg) 100%)}
 :root[data-theme="dark"] .hero2::after{background:linear-gradient(90deg,rgba(13,16,23,.92) 0%,rgba(13,16,23,.75) 34%,rgba(13,16,23,.2) 60%,rgba(13,16,23,.05) 72%),linear-gradient(180deg,rgba(13,16,23,.5) 0%,rgba(13,16,23,0) 22%,rgba(13,16,23,0) 80%,var(--bg) 100%)}
@@ -455,9 +454,9 @@ nav.menu a.active{color:var(--ink)}
 .social{display:flex;gap:22px;margin-top:30px}
 .social a{color:var(--ink-2);display:grid;place-items:center;transition:color .2s,transform .25s}
 .social a:hover{color:var(--ink);transform:translateY(-2px)}
-.social svg{width:22px;height:22px}
+.social svg{width:24px;height:24px}
 @media(max-width:760px){.hero2{display:block;min-height:0;background:var(--bg)}
-  .hero2 .bg{position:relative;height:72vw;min-height:280px;animation:none;transform:none;background-position:78% 25%}
+  .hero2 .bg{position:relative;width:100%;aspect-ratio:auto;height:72vw;min-height:280px;animation:none;transform:none;background-position:78% 25%;-webkit-mask-image:none;mask-image:none}
   .hero2::after{inset:0 0 auto 0;height:72vw;min-height:280px;background:linear-gradient(180deg,rgba(247,245,241,.35) 0%,rgba(247,245,241,0) 25%,rgba(247,245,241,0) 65%,var(--bg) 100%)}
   :root[data-theme="dark"] .hero2::after{background:linear-gradient(180deg,rgba(13,16,23,.4) 0%,rgba(13,16,23,0) 25%,rgba(13,16,23,0) 65%,var(--bg) 100%)}
   .hero2 .wrap{padding:4px 0 36px}}
@@ -477,12 +476,34 @@ nav.menu a.active{color:var(--ink)}
 .pillar .pl{font-size:14px;color:var(--ink-3);margin-top:6px;line-height:1.4}
 @media(max-width:520px){.pillars{grid-template-columns:1fr}.pillar:nth-child(odd){border-right:0}.pillar:nth-child(even){padding-left:0}}
 .avail{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:14px;color:var(--ink-2)}
+
+.mapbox .land{fill:#e4e0d8;stroke:#f7f5f1}
+.mapbox .land.hi{fill:#1b2a4a}
+:root[data-theme="dark"] .mapbox .land{fill:#232a37;stroke:#0d1017}
+:root[data-theme="dark"] .mapbox .land.hi{fill:#8a9bc0}
+.pin circle.core{fill:#e07a3a;stroke:#fff;stroke-width:1.5}
+.pin.on circle.core{r:5}
+.pin circle.pulse{stroke:#e07a3a}
+.pin text{font:600 12px var(--sans);fill:var(--ink);stroke:var(--bg)}
+.pin.on text{opacity:1}
+.mapbox .arc{stroke:#e07a3a;filter:none}
+/* research card logos */
+.rstop img{height:38px;width:auto;max-width:150px;object-fit:contain;object-position:left center;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.pw:hover .rstop img{transform:scale(1.06)}
+.rstop{background:#fff;border-bottom:1px solid var(--line)}
+:root[data-theme="dark"] .rstop{background:#fff}
+:root[data-theme="dark"] .rstop small{color:#7c808a}
+/* hero on narrow screens: text first, photo below */
+@media(max-width:760px){.hero2{display:flex!important;flex-direction:column;align-items:stretch;height:auto;min-height:0}
+  .hero2::after{display:none}
+  .hero2 .wrap{order:1;padding:100px 0 8px!important}
+  .hero2 .bg{order:2;position:relative!important;inset:auto;width:100%!important;height:78vw!important;min-height:280px;background-position:78% 30%!important;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 82%,transparent 100%)!important;mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 82%,transparent 100%)!important}}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
 <header class="top" id="topbar"><div class="wrap">
-  <a class="brand" href="#home" aria-label="Ameer Batcha, home"><svg class="sig" viewBox="-10 0 220 120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="skewX(-10) translate(14 0)"><path stroke-width="7" d="M20 100 C 44 78, 62 40, 80 14 C 82 40, 80 72, 76 100"/><path stroke-width="7" d="M34 76 C 50 70, 64 68, 78 68 M78 68 C 92 66, 100 58, 104 44 C 108 30, 110 20, 114 14 C 150 6, 160 34, 122 50 C 164 50, 170 90, 124 100 C 106 104, 94 98, 100 92 C 104 88, 112 92, 108 98"/></g></svg></a>
+  <a class="brand" href="#home" aria-label="Ameer Batcha, home"><svg class="sig" viewBox="230 40 740 690" aria-hidden="true"><defs><g id="abs" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path data-k="aleft" d="M260 648 C 262 600, 300 520, 340 420 C 390 300, 440 170, 472 62"/><path data-k="aright" d="M476 60 C 488 150, 490 400, 495 560 C 498 650, 505 705, 516 708 C 524 706, 528 690, 532 678"/><path data-k="cross" d="M335 455 C 400 440, 490 405, 565 383"/><path data-k="bstem" d="M640 244 C 646 330, 652 430, 660 536"/><path data-k="btop" d="M594 264 C 588 228, 620 204, 684 180 C 760 150, 835 125, 853 165 C 868 205, 800 262, 706 355"/><path data-k="bbot" d="M706 355 C 800 343, 930 360, 940 440 C 950 540, 860 622, 740 656 C 650 681, 560 690, 548 650 C 538 600, 610 560, 680 518"/></g></defs><use href="#abs" x="-6.13" y="5.14"/><use href="#abs" x="-4.09" y="3.43"/><use href="#abs" x="-2.04" y="1.71"/><use href="#abs" x="0.0" y="-0.0"/><use href="#abs" x="2.04" y="-1.71"/><use href="#abs" x="4.09" y="-3.43"/><use href="#abs" x="6.13" y="-5.14"/></svg></a>
   <nav class="menu" id="menu">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -512,9 +533,9 @@ nav.menu a.active{color:var(--ink)}
       <a class="btn" href="assets/CV_Ameer_Batcha.pdf" target="_blank" rel="noopener">Download CV <span class="arr">↓</span></a>
     </div>
     <div class="social rv">
-      <a href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+      <a href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 2H3.55C2.7 2 2 2.7 2 3.55v16.9C2 21.3 2.7 22 3.55 22h16.9c.85 0 1.55-.7 1.55-1.55V3.55C22 2.7 21.3 2 20.45 2zM8 19H5V9.5h3V19zM6.5 8.2a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1-.02-2.5-1.52-2.5-1.52 0-1.76 1.19-1.76 2.42V19h-3V9.5h2.88v1.3h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.52 2 3.52 4.6V19z"/></svg></a>
       <a href="https://github.com/ameer29" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
-      <a href="mailto:ameer.batcha@u.nus.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+      <a href="mailto:ameer.batcha@u.nus.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 4h17A1.5 1.5 0 0 1 22 5.5v.3l-10 6.3L2 5.8v-.3A1.5 1.5 0 0 1 3.5 4zM2 8.2l9.47 5.97a1 1 0 0 0 1.06 0L22 8.2v10.3a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5V8.2z"/></svg></a>
     </div>
   </div>
 </section>
@@ -542,11 +563,11 @@ nav.menu a.active{color:var(--ink)}
   <section style="padding-top:8px">
     <div class="sec-head rv"><div><p class="eyebrow">Achievements</p><h2>Highlights so far</h2></div><div class="unlocked">Hover a card for the details</div></div>
     <div class="badges">
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg></div><div class="t">Rockstar Rookie</div><div class="s">Forbes Advisor · Jul 2024</div></div><div class="b"><b>Why</b>For outstanding talent, collaboration, innovation and initiative as a new team member, six months after I joined.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6 4 4 6-7"/><path d="M15 8h5v5"/></svg></div><div class="t">Promoted in 15 months</div><div class="s">Forbes Advisor · Apr 2025</div></div><div class="b"><b>How</b>Associate → Senior Associate after leading a team of 4 and cutting bottleneck resolution from two weeks to 2–3 days.</div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg></div><div class="t">Value Champion</div><div class="s">ITILITE Technologies</div></div><div class="b"><b>Why</b>A certificate of appreciation from ITILITE's founders for upholding the company's core values.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></div><div class="t">First Class Distinction</div><div class="s">BBA · Amity · 2021</div></div><div class="b"><b>Plus</b>Two survey studies, on Netflix and Swiggy, now on my <a href="research.html" target="_blank" rel="noopener">Research page ↗</a></div></div></div>
-      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 0 0-5.8 1A3 3 0 0 0 4 11a3 3 0 0 0 2 5 3 3 0 0 0 6 1V5z"/><path d="M12 5a3 3 0 0 1 5.8 1A3 3 0 0 1 20 11a3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></svg></div><div class="t">9.3 / 10</div><div class="s">Clinical psychology internship · 2026</div></div><div class="b"><b>What</b>240 hours of training: Mental Status Examination, case-history intake, risk assessment and therapeutic approaches.</div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🏆</div><div class="t">Rockstar Rookie</div><div class="s">Forbes Advisor · Jul 2024</div></div><div class="b"><b>Why</b>For outstanding talent, collaboration, innovation and initiative as a new team member, six months after I joined.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">⬆️</div><div class="t">Promoted in 15 months</div><div class="s">Forbes Advisor · Apr 2025</div></div><div class="b"><b>How</b>Associate → Senior Associate after leading a team of 4 and cutting bottleneck resolution from two weeks to 2–3 days.</div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🏅</div><div class="t">Value Champion</div><div class="s">ITILITE Technologies</div></div><div class="b"><b>Why</b>A certificate of appreciation from ITILITE's founders for upholding the company's core values.<br><a href="certifications.html#awards" target="_blank" rel="noopener">See the certificate ↗</a></div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🎓</div><div class="t">First Class Distinction</div><div class="s">BBA · Amity · 2021</div></div><div class="b"><b>Plus</b>Two survey studies, on Netflix and Swiggy, now on my <a href="research.html" target="_blank" rel="noopener">Research page ↗</a></div></div></div>
+      <div class="badge rv" tabindex="0"><div class="in"><div class="f"><div class="ic">🧠</div><div class="t">9.3 / 10</div><div class="s">Clinical psychology internship · 2026</div></div><div class="b"><b>What</b>240 hours of training: Mental Status Examination, case-history intake, risk assessment and therapeutic approaches.</div></div></div>
     </div>
   </section>
 
@@ -735,10 +756,10 @@ nav.menu a.active{color:var(--ink)}
   <section id="research">
     <div class="sec-head rv"><div><p class="eyebrow">Research</p><h2>Questions I've studied</h2><p class="muted">Two consumer surveys from my BBA, a psychology field report, and my MSc dissertation in progress. Open any card for the method, findings, questionnaire and full report.</p></div></div>
     <div class="rsgrid">
-      <a class="card pw rv" href="research.html#netflix" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2020 · survey</small><b>n = 92</b></div><div class="pwb"><div class="pwk">Consumer research</div><div class="pwt">Why people stay with Netflix</div><div class="pwd">Survey, May – Jun 2020</div><ul class="pwl"><li>81% satisfied; pricing rated lowest</li><li>Phone-first, young audience</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
-      <a class="card pw rv" href="research.html#swiggy" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2021 · dissertation</small><b>n = 93</b></div><div class="pwb"><div class="pwk">Business model &amp; survey</div><div class="pwt">What keeps people ordering on Swiggy</div><div class="pwd">Survey, Mar – Apr 2021</div><ul class="pwl"><li>80% satisfied; food quality the top concern</li><li>App discounts the biggest driver</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
-      <a class="card pw rv" href="research.html#peer" target="_blank" rel="noopener"><div class="rstop"><small>MSc · 2026 · field report</small><b>5Cs</b></div><div class="pwb"><div class="pwk">Psychology field placement</div><div class="pwt">Building trust with young mentees</div><div class="pwd">PEER, Feb – Apr 2026</div><ul class="pwl"><li>Play-based activities to build rapport</li><li>Mapped to Positive Youth Development</li></ul><span class="pwgo">See the report <i>↗</i></span></div></a>
-      <a class="card pw rv" href="research.html#sdt" target="_blank" rel="noopener"><div class="rstop"><small class="soon">MSc dissertation · in progress</small><b>SDT</b></div><div class="pwb"><div class="pwk">Organisational psychology</div><div class="pwt">Leadership styles and employee well-being</div><div class="pwd">Literature review drafted</div><ul class="pwl"><li>Autonomy, competence, relatedness</li><li>Results coming soon</li></ul><span class="pwgo">See progress <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#netflix" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2020 · survey</small><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Netflix_2015_logo.svg?width=240" alt="Netflix logo"></div><div class="pwb"><div class="pwk">Consumer research</div><div class="pwt">Why people stay with Netflix</div><div class="pwd">Survey, May – Jun 2020</div><ul class="pwl"><li>81% satisfied; pricing rated lowest</li><li>Phone-first, young audience</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#swiggy" target="_blank" rel="noopener"><div class="rstop"><small>BBA · 2021 · dissertation</small><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Swiggy_logo.png?width=240" alt="Swiggy logo"></div><div class="pwb"><div class="pwk">Business model &amp; survey</div><div class="pwt">What keeps people ordering on Swiggy</div><div class="pwd">Survey, Mar – Apr 2021</div><ul class="pwl"><li>80% satisfied; food quality the top concern</li><li>App discounts the biggest driver</li></ul><span class="pwgo">See the study <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#peer" target="_blank" rel="noopener"><div class="rstop"><small>MSc · 2026 · field report</small><img src="https://icons.duckduckgo.com/ip3/mendakiclub.org.sg.ico" alt="Mendaki Club logo"></div><div class="pwb"><div class="pwk">Psychology field placement</div><div class="pwt">Building trust with young mentees</div><div class="pwd">PEER, Feb – Apr 2026</div><ul class="pwl"><li>Play-based activities to build rapport</li><li>Mapped to Positive Youth Development</li></ul><span class="pwgo">See the report <i>↗</i></span></div></a>
+      <a class="card pw rv" href="research.html#sdt" target="_blank" rel="noopener"><div class="rstop"><small class="soon">MSc dissertation · in progress</small><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jain-University-Bangalore-India-Logo.png?width=240" alt="Jain University logo"></div><div class="pwb"><div class="pwk">Organisational psychology</div><div class="pwt">Leadership styles and employee well-being</div><div class="pwd">Literature review drafted</div><ul class="pwl"><li>Autonomy, competence, relatedness</li><li>Results coming soon</li></ul><span class="pwgo">See progress <i>↗</i></span></div></a>
     </div>
   </section>
 
@@ -827,12 +848,13 @@ nav.menu a.active{color:var(--ink)}
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="sec-head rv"><div><p class="eyebrow">Toolkit</p><h2>Skills</h2></div></div>
+    <div class="sec-head rv"><div><p class="eyebrow">Toolkit</p><h2>Skills</h2><p class="muted">Hover over a skill to wake it up.</p></div></div>
     <div class="sgrid">
       <div class="card rv"><h3>Data &amp; AI</h3><div class="skill-tags"><span data-i="🐍" data-a="snake">Python · pandas</span><span data-i="🔢">NumPy</span><span data-i="📈">Matplotlib · Seaborn</span><span data-i="🧪">SciPy</span><span data-i="🤖">scikit-learn</span><span data-i="🗄️">SQL Server</span><span data-i="🧮">Excel · Solver</span><span data-i="📊">Tableau</span><span data-i="⚡" data-a="pulse">Power BI</span><span data-i="✨" data-a="pulse">Google Gemini</span></div></div>
       <div class="card rv"><h3>Product</h3><div class="skill-tags"><span data-i="📝">PRDs</span><span data-i="🎯" data-a="pulse">Jobs-to-be-Done</span><span data-i="🧩">Value Proposition Canvas</span><span data-i="⚖️">MoSCoW · RICE</span><span data-i="📏">Success metrics</span><span data-i="🆎">A/B test design</span><span data-i="🛠️">Prototyping (Lovable)</span><span data-i="🚀" data-a="pulse">Vercel · Supabase</span></div></div>
       <div class="card rv"><h3>Strategy &amp; research</h3><div class="skill-tags"><span data-i="📋">Survey design</span><span data-i="🌍">Market entry</span><span data-i="🗺️">Business Model Canvas</span><span data-i="🌊" data-a="snake">Blue Ocean · Four Actions</span><span data-i="💡" data-a="pulse">Design thinking</span><span data-i="🤝" data-a="pulse">Stakeholder advisory</span><span data-i="⚙️" data-a="spin">Process optimisation</span></div></div>
-      <div class="card rv"><h3>Languages</h3><div class="skill-tags"><span data-i="Hello" data-a="say">English</span><span data-i="வணக்கம்" data-a="say">Tamil</span><span data-i="नमस्ते" data-a="say">Hindi</span><span data-i="آداب" data-a="say">Urdu</span><span data-i="¡Hola!" data-a="say">Spanish (elementary)</span></div></div>
+      <div class="card rv"><h3>Soft skills</h3><div class="skill-tags"><span data-i="🧭" data-a="pulse">Leadership</span><span data-i="🌱" data-a="pulse">Mentoring</span><span data-i="👂">Active listening</span><span data-i="💬">Empathy</span><span data-i="🗣️">Presenting</span><span data-i="🤝">Stakeholder communication</span><span data-i="🌏" data-a="spin">Cross-cultural teamwork</span><span data-i="🔄" data-a="spin">Adaptability</span><span data-i="🧩">Problem solving</span></div></div>
+      <div class="card rv wide"><h3>Languages</h3><div class="skill-tags"><span data-i="Hello" data-a="say">English</span><span data-i="வணக்கம்" data-a="say">Tamil</span><span data-i="नमस्ते" data-a="say">Hindi</span><span data-i="آداب" data-a="say">Urdu</span><span data-i="¡Hola!" data-a="say">Spanish (elementary)</span></div></div>
     </div>
   </section>
 
@@ -950,7 +972,7 @@ window.addEventListener('DOMContentLoaded',function(){
   });
   var btns=[].slice.call(stopsEl.children), xp=document.getElementById('xpbar');
   var hudL=document.getElementById('hudLevel'), hudP=document.getElementById('hudPlace');
-  var mapReady=false, svg, g, proj, path, W=960, H=600, landSel, pins=[], arcs=[];
+  var mapReady=false, svg, g, proj, path, W=960, H=600, landSel, landFeat=[], pins=[], arcs=[];
 
   function select(i,user){
     btns.forEach(function(b,j){b.classList.toggle('on',j===i);});
@@ -963,10 +985,20 @@ window.addEventListener('DOMContentLoaded',function(){
     arcs.forEach(function(a,j){a.classed('dim',j>=i);});
     zoomTo(i);
   }
+  function mainBounds(f){
+    if(f.geometry.type!=='MultiPolygon') return path.bounds(f);
+    var best=null,ba=-1;f.geometry.coordinates.forEach(function(c){var g={type:'Polygon',coordinates:c},a=path.area(g);if(a>ba){ba=a;best=g;}});
+    return path.bounds(best);
+  }
   function zoomTo(i){
-    var p=proj(STOPS[i].ll), k=2.4, vw=W/k, vh=H/k;
-    var x=Math.max(0,Math.min(W-vw,p[0]-vw/2)), y=Math.max(0,Math.min(H-vh,p[1]-vh/2));
-    svg.transition().duration(1100).ease(d3.easeCubicInOut).attr('viewBox',[x,y,vw,vh].join(' '));
+    var s=STOPS[i], p=proj(s.ll), f=landFeat.filter(function(d){return d.id===s.iso;})[0];
+    var b=f?mainBounds(f):[[p[0],p[1]],[p[0],p[1]]];
+    var x0=Math.min(b[0][0],p[0]),y0=Math.min(b[0][1],p[1]),x1=Math.max(b[1][0],p[0]),y1=Math.max(b[1][1],p[1]);
+    var w=Math.max(x1-x0,6)*1.9, h=Math.max(y1-y0,6)*1.9, ar=W/H;
+    if(w/h>ar) h=w/ar; else w=h*ar;
+    var cx=(x0+x1)/2, cy=(y0+y1)/2, k=W/w;
+    svg.transition().duration(1200).ease(d3.easeCubicInOut).attr('viewBox',[cx-w/2,cy-h/2,w,h].join(' '));
+    pins.forEach(function(pg,j){var q=proj(STOPS[j].ll);pg.transition().duration(1200).ease(d3.easeCubicInOut).attr('transform','translate('+q[0]+','+q[1]+') scale('+(1.4/k)+')');});
   }
   var tour=null;
   function stopTour(){ if(tour){clearInterval(tour); tour=null; document.getElementById('playBtn').textContent='▶ Play journey';} }
@@ -979,7 +1011,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
   function draw(world){
     var fb=document.getElementById('mapfallback'); fb.remove();
-    var land=topojson.feature(world,world.objects.countries).features.filter(function(f){return f.id!=='010';});
+    var land=topojson.feature(world,world.objects.countries).features.filter(function(f){return f.id!=='010';}); landFeat=land;
     proj=d3.geoNaturalEarth1().fitExtent([[10,10],[W-10,H-10]],{type:'FeatureCollection',features:land});
     path=d3.geoPath(proj);
     svg=d3.select('#mapbox').insert('svg',':first-child').attr('viewBox','0 0 '+W+' '+H).attr('role','img').attr('aria-label','World map of the places in my journey');
@@ -1004,7 +1036,7 @@ window.addEventListener('DOMContentLoaded',function(){
   select(CUR);
   function tryLoad(n){
     if(window.d3 && window.topojson){
-      fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(r){return r.json();}).then(draw).catch(function(){document.getElementById('mapfallback').textContent='Map unavailable offline. The stops are listed alongside.';});
+      fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json').then(function(r){return r.json();}).then(draw).catch(function(){document.getElementById('mapfallback').textContent='Map unavailable offline. The stops are listed alongside.';});
     } else if(n<40) setTimeout(function(){tryLoad(n+1);},150);
     else document.getElementById('mapfallback').textContent='Map unavailable. The stops are listed alongside.';
   }
