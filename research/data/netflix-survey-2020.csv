@@ -1,0 +1,93 @@
+respondent,2)Gender,4)Age Groups,5) Profession,6) Are you an existing customer of NETFLIX,7) What device/Platform do you use NETFLIX on?,8) If you had to choose any streaming other than NETFLIX what would it be,9) Rank the following features of NETFLIX on a satisfaction scale. [QUALITY CONTENT],9) Rank the following features of NETFLIX on a satisfaction scale. [INTERFACE],9) Rank the following features of NETFLIX on a satisfaction scale. [INSTANT BLU-RAY AND DOLBY ATMOS],9) Rank the following features of NETFLIX on a satisfaction scale. [MANY SERIES],9) Rank the following features of NETFLIX on a satisfaction scale. [PRICING],10) Since how long have you been using NETFLIX,11) How often do you use NETFLIX in a day.,12) How often do you go through NETFLIX's recommendation list before you choose new content to watch?,13) How much likely will you recommend NETFLIX to others?,14) What type of shows you prefer on NETFLIX?,15) What is the reason you prefer NETFLIX over other online streaming,16) What type of subscription you prefer?,17) Overall how satisfied are you with NETFLIX
+1,Male,20-30 Years,Student,Yes,Smartphone,I would always choose NETFLIX over anything,SATISFIED,,,,,6 months,1-2 hours,Sometime,Always,Comedy ,Popularity,Basic,Moderately Satisfied
+2,Male,20-30 Years,Private,Yes,Smartphone,Hulu,SATISFIED,,,SATISFIED,SATISFIED,3 months,2-3 hours,Sometime,Sometime,Thriller,All of the above,Mobile,Moderately Satisfied
+3,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,1 year,more than 5 hours,Sometime,Sometime,Comedy,New Content,premium,Moderately Satisfied
+4,Female,20-30 Years,Student,Yes,Smartphone,Amazon Prime,,,,SATISFIED,,3 months,2-3 hours,Sometime,Always,Anime,Popularity,Mobile,Extremely Satisfied
+5,Male,15-20 Years,Student,No,Television,Amazon Prime,,,,SATISFIED,,3 months,1-2 hours,Sometime,Always,Sci-Fic/Action,New Content,standard,Moderately Satisfied
+6,Male,20-30 Years,Student,Maybe,Other,Amazon Prime;Hotstar,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,6 months,1-2 hours,Sometime,Always,Sci-Fic/Action,All of the above,Mobile,Neutral
+7,Female,20-30 Years,Student,Yes,Smartphone,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,more than a year,1-2 hours,Sometime,Always,Horror,All of the above,Mobile,Extremely Satisfied
+8,Female,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,6 months,2-3 hours,Sometime,Always,Horror,All of the above,premium,Extremely Satisfied
+9,Male,30-40 Years,Private,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,3 months,1-2 hours,Sometime,Always,Action ,Entertainment,Mobile,Extremely Satisfied
+10,Male,30-40 Years,Private,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,3 months,1-2 hours,Sometime,Always,Action ,Entertainment,Mobile,Extremely Satisfied
+11,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,,SATISFIED,SATISFIED,,1 year,4-5 hours,Sometime,Always,Thriller,All of the above,premium,Extremely Satisfied
+12,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,,,SATISFIED,,6 months,4-5 hours,,Sometime,Thriller,All of the above,standard,Moderately Satisfied
+13,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,,,1 year,1-2 hours,Sometime,Always,Sci-Fic/Action,Pricing,standard,Moderately Satisfied
+14,Male,20-30 Years,Student,Yes,Television,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,more than a year,3-4 hours,Sometime,Sometime,Sci-Fic/Action,New Content,premium,Extremely Satisfied
+15,Female,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,,,SATISFIED,,6 months,2-3 hours,Sometime,Always,Thriller,Entertainment,standard,Extremely Satisfied
+16,Male,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,,SATISFIED,,more than a year,2-3 hours,Never,Sometime,Romcom and thriller,New Content,standard,Moderately Satisfied
+17,Female,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,,,,,more than a year,3-4 hours,Never,Sometime,Thriller,Entertainment,Basic,Neutral
+18,Male,15-20 Years,Student,No,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,3 months,more than 5 hours,Sometime,Always,Sci-Fic/Action,Entertainment,Mobile,Neutral
+19,Male,15-20 Years,Student,No,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,3 months,2-3 hours,Sometime,Always,Sci-Fic/Action,New Content,standard,Moderately Satisfied
+20,Female,15-20 Years,Student,Yes,Other,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,3 months,3-4 hours,Sometime,Sometime,Horror,All of the above,premium,Neutral
+21,Male,20-30 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,1-2 hours,Sometime,Sometime,Thriller,All of the above,premium,Moderately Satisfied
+22,Female,20-30 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,6 months,2-3 hours,Sometime,Always,Sci-Fic/Action,All of the above,Mobile,Extremely Satisfied
+23,Female,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,,,SATISFIED,,more than a year,3-4 hours,Sometime,Always,Not specific,Entertainment,standard,Moderately Satisfied
+24,Male,20-30 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,more than a year,more than 5 hours,Sometime,Sometime,Sci-Fic/Action,New Content,Basic,Moderately Satisfied
+25,Prefer not to say,50 + Years,Goverment,No,Television,,,,,,,,,,,,,,
+26,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,4-5 hours,Sometime,Always,Sci-Fic/Action,New Content,premium,Extremely Satisfied
+27,Male,15-20 Years,Student,Yes,Smartphone,I would always choose NETFLIX over anything,SATISFIED,,SATISFIED,SATISFIED,,more than a year,more than 5 hours,Sometime,Always,Sci-Fic/Action,All of the above,premium,Extremely Satisfied
+28,Female,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,,,SATISFIED,SATISFIED,more than a year,1-2 hours,Sometime,Always,Thriller,New Content,premium,Neutral
+29,Female,20-30 Years,Private,Maybe,Smartphone,Amazon Prime;I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,6 months,1-2 hours,Sometime,Always,Comedy ,Entertainment,standard,Moderately Satisfied
+30,Male,20-30 Years,Student,Yes,Smartphone,Telegram,,SATISFIED,,,,more than a year,2-3 hours,Never,Very Rarely,Anime,Entertainment,Basic,Extremely Satisfied
+31,Male,15-20 Years,Student,Yes,Smartphone,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,3 months,2-3 hours,Always,Sometime,Sci-Fic/Action,All of the above,premium,Moderately Satisfied
+32,Male,20-30 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,4-5 hours,Always,Always,Thriller,All of the above,premium,Extremely Satisfied
+33,Female,40-50 Years,Private,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,1 year,1-2 hours,Sometime,Always,Sci-Fic/Action,New Content,premium,Extremely Satisfied
+34,Male,20-30 Years,Business,Yes,Television,Amazon Prime,SATISFIED,,,,,more than a year,1-2 hours,Sometime,Always,Thriller,All of the above,premium,Extremely Satisfied
+35,Male,15-20 Years,Business,No,Television,Hotstar,,,SATISFIED,,,3 months,1-2 hours,Never,Sometime,Horror,Popularity,standard,Neutral
+36,Female,15-20 Years,Student,Yes,Smartphone,Amazon Prime,,,SATISFIED,SATISFIED,,more than a year,2-3 hours,Always,Sometime,Horror,All of the above,premium,Moderately Satisfied
+37,Male,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,,SATISFIED,,6 months,1-2 hours,Sometime,Always,Romcom,Entertainment,premium,Moderately Satisfied
+38,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,,SATISFIED,,,1 year,3-4 hours,Sometime,Always,Sci-Fic/Action,Pricing,standard,Moderately Satisfied
+39,Female,20-30 Years,Business,Yes,Smartphone,Amazon Prime,SATISFIED,,,SATISFIED,SATISFIED,1 year,1-2 hours,Always,Always,Thriller,New Content,Basic,Moderately Satisfied
+40,Female,30-40 Years,Business,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,1 year,2-3 hours,Sometime,Always,Thriller,New Content,Mobile,Extremely Satisfied
+41,Female,15-20 Years,Student,Maybe,Smartphone,Hotstar,,,,SATISFIED,,3 months,1-2 hours,Sometime,Sometime,Horror,Entertainment,Mobile,Neutral
+42,Female,20-30 Years,Business,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,,SATISFIED,SATISFIED,,6 months,1-2 hours,Sometime,Always,Horror,Entertainment,premium,Extremely Satisfied
+43,Male,20-30 Years,Business,Yes,Smartphone,Hotstar,SATISFIED,,,,,more than a year,4-5 hours,Always,Sometime,Sci-Fic/Action,Popularity,standard,Moderately Dissatisfied
+44,Male,15-20 Years,Student,Yes,Smartphone,Amazon Prime;Hotstar,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,6 months,2-3 hours,Sometime,Sometime,Thriller,Entertainment,standard,Neutral
+45,Male,15-20 Years,Student,Maybe,Computers/Laptop,Amazon Prime;Hotstar,,,,SATISFIED,,3 months,4-5 hours,Sometime,Very Rarely,Thriller,Entertainment,premium,Neutral
+46,Prefer not to say,30-40 Years,Goverment,Maybe,Other,I would always choose NETFLIX over anything,SATISFIED,,,,,more than a year,more than 5 hours,Always,Always,Sex ed,Pricing,Mobile,Extremely Satisfied
+47,Female,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,,,SATISFIED,,6 months,2-3 hours,Sometime,Always,Thriller,Entertainment,standard,Extremely Satisfied
+48,Male,15-20 Years,Student,Yes,Computers/Laptop,I would always choose NETFLIX over anything,,,,SATISFIED,,6 months,2-3 hours,Sometime,Always,Thriller,Entertainment,Mobile,Extremely Satisfied
+49,Female,20-30 Years,Student,Yes,Television,Amazon Prime,SATISFIED,SATISFIED,,SATISFIED,SATISFIED,more than a year,2-3 hours,Always,Always,Thriller,All of the above,premium,Moderately Satisfied
+50,Male,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,3 months,1-2 hours,Sometime,Sometime,Sci-Fic/Action,Popularity,Mobile,Neutral
+51,Male,20-30 Years,Business,Yes,Television,Amazon Prime,SATISFIED,,,,,more than a year,1-2 hours,Sometime,Always,Thriller,All of the above,premium,Extremely Satisfied
+52,Female,15-20 Years,Student,Yes,Television,Amazon Prime,,,,SATISFIED,,3 months,3-4 hours,Sometime,Sometime,Thriller,New Content,Mobile,Moderately Satisfied
+53,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,2-3 hours,Sometime,Sometime,Horror,All of the above,standard,Neutral
+54,Male,20-30 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,,,6 months,2-3 hours,Sometime,Always,Sci-Fic/Action,All of the above,Mobile,Extremely Satisfied
+55,Male,20-30 Years,Private,Yes,Computers/Laptop,Amazon Prime;Hotstar,SATISFIED,SATISFIED,SATISFIED,,SATISFIED,more than a year,2-3 hours,Always,Sometime,Sci-Fic/Action,Popularity,premium,Moderately Satisfied
+56,Male,20-30 Years,Student,Yes,Smartphone,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,more than a year,1-2 hours,Sometime,Always,Thriller,New Content,Mobile,Moderately Satisfied
+57,Male,20-30 Years,Student,Yes,Smartphone,Hotstar,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,1-2 hours,Sometime,Very Rarely,Sci-Fic/Action,Popularity,Basic,Moderately Satisfied
+58,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,,,,,3 months,3-4 hours,Sometime,Always,Thriller,All of the above,Basic,Moderately Satisfied
+59,Female,20-30 Years,Student,Yes,Smartphone,Amazon Prime,,,,,SATISFIED,1 year,3-4 hours,Sometime,Sometime,Thriller,All of the above,Basic,Neutral
+60,Male,20-30 Years,Student,No,Smartphone,Amazon Prime;Hotstar,SATISFIED,SATISFIED,,SATISFIED,,3 months,1-2 hours,Never,Very Rarely,Thriller,Popularity,Basic,Neutral
+61,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,SATISFIED,SATISFIED,SATISFIED,,3 months,2-3 hours,Sometime,Always,Horror,New Content,premium,Extremely Satisfied
+62,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,SATISFIED,SATISFIED,SATISFIED,,3 months,2-3 hours,Sometime,Always,Horror,New Content,premium,Extremely Satisfied
+63,Male,15-20 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,3 months,more than 5 hours,Never,Sometime,Whats in my Mind,Entertainment,premium,Extremely Satisfied
+64,Male,20-30 Years,Student,Yes,Smartphone,Amazon Prime;Hotstar,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,more than 5 hours,Always,Sometime,Sci-Fic/Action,New Content,standard,Moderately Satisfied
+65,Male,15-20 Years,Student,Yes,Smartphone,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,6 months,more than 5 hours,Sometime,Always,Horror,Popularity,Mobile,Neutral
+66,Female,15-20 Years,Business,Yes,Television,I would always choose NETFLIX over anything,,,,SATISFIED,,6 months,2-3 hours,Sometime,Always,Sci-Fic/Action,All of the above,premium,Extremely Satisfied
+67,Female,20-30 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,,SATISFIED,SATISFIED,,more than a year,3-4 hours,Sometime,Always,Horror,New Content,premium,Extremely Satisfied
+68,Female,15-20 Years,Student,Yes,Other,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,more than a year,4-5 hours,Sometime,Sometime,Anime,All of the above,premium,Extremely Satisfied
+69,Female,15-20 Years,Student,Yes,Other,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,more than a year,4-5 hours,Sometime,Sometime,Anime,All of the above,premium,Extremely Satisfied
+70,Male,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,SATISFIED,,SATISFIED,,1 year,2-3 hours,Sometime,Always,,Entertainment,premium,Extremely Satisfied
+71,Female,20-30 Years,Business,No,Computers/Laptop,I would always choose NETFLIX over anything,,,SATISFIED,,,6 months,1-2 hours,Sometime,Always,Thriller,All of the above,premium,Extremely Satisfied
+72,Male,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,more than a year,4-5 hours,Sometime,Always,Sci-Fic/Action,Entertainment,premium,Extremely Satisfied
+73,Male,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,,SATISFIED,SATISFIED,,more than a year,4-5 hours,Sometime,Always,Thriller,Entertainment,premium,Extremely Satisfied
+74,Female,20-30 Years,Business,No,Other,I would always choose NETFLIX over anything,SATISFIED,,,,,3 months,1-2 hours,Sometime,Always,Thriller,New Content,premium,Extremely Satisfied
+75,Male,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,,SATISFIED,,more than a year,4-5 hours,Sometime,Always,Horror,Entertainment,premium,Extremely Satisfied
+76,Male,15-20 Years,Student,Yes,Computers/Laptop,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,more than a year,more than 5 hours,Sometime,Always,Thriller,All of the above,premium,Extremely Satisfied
+77,Male,15-20 Years,Business,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,more than a year,more than 5 hours,Never,Always,Horror,New Content,premium,Extremely Satisfied
+78,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,more than 5 hours,Always,Always,Sci-Fic/Action,All of the above,premium,Extremely Satisfied
+79,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,,SATISFIED,SATISFIED,,1 year,3-4 hours,Sometime,Always,Thriller,All of the above,premium,Extremely Satisfied
+80,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,more than a year,4-5 hours,Sometime,Always,Anime,All of the above,premium,Extremely Satisfied
+81,Male,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,,SATISFIED,,6 months,2-3 hours,Sometime,Sometime,Sci-Fic/Action,Entertainment,premium,Extremely Satisfied
+82,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,,SATISFIED,SATISFIED,,6 months,3-4 hours,Sometime,Always,Horror,Entertainment,premium,Extremely Satisfied
+83,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,,SATISFIED,SATISFIED,,3 months,2-3 hours,Sometime,Always,Anime,All of the above,premium,Extremely Satisfied
+84,Female,15-20 Years,Student,Yes,Computers/Laptop,I would always choose NETFLIX over anything,SATISFIED,,,SATISFIED,,more than a year,3-4 hours,Sometime,Always,Sci-Fic/Action,New Content,premium,Extremely Satisfied
+85,Male,20-30 Years,Student,Yes,Television,Amazon Prime,SATISFIED,SATISFIED,,,,6 months,2-3 hours,Sometime,Sometime,Thriller,New Content,standard,Moderately Satisfied
+86,Female,15-20 Years,Student,Yes,Television,I would always choose NETFLIX over anything,,,,SATISFIED,,1 year,2-3 hours,Always,Sometime,Thriller,All of the above,standard,Moderately Satisfied
+87,Female,20-30 Years,Student,Maybe,Smartphone,Amazon Prime;Hotstar,SATISFIED,,,SATISFIED,,3 months,1-2 hours,Sometime,Sometime,Thriller,New Content,Basic,Moderately Satisfied
+88,Female,15-20 Years,Student,No,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,,3 months,1-2 hours,Sometime,Sometime,Romcom,Entertainment,Basic,Neutral
+89,Male,15-20 Years,Student,Yes,Computers/Laptop,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,more than a year,2-3 hours,Sometime,Sometime,Horror,All of the above,standard,Neutral
+90,Male,15-20 Years,Student,No,Smartphone,I would always choose NETFLIX over anything,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,6 months,2-3 hours,Sometime,Sometime,Sci-Fic/Action,All of the above,Mobile,Moderately Satisfied
+91,Female,20-30 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,6 months,2-3 hours,Sometime,Always,Sci-Fic/Action,All of the above,Mobile,Extremely Satisfied
+92,Female,20-30 Years,Student,Yes,Smartphone,Amazon Prime,SATISFIED,SATISFIED,SATISFIED,SATISFIED,SATISFIED,6 months,2-3 hours,Sometime,Always,Sci-Fic/Action,All of the above,Mobile,Extremely Satisfied
