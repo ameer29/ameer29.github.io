@@ -513,6 +513,18 @@ nav.menu a.active{color:var(--ink)}
   .hero2 .tagline{letter-spacing:.22em;font-size:13px}
   .hero2 .btns .btn{padding:13px 18px}
 }
+
+.hero2 .lead.intro{font:500 clamp(19px,2vw,24px)/1.4 var(--sans);color:var(--ink-2);margin-top:26px}
+.hero2 .rotator{color:var(--ink);font-weight:700;border-bottom:2px solid var(--warm);min-width:9ch;transition:opacity .25s}
+/* tablet: keep the nav visible as a second row instead of a menu icon */
+@media(min-width:601px) and (max-width:1020px){
+  header.top .wrap{flex-wrap:wrap;height:auto;padding:10px 0 0;row-gap:4px}
+  nav.menu{order:3;width:100%;position:static!important;flex-direction:row!important;justify-content:center;gap:22px!important;padding:8px 0 10px!important;background:none!important;border:0!important;box-shadow:none!important;opacity:1!important;pointer-events:auto!important;transform:none!important;overflow-x:auto;white-space:nowrap}
+  nav.menu a{padding:4px 0!important;border-bottom:0!important;font-size:14px!important}
+  nav.menu a::after{display:block!important}
+  .menu-btn{display:none!important}
+  .hero2 .wrap{padding-top:150px}
+}
 </style>
 </head>
 <body>
@@ -542,7 +554,7 @@ nav.menu a.active{color:var(--ink)}
     <p class="hi rv">Hello, I’m</p>
     <h1 class="rv">Ameer Batcha</h1>
     <p class="tagline rv">Strategy<i>·</i>Product<i>·</i>Data</p>
-    <p class="lead rv">Business and management professional with experience across data research, strategy, product management and consumer insights. Now a CEMS MIM candidate at NUS Business School.</p>
+    <p class="lead rv intro">I work at the intersection of <span class="rotator" id="rotator">product</span></p>
     <div class="btns rv">
       <a class="btn primary" href="#projects">View my work <span class="arr">→</span></a>
       <a class="btn" href="assets/CV_Ameer_Batcha.pdf" target="_blank" rel="noopener">Download CV <span class="arr">↓</span></a>
@@ -560,7 +572,8 @@ nav.menu a.active{color:var(--ink)}
     <div class="about">
       <div class="rv">
         <div class="sec-head" style="margin-bottom:18px"><div><p class="eyebrow">About</p><h2>About me</h2></div></div>
-        <p class="body">I work at the intersection of business, data and people. I ran operations analytics at a SaaS start-up, led data research at Forbes Advisor, and I'm now studying management across Singapore, Barcelona and Helsinki, alongside an MSc in Psychology.</p>
+        <p class="body">Business and management professional with experience across data research, strategy, product management and consumer insights. Now a CEMS MIM candidate at NUS Business School.</p>
+        <p class="body">I ran operations analytics at a SaaS start-up and led data research at Forbes Advisor. I'm now studying management across Singapore, Barcelona and Helsinki, alongside an MSc in Psychology.</p>
         <a class="more" href="#story">More about me <span class="arr">→</span></a>
         <div class="avail"><span class="dot"></span>Open to product, data, strategy and consulting roles</div>
       </div>
