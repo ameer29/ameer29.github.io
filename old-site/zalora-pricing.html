@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zalora Pricing · Ameer Batcha</title><meta name="description" content="Pricing analytics: regression demand model and profit-maximising price for a Zalora dress. NUS BMS5503.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=3"><script src="../assets/site.js?v=3"></script></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">Ameer Batcha</a>
+<nav><a href="index.html#experience">Experience</a><a href="index.html#projects">Projects</a><a href="#contact" class="hide-sm">Contact</a><button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button></nav></div></header>
+<main class="wrap"><a class="back" href="index.html#projects">← All projects</a>
+
+<div class="hero" style="padding-top:28px">
+  <p class="eyebrow">Pricing analytics case · NUS Business School · 2026</p>
+  <h1>Zalora: stop the markdown</h1>
+  <p class="lead">Using 2,633 product-week sales records, we built a demand model for a Zalora-branded dress and found a counter-intuitive answer: the early price cut was premature, and holding the price at <b>S$49.90</b> clears the same stock at a much higher margin.</p>
+  <div class="meta"><span><b>Course</b> BMS5503 Pricing Analytics</span><span><b>Faculty</b> Richard Grice</span><span><b>Team</b> 3, joint work throughout</span><span><b>Grade</b> 4 / 5</span><span><b>Tools</b> Excel regression, optimisation</span></div>
+</div>
+<div class="stats">
+  <div class="stat"><div class="num">S$49.90</div><div class="lbl">recommended price, instead of the S$34.90 markdown</div></div>
+  <div class="stat"><div class="num">−0.15</div><div class="lbl">units lost per S$1 of price increase (p &lt; 0.001)</div></div>
+  <div class="stat"><div class="num">Week 11</div><div class="lbl">all 39 units still sell out at the higher price</div></div>
+</div>
+
+<section>
+  <p class="eyebrow">Step 1 · Demand model</p>
+  <h2>What actually drives units sold?</h2>
+  <p>We filtered the historical data to Zalora-branded products and ran a correlation analysis to avoid multicollinearity. <b>Impressions</b> moved almost perfectly with clicks (ρ = 0.93), so we dropped them. <b>Cost, price band and stock</b> were dropped as either consequences of demand or redundant. The final regression predicts units sold from <b>price</b> and <b>product clicks</b> (a signal of real customer intent), controlling for weeks since release.</p>
+  <div class="callout"><p><b>Units sold</b> = 12.02 − 0.151 × Price + 0.0011 × Clicks + 0.017 × Weeks since release</p></div>
+  <div class="tw"><table class="data"><thead><tr><th>Variable</th><th>Coefficient</th><th>p-value</th><th>Reading</th></tr></thead><tbody>
+    <tr><td>Intercept</td><td class="n">12.019</td><td class="n">&lt;0.001</td><td>Baseline weekly units</td></tr>
+    <tr><td>Unit price (S$)</td><td class="n">−0.151</td><td class="n">&lt;0.001</td><td>Each S$1 increase loses about 0.15 units a week</td></tr>
+    <tr><td>Product clicks</td><td class="n">0.0011</td><td class="n">&lt;0.001</td><td>About 1 extra unit per 900 clicks</td></tr>
+    <tr><td>Weeks since release</td><td class="n">0.017</td><td class="n">0.52</td><td>No significant effect</td></tr>
+  </tbody></table></div>
+  <p class="note">2,633 observations · R² = 0.15 · F = 157.5 (p &lt; 0.001) · Excel regression</p>
+</section>
+
+<section>
+  <p class="eyebrow">Step 2 · Optimise</p>
+  <h2>Maximise profit, subject to stock</h2>
+  <p>Holding clicks at their post-launch average (500 a week), we maximised weekly profit, (price − S$15.39 unit cost) × demand, subject to only 39 units being left in stock. Solving the first-order condition gives an optimal price of about <b>S$49.50</b> in every week, rounded to the retail price point of <b>S$49.90</b>.</p>
+  <div class="tw"><table class="data"><thead><tr><th>Week</th><th>Price</th><th>Units sold</th><th>Cumulative</th><th>Stock left</th><th>Profit (S$)</th></tr></thead><tbody><tr><td>4</td><td class="n">49.90</td><td class="n">5.1</td><td class="n">5.1</td><td class="n">33.9</td><td class="n">175.70</td></tr><tr><td>5</td><td class="n">49.90</td><td class="n">5.1</td><td class="n">10.2</td><td class="n">28.8</td><td class="n">176.27</td></tr><tr><td>6</td><td class="n">49.90</td><td class="n">5.1</td><td class="n">15.3</td><td class="n">23.7</td><td class="n">176.84</td></tr><tr><td>7</td><td class="n">49.90</td><td class="n">5.1</td><td class="n">20.4</td><td class="n">18.5</td><td class="n">177.41</td></tr><tr><td>8</td><td class="n">49.90</td><td class="n">5.2</td><td class="n">25.6</td><td class="n">13.4</td><td class="n">177.97</td></tr><tr><td>9</td><td class="n">49.90</td><td class="n">5.2</td><td class="n">30.8</td><td class="n">8.2</td><td class="n">178.54</td></tr><tr><td>10</td><td class="n">49.90</td><td class="n">5.2</td><td class="n">36.0</td><td class="n">3.0</td><td class="n">179.11</td></tr><tr><td>11 · sell-out</td><td class="n">49.90</td><td class="n">3.0</td><td class="n">39.0</td><td class="n">0</td><td class="n">104.05</td></tr></tbody></table></div>
+  <div class="callout"><p><b>The insight.</b> At S$34.90 the dress sells about 7–8 units a week and runs out sooner, but at a much thinner margin. At S$49.90 it sells about 5 a week and <b>still sells out by week 11</b>, earning about S$176–179 a week. With limited stock, the question isn't "how do we sell more?" but "how do we earn the most from what we have?"</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">Team (Group 3)</p>
+  <p class="muted">Anav Mahajan · Ardy Shaqeal · Ameer Batcha. We built the model, optimisation and write-up together.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Looking back</p>
+  <h2>What I'd tighten</h2>
+  <ul class="clean">
+    <li><b>The model explains 15% of the variation (R² = 0.15).</b> The price effect is reliable, but demand for a single product is noisy. I'd add seasonality, promotion flags and competitor prices, and test a log-log model to estimate elasticity directly.</li>
+    <li><b>Consistency:</b> our write-up said weeks since release was dropped, while the final equation kept it. It has no real effect (p = 0.52), but the model and the text should match.</li>
+    <li><b>Validate before you trust:</b> backtest the recommended price on held-out weeks, or run a limited A/B price test.</li>
+  </ul>
+</section>
+<footer id="contact"><div><p><b>Ameer Batcha</b> · ameer.batcha@u.nus.edu · <a href="https://www.linkedin.com/in/ameer-batcha-28a689180/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/ameer29">GitHub</a></p></div></footer>
+</main><script>(function(){var b=document.getElementById('themeBtn'),r=document.documentElement;b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);r.setAttribute('data-theme',d?'light':'dark');});})();</script></body></html>
