@@ -529,6 +529,9 @@ nav.menu a.active{color:var(--ink)}
 .sec-head.sub .eyebrow::before{content:"";counter-increment:none;width:18px;height:1px;background:var(--ink-3);margin-right:6px}
 .cta .eyebrow::before{counter-increment:ch;content:counter(ch,decimal-leading-zero) ".";font:500 13px/1 var(--sans);color:var(--ink-2);margin-right:4px}
 @media(max-width:1180px) and (min-width:1021px){nav.menu{gap:20px}nav.menu a{font-size:14px}}
+.metrics.m3{grid-template-columns:repeat(3,1fr)}
+.cgive{align-items:stretch}.cgive>.card{display:flex;flex-direction:column}.cgive .btns{margin-top:auto;padding-top:6px}
+@media(max-width:480px){.metrics.m3{grid-template-columns:1fr 1fr 1fr;gap:6px}.metrics.m3 .metric{padding:10px 8px}}
 </style>
 </head>
 <body>
@@ -715,85 +718,30 @@ nav.menu a.active{color:var(--ink)}
 
   <!-- COMMUNITY -->
   <section id="community">
-    <div class="sec-head sub rv"><div><p class="eyebrow">Community</p><h2>Giving back</h2><p class="muted">PEER, a structured youth-mentoring programme in Singapore and the field placement for my MSc in Psychology, and a small circle of NUS applicants who were where I was in 2021.</p></div></div>
-    <article class="card rv">
-      <div class="org"><a class="logo" href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener" data-mono="PR"><img alt="Mendaki Club logo" src="https://icons.duckduckgo.com/ip3/mendakiclub.org.sg.ico"></a>
-        <div><h3>Volunteer Mentor · <a href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener">PEER Community Programme</a></h3><div class="meta"><span>PEER @ Tampines, Singapore</span><span>Feb – Aug 2026 · completed</span><span>Group lead</span><span>MENDAKI Club · Yayasan MENDAKI</span></div></div></div>
-      <p class="muted" style="margin-top:14px"><b>PEER</b> (Positive Engagement through Experiential Relationships) is a six-month programme that pairs trained volunteer mentors with secondary-school students aged 11–16. It runs every other Saturday, built on the <b>5Cs of Positive Youth Development</b>. I mentored through the full Feb – Aug 2026 cycle, from mentor onboarding and mock rounds on 7 February to the closing session in August.</p>
-      <div class="metrics">
-        <div class="metric"><div class="v">12</div><div class="l">sessions in the season; I completed the full programme</div></div>
-        <div class="metric"><div class="v">90+</div><div class="l">volunteer mentors and organisers</div></div>
-        <div class="metric"><div class="v">60+</div><div class="l">mentees aged 11–16</div></div>
-        <div class="metric"><div class="v">2 : 3</div><div class="l">mentors to mentees in every squad</div></div>
-      </div>
-
-      <div class="h4">The 5Cs framework · hover or tap each C</div>
-      <div class="fivec" id="fivec">
-        <button type="button" class="c on" data-i="0"><b>C</b>ompetence</button>
-        <button type="button" class="c" data-i="1"><b>C</b>onfidence</button>
-        <button type="button" class="c" data-i="2"><b>C</b>onnection</button>
-        <button type="button" class="c" data-i="3"><b>C</b>haracter</button>
-        <button type="button" class="c" data-i="4"><b>C</b>ontribution</button>
-      </div>
-      <div class="cdesc" id="cdesc"></div>
-
-      <div class="h4" style="margin-top:22px">The season · Feb – Aug 2026 · completed ✓</div>
-      <div class="season" id="season"></div>
-      <div class="sdesc" id="sdesc"></div>
-      <div class="btns" style="margin-top:20px"><a class="btn sm primary" href="research.html#peer" target="_blank" rel="noopener">Read my field report <span class="arr">↗</span></a><a class="btn sm" href="../research/reports/peer-mentor-field-report-2026.pdf" target="_blank" rel="noopener">Report (PDF) <span class="arr">↗</span></a></div>
-    </article>
-
-    <div class="grid2 rv" style="margin-top:16px">
-      <div class="card lift pcard"><span class="k">Every session · Feb – Aug 2026</span><div class="t">The check-in: one happy moment</div><div class="d">We opened every session by asking each mentee for one moment that made them happy in the previous week. Over the season it became the way in: the mentees got fully involved and began opening up about whatever was worrying them.</div><div class="tags"><span class="tag">Ritual</span><span class="tag">Safe space</span></div></div>
-      <div class="card lift pcard"><span class="k">Whole season · Feb – Aug 2026</span><div class="t">Group lead</div><div class="d">I was one of two group leads in our squad, with three mentees, and stayed with them for the full season, from orientation in February to the closing session in August.</div><div class="tags"><span class="tag">Leadership</span><span class="tag">Continuity</span></div></div>
-    </div>
-    <div class="h4" style="margin-top:26px">Session by session · all 12</div>
-    <div class="pgrid sessions" style="margin-top:8px">
-      <div class="card lift pcard rv"><span class="k">Session 1 · 14 Feb 2026 · Orientation</span><div class="t">The First Bridge: From Me to We</div><div class="d">Opened by the guest of honour, Dr Syed Harun. Squads crossed a floor of “lava” as one connected train, built a table that had to hold an egg through a surprise wind test, then agreed on three shared values.</div><div class="where">Our Tampines Hub</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 2 · 28 Feb 2026 · Community session</span><div class="t">Ramadan food distribution</div><div class="d">We packed food packs at Our Tampines Hub, then went floor by floor delivering them to families in need, and closed with a reflection on what the residents’ lives taught us.</div><div class="where">Our Tampines Hub → Blk 299B Tampines St 22</div><div class="tags"><span class="tag">Character</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 3 · 14 Mar 2026 · Social session</span><div class="t">Board &amp; Bond</div><div class="d">“Draw My Face”: rotating pairs each drew one feature of their partner while chatting, until everyone had a finished portrait. Then rounds of board games run by The Mind Cafe.</div><div class="where">Home Team NS, Bedok Reservoir</div><div class="tags"><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 4 · 11 Apr 2026 · Full-group session</span><div class="t">Tribe Quest</div><div class="d">Back after the Hari Raya break: tribe-based tactical missions where every mentee had a different ability, so the tribe could only win by relying on each other.</div><div class="where">Siglap Community Club</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 5 · 25 Apr 2026 · Squad outing</span><div class="t">The Albatross File exhibition</div><div class="d">Breakfast check-in with the squad, then Singapore’s journey from merger to separation (1963–65) through declassified documents. We reflected on making hard decisions under pressure.</div><div class="where">National Library, Victoria Street</div><div class="tags"><span class="tag">Competence</span><span class="tag">Character</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 6 · 9 May 2026 · Social session</span><div class="t">Pirateball</div><div class="d">Station games (broken telephone, match the cups, dog and bone) earned points to buy “powers” and “threats” for Pirateball, a captain’s-ball spin-off built on strategy and knowing each other’s strengths.</div><div class="where">Yayasan MENDAKI field</div><div class="tags"><span class="tag">Competence</span><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 7 · 23 May 2026 · Squad outing</span><div class="t">Squad outing</div><div class="d">An outing with just our squad: two mentors and three mentees.</div><div class="where">With our three mentees</div><div class="tags"><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 8 · 6 Jun 2026 · Career session</span><div class="t">Future Fit: pathways that align with you</div><div class="d">A career auction scored on income, meaning and work-life balance, a lab of six future industries, and a “Human Library” where mentors shared their paths. I gave my view on finding a path that fits you, rather than following a set route.</div><div class="where">Tampines West CC</div><div class="tags"><span class="tag">Competence</span><span class="tag">Confidence</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 9 · 20 Jun 2026 · Life-skills session</span><div class="t">Sneaker art jamming</div><div class="d">Each mentee turned a blank pair of sneakers into a design that told their own story, a no-wrong-answers way to build confidence through self-expression.</div><div class="where">Epic Workshop, Jalan Pemimpin</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Character</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 10 · 4 Jul 2026 · Squad outing</span><div class="t">Indoor pool activities</div><div class="d">A more relaxed, active outing with the squad, at an indoor swimming pool.</div><div class="where">Indoor swimming pool</div><div class="tags"><span class="tag">Connection</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 11 · 18 Jul 2026 · Community session</span><div class="t">Youth-senior terrarium workshop</div><div class="d">Mentees built terrariums side by side with seniors (Care Corner beneficiaries), then shared lunch with them. I registered as a Care Corner volunteer for the session.</div><div class="where">House of Joy Active Ageing Centre</div><div class="tags"><span class="tag">Character</span><span class="tag">Contribution</span></div></div>
-      <div class="card lift pcard rv"><span class="k">Session 12 · 1 Aug 2026 · Closing session</span><div class="t">Journey Forward: Charting My Direction</div><div class="d">A squad cheer, a drawing relay using words from the programme, a gallery walk of the season, and a Circle of Encouragement. Then we agreed how the squad would stay connected after PEER.</div><div class="where">Tampines West CC</div><div class="tags"><span class="tag">Confidence</span><span class="tag">Connection</span></div></div>
-    </div>
-
-    <div class="grid2 rv" style="margin-top:16px">
-      <div class="card"><div class="h4" style="margin-top:0">What changed across the season</div>
-        <div class="prog">
-          <div><span>Session 1</span><i style="--w:25%"></i><em>Guarded, unsure what to expect</em></div>
-          <div><span>Session 3</span><i style="--w:60%"></i><em>Relaxing, expressing themselves through drawing and games</em></div>
-          <div><span>Session 4</span><i style="--w:80%"></i><em>Initiating conversations, laughing, keen to come back</em></div>
-          <div><span>May – Aug</span><i style="--w:100%"></i><em>Fully involved every session, and opening up about what was worrying them</em></div>
+    <div class="sec-head sub rv"><div><p class="eyebrow">Community</p><h2>Giving back</h2><p class="muted">Mentoring young people through PEER, and helping NUS applicants who are where I was in 2021.</p></div></div>
+    <div class="grid2 cgive">
+      <article class="card rv">
+        <div class="org"><a class="logo" href="https://www.mendakiclub.org.sg/peer-community-programme" target="_blank" rel="noopener" data-mono="PR"><img alt="Mendaki Club logo" src="https://icons.duckduckgo.com/ip3/mendakiclub.org.sg.ico"></a>
+          <div><h3>Volunteer Mentor · PEER Community Programme</h3><div class="meta"><span>Tampines, Singapore</span><span>Feb – Aug 2026 · completed</span><span>Group lead</span></div></div></div>
+        <p class="muted" style="margin-top:14px">A six-month youth-mentoring programme by MENDAKI Club, built on the 5Cs of Positive Youth Development and the field placement for my MSc in Psychology. As one of two group leads, I mentored a squad of three secondary-school students through all 12 sessions.</p>
+        <div class="metrics m3">
+          <div class="metric"><div class="v">12</div><div class="l">sessions, full season completed</div></div>
+          <div class="metric"><div class="v">60+</div><div class="l">mentees aged 11–16</div></div>
+          <div class="metric"><div class="v">2 : 3</div><div class="l">mentors to mentees per squad</div></div>
         </div>
-        <p class="small muted" style="margin-top:10px">My own observations: Sessions 1–4 from my placement report, the rest of the season from my experience as group lead.</p>
-      </div>
-      <div class="card"><div class="h4" style="margin-top:0">Through a psychology lens</div>
-        <ul class="clean">
-          <li><b>Rapport can't be rushed.</b> As in therapy, the relationship is the intervention, so I built trust through consistency rather than questions.</li>
-          <li><b>Play and art lower the barrier.</b> Adolescents who won't talk in a new group will draw, build and play, and the conversation follows.</li>
-          <li><b>Feedback loops keep it honest.</b> Mentee journals and mentor reports to group leads mean the programme adapts to what the mentees actually need.</li>
-        </ul>
-      </div>
+        <div class="btns"><a class="btn sm primary" href="community.html" target="_blank" rel="noopener">See the full season <span class="arr">↗</span></a><a class="btn sm" href="../research/reports/peer-mentor-field-report-2026.pdf" target="_blank" rel="noopener">Field report (PDF) <span class="arr">↗</span></a></div>
+      </article>
+      <article class="card rv">
+        <div class="org"><a class="logo" href="https://nus.edu.sg/" target="_blank" rel="noopener" data-mono="NUS"><img alt="NUS logo" src="https://en.wikipedia.org/wiki/Special:FilePath/NationalUniversityofSingapore.svg?width=240"></a>
+          <div><h3>NUS applicant circle</h3><div class="meta"><span>Informal, self-started</span><span>From Mar 2026</span><span>Weekly</span></div></div></div>
+        <p class="muted" style="margin-top:14px">I bring four NUS applicants together every week to work on their profiles, essays and interviews, drawing on what I learnt from my own two applications. <b>Two of the four have since secured places at NUS.</b></p>
+        <div class="metrics m3">
+          <div class="metric"><div class="v">4</div><div class="l">applicants in the group</div></div>
+          <div class="metric"><div class="v">Weekly</div><div class="l">profile, essay and interview work</div></div>
+          <div class="metric"><div class="v">2 of 4</div><div class="l">secured places at NUS</div></div>
+        </div>
+      </article>
     </div>
-    <p class="small muted rv" style="margin-top:12px">My placement report, written at the end of April, looks closely at Sessions 1–4. I stayed with my squad as group lead for the rest of the season, through to the closing session on 1 August.</p>
-
-    <article class="card rv" style="margin-top:22px">
-      <div class="org"><a class="logo" href="https://nus.edu.sg/" target="_blank" rel="noopener" data-mono="NUS"><img alt="NUS logo" src="https://en.wikipedia.org/wiki/Special:FilePath/NationalUniversityofSingapore.svg?width=240"></a>
-        <div><h3>NUS applicant circle</h3><div class="meta"><span>Informal, self-started</span><span>From Mar 2026</span><span>Weekly sessions</span></div></div></div>
-      <p class="muted" style="margin-top:14px">From March 2026, people applying to NUS started asking me to help strengthen their profiles. Instead of answering one by one, I brought four of them together and met them every week to work on their profiles, essays and interview preparation, drawing on what I learnt from my own two applications. <b>Two of the four have since secured places at NUS.</b></p>
-      <div class="metrics">
-        <div class="metric"><div class="v">4</div><div class="l">applicants in the group</div></div>
-        <div class="metric"><div class="v">Weekly</div><div class="l">profile, essay and interview work</div></div>
-        <div class="metric"><div class="v">2 of 4</div><div class="l">secured places at NUS</div></div>
-        <div class="metric"><div class="v">2</div><div class="l">applications of my own to learn from</div></div>
-      </div>
-    </article>
   </section>
 
   <!-- EDUCATION -->
@@ -1096,24 +1044,5 @@ window.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 
-<script>
-(function(){
-  var C=[['Competence','A positive view of one\'s abilities: social, academic, cognitive and vocational.','Build social skills, academic confidence and life skills.'],
-         ['Confidence','An inner sense of self-worth, self-efficacy and belief in the future.','Consistent encouragement and reinforcement from mentors.'],
-         ['Connection','Positive two-way bonds with peers, family, school and community.','A real bond with the mentor, and better relationships beyond the programme.'],
-         ['Character','Respect, a sense of right and wrong, integrity, care and empathy.','Mentors model positive values and hold high expectations.'],
-         ['Contribution','Active participation in family, school and community life, and leadership.','Chances to give back, like the Ramadan food distribution.']];
-  var cd=document.getElementById('cdesc'), cs=[].slice.call(document.querySelectorAll('#fivec .c'));
-  function showC(i){cs.forEach(function(b,j){b.classList.toggle('on',j===i);}); cd.innerHTML='<b>'+C[i][0]+'</b>: '+C[i][1]+'<br><span style="color:var(--ink-3)">In PEER:</span> '+C[i][2];}
-  cs.forEach(function(b,i){b.addEventListener('mouseenter',function(){showC(i);}); b.addEventListener('click',function(){showC(i);}); b.addEventListener('focus',function(){showC(i);});});
-  showC(0);
-  var S=[['1', 'Orientation: The First Bridge: From Me to We', '14 Feb', 1], ['2', 'Community session: Ramadan food distribution', '28 Feb', 1], ['3', 'Social session: Board & Bond', '14 Mar', 1], ['—', 'Hari Raya break', '21 Mar – 10 Apr', -1], ['4', 'Full-group session: Tribe Quest', '11 Apr', 1], ['5', 'Squad outing: The Albatross File exhibition', '25 Apr', 1], ['6', 'Social session: Pirateball', '9 May', 1], ['7', 'Squad outing with our squad', '23 May', 1], ['8', 'Career session: Future Fit: pathways that align with you', '6 Jun', 1], ['9', 'Life-skills session: Sneaker art jamming', '20 Jun', 1], ['10', 'Squad outing: Indoor pool activities', '4 Jul', 1], ['11', 'Community session: Youth-senior terrarium workshop', '18 Jul', 1], ['12', 'Closing session: Journey Forward: Charting My Direction', '1 Aug', 1]];
-  var se=document.getElementById('season'), sd=document.getElementById('sdesc'), btns=[];
-  S.forEach(function(s,i){var b=document.createElement('button'); b.type='button'; b.className='s'+(s[3]===1?' done':'')+(s[3]===-1||s[3]===2?' brk':''); b.textContent=s[3]===-1?'Break':s[0]; b.title=s[1];
-    b.addEventListener('mouseenter',function(){show(i);}); b.addEventListener('click',function(){show(i);}); se.appendChild(b); btns.push(b);});
-  function show(i){var s=S[i]; btns.forEach(function(b,j){b.classList.toggle('on',j===i);}); sd.innerHTML=(s[3]===-1?'':'<b>Session '+s[0]+'</b> · ')+s[1]+' <span style="color:var(--ink-3)">· '+s[2]+' 2026'+(s[3]===1?' · completed ✓':'')+'</span>';}
-  show(S.length-1);
-})();
-</script>
 </body>
 </html>
